@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>COMUNIDADE REVALIDA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#020617;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* FUNDO */
+
+.bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.blur1{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#2563eb;
+    border-radius:50%;
+    filter:blur(180px);
+    top:-200px;
+    right:-100px;
+    opacity:0.25;
+}
+
+.blur2{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#7c3aed;
+    border-radius:50%;
+    filter:blur(180px);
+    bottom:-200px;
+    left:-100px;
+    opacity:0.20;
+}
+
+/* LOGIN */
+
+.login-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.login-box{
+    width:100%;
+    max-width:420px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:28px;
+    padding:40px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.logo{
+    font-size:38px;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:10px;
+    background:linear-gradient(to right,#60a5fa,#a78bfa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#94a3b8;
+    margin-bottom:35px;
+    font-size:15px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+.input-group input{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:rgba(255,255,255,0.05);
+    color:white;
+    font-size:15px;
+    outline:none;
+    border:1px solid transparent;
+    transition:0.3s;
+}
+
+.input-group input:focus{
+    border-color:#2563eb;
+    background:rgba(255,255,255,0.08);
+}
+
+.input-group input::placeholder{
+    color:#64748b;
+}
+
+.login-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(to right,#2563eb,#7c3aed);
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:10px;
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+    opacity:0.95;
+}
+
+.info{
+    margin-top:25px;
+    text-align:center;
+    color:#64748b;
+    font-size:13px;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display:none;
+    padding:40px;
+    max-width:1300px;
+    margin:auto;
+}
+
+.topo{
+    margin-bottom:40px;
+}
+
+.topo h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.topo p{
+    color:#94a3b8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:24px;
+    padding:25px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#2563eb;
+    box-shadow:0 15px 40px rgba(37,99,235,0.2);
+}
+
+.numero{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:#2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.titulo{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.descricao{
+    color:#94a3b8;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.botao{
+    display:inline-block;
+    padding:12px 18px;
+    background:white;
+    color:#020617;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.botao:hover{
+    background:#2563eb;
+    color:white;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .dashboard{
+        padding:20px;
+    }
+
+    .topo h1{
+        font-size:32px;
+    }
+
+    .login-box{
+        padding:30px;
+    }
+
+}
+.status-aula{
+    margin-top:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.check{
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    border:2px solid #22c55e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    background:#22c55e;
+    font-size:14px;
+    display:none;
+}
+
+.concluir-btn{
+    padding:10px 14px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+    <div class="blur1"></div>
+    <div class="blur2"></div>
+</div>
+
+<!-- LOGIN -->
+
+<div class="login-container" id="loginContainer">
+
+    <div class="login-box">
+
+        <div class="logo">JORNADA DA APROVACAO 2026</div>
+
+        <div class="subtitulo">
+            Aulas direcionadas para o revalida 2026.1
+        </div>
+
+        <div class="input-group">
+            <label>Login</label>
+            <input type="text" id="login" placeholder="Digite seu login">
+        </div>
+
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+        </div>
+
+        <button class="login-btn" onclick="entrar()">
+            Entrar
+        </button>
+
+        <div class="info">
+            Acesso restrito para alunos.
+        </div>
+
+    </div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div class="dashboard" id="dashboard">
+
+    <div class="topo">
+        <h1>JORNADA DA APROVAÇÃO 👨‍⚕️</h1>
+        <p>Comunidade Revalida</p>
+    </div>
+
+    <div class="grid">
+
+<div class="card">
+
+    <div class="numero">01</div>
+
+    <div class="titulo">Pneumologia</div>
+
+    <div class="descricao">
+        Bronquiolite viral aguda, asma brônquica, pneumonia, abscesso pulmonar, derrame pleural e DPOC.
+    </div>
+
+    <a class="botao" href="https://youtu.be/yZf6y4Lo2BI" target="_blank">
+        Assistir Aula
+    </a>
+
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula1', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula1-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="card">
+    <div class="numero">02</div>
+    <div class="titulo">Ginecologia</div>
+    <div class="descricao">
+        Doenças benignas da mama, nódulos benignos, câncer de mama e rastreio de câncer de mama.
+    </div>
+
+    <a class="botao" href="https://youtu.be/ePQo7anMOJM" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula2', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula2-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">03</div>
+    <div class="titulo">Hematologia</div>
+    <div class="descricao">
+        Anemias, linfomas, leucemias, reações transfusionais, vasculites e púrpuras.
+    </div>
+
+    <a class="botao" href="https://youtu.be/VgYjMQMae_A" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula3', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula3-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">04</div>
+    <div class="titulo">Trauma I</div>
+    <div class="descricao">
+        ATLS, trauma torácico, trauma abdominal e trauma pélvico.
+    </div>
+
+    <a class="botao" href="https://youtu.be/EZi_1XXCGlg" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula4', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula4-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">05</div>
+    <div class="titulo">Psiquiatria</div>
+    <div class="descricao">
+        TAG, transtorno do pânico, bipolaridade, transtornos alimentares, fobia social, TEPT, depressão maior e delirium tremens.
+    </div>
+
+    <a class="botao" href="https://youtu.be/eAVhYz_WzMM" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula5', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula5-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">06</div>
+    <div class="titulo">Obstetrícia / Pediatria</div>
+    <div class="descricao">
+        Sífilis gestacional, sífilis congênita, toxoplasmose na gestante e toxoplasmose congênita.
+    </div>
+
+    <a class="botao" href="https://youtu.be/9mGNIb-7EK8" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula6', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula6-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">07</div>
+    <div class="titulo">Reumatologia</div>
+    <div class="descricao">
+        Artrite reumatoide, lúpus, artrite gotosa, osteoartrose, artrite séptica, fibromialgia e lombalgias.
+    </div>
+
+    <a class="botao" href="https://youtu.be/OLepW2DYTko" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula7', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula7-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">08</div>
+    <div class="titulo">Obstetrícia II</div>
+    <div class="descricao">
+        Pré-natal de baixo e alto risco, hemorragias da gestação, placenta prévia e DPP.
+    </div>
+
+    <a class="botao" href="https://youtu.be/Wa7RGvZwhuU" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula8', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula8-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">09</div>
+    <div class="titulo">Preventiva I</div>
+    <div class="descricao">
+        Financiamentos, conselhos, Lei 8.142, programas do MS, vigilância epidemiológica e atribuições ACS/ACE.
+    </div>
+
+    <a class="botao" href="https://youtu.be/fC_Tdy8Du44" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula9', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula9-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">10</div>
+    <div class="titulo">Pediatria I</div>
+    <div class="descricao">
+        Doenças exantemáticas, parvovirose, rubéola, varicela, Kawasaki, escarlatina e desidratação.
+    </div>
+
+    <a class="botao" href="https://youtu.be/zFNfCATf2JM" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula10', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula10-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">11</div>
+    <div class="titulo">Cardiologia</div>
+    <div class="descricao">
+        Valvopatias, insuficiência cardíaca, arritmias, fibrilação atrial, ACLS, PCR e cardiopatias congênitas.
+    </div>
+
+    <a class="botao" href="https://youtu.be/8bl255K_I2Q" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula11', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula11-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">12</div>
+    <div class="titulo">Emergências Clínicas</div>
+    <div class="descricao">
+        Sepse, hemorragias digestivas, intoxicações exógenas, insuficiência renal aguda e cirurgia vascular.
+    </div>
+
+    <a class="botao" href="https://youtu.be/e-J21Q444m0" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula12', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula12-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">13</div>
+    <div class="titulo">Preventiva II</div>
+    <div class="descricao">
+        Sigilo médico, declaração de óbito, doenças ocupacionais, pneumoconioses e acidentes ofídicos.
+    </div>
+
+    <a class="botao" href="https://youtu.be/38qqfSDZhQE" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula13', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula13-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">14</div>
+    <div class="titulo">Ginecologia II</div>
+    <div class="descricao">
+        Amenorreias, SOP, Ferriman-Gallwey, sangramento uterino anormal, endometriose e ISTs.
+    </div>
+
+    <a class="botao" href="https://youtu.be/rJl-7mNDvJQ" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula14', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula14-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">15</div>
+    <div class="titulo">Endocrinologia</div>
+    <div class="descricao">
+        Tireoidopatias, diabetes mellitus, obesidade e síndrome metabólica.
+    </div>
+
+    <a class="botao" href="https://youtu.be/rto_49nvUsY" target="_blank">
+        Assistir Aula
+    </a>
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula15', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula15-check">
+            ✓
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card">
+    <div class="numero">16</div>
+    <div class="titulo">Neonatologia</div>
+
+    <div class="descricao">
+        TORCHS, icterícia neonatal, aloimunização Rh, reanimação neonatal e triagem neonatal.
+    </div>
+
+    <a class="botao" href="https://youtu.be/rSypSqeD4I4" target="_blank">
+        Assistir Aula
+    </a>
+
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula16', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula16-check">
+            ✓
+        </div>
+
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="numero">17</div>
+
+    <div class="titulo">Nefro, Uro e Proctologia</div>
+
+    <div class="descricao">
+        Doenças da próstata, ITU e doenças orificiais.
+    </div>
+
+    <a class="botao" href="https://youtu.be/JZEyIji3Gzc" target="_blank">
+        Assistir Aula
+    </a>
+
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula17', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula17-check">
+            ✓
+        </div>
+
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="numero">18</div>
+
+    <div class="titulo">Neurologia</div>
+
+    <div class="descricao">
+        Conteúdo de neurologia do Revalida.
+    </div>
+
+    <a class="botao" href="https://youtu.be/VhLSz0B7sfk" target="_blank">
+        Assistir Aula
+    </a>
+
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula18', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula18-check">
+            ✓
+        </div>
+
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="numero">19</div>
+
+    <div class="titulo">Gastro I</div>
+
+    <div class="descricao">
+        Conteúdo de gastroenterologia do Revalida.
+    </div>
+
+    <a class="botao" href="https://youtu.be/5jH2kOzam1A" target="_blank">
+        Assistir Aula
+    </a>
+
+    <div class="status-aula">
+
+        <button class="concluir-btn" onclick="concluirAula('aula19', this)">
+            Concluir Aula
+        </button>
+
+        <div class="check" id="aula19-check">
+            ✓
+        </div>
+
+    </div>
+</div>
+<script>
+
+function entrar(){
+
+    let login = document.getElementById("login").value;
+    let senha = document.getElementById("senha").value;
+
+    if(login === "revalida2026" && senha === "revalida2026"){
+
+        document.getElementById("loginContainer").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+
+        carregarProgresso();
+
+    }else{
+
+        alert("Login ou senha incorretos!");
+
+    }
+
+}
+
+function concluirAula(aula, botao){
+
+    let check = document.getElementById(aula + "-check");
+
+    if(localStorage.getItem(aula) === "ok"){
+
+        localStorage.removeItem(aula);
+
+        check.style.display = "none";
+
+        botao.innerText = "Concluir Aula";
+
+    }else{
+
+        localStorage.setItem(aula, "ok");
+
+        check.style.display = "flex";
+
+        botao.innerText = "Aula Concluída";
+
+    }
+
+}
+
+function carregarProgresso(){
+
+    for(let i = 1; i <= 19; i++){
+
+        let aula = "aula" + i;
+
+        let check = document.getElementById(aula + "-check");
+
+        let botao = document.querySelector(
+            '[onclick*="' + aula + '"]'
+        );
+
+        if(localStorage.getItem(aula) === "ok"){
+
+            check.style.display = "flex";
+
+            if(botao){
+
+                botao.innerText = "Aula Concluída";
+
+            }
+
+        }else{
+
+            check.style.display = "none";
+
+            if(botao){
+
+                botao.innerText = "Concluir Aula";
+
+            }
+
+        }
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
