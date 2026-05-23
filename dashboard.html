@@ -53,13 +53,6 @@ html{
 scroll-behavior:smooth;
 }
 
-body{
-background:#090B10;
-color:white;
-overflow-x:hidden;
-min-height:100vh;
-}
-
 /* ===================================
 BACKGROUND
 =================================== */
@@ -113,10 +106,11 @@ SIDEBAR
 
 position:fixed;
 top:0;
+bottom:0;
 left:0;
 
 width:300px;
-height:100vh;
+min-height:100dvh;
 
 background:
 linear-gradient(
@@ -267,7 +261,19 @@ margin-left:300px;
 
 padding:35px;
 
-min-height:100vh;
+padding-top:
+calc(
+env(safe-area-inset-top)
++ 35px
+);
+
+padding-bottom:
+calc(
+env(safe-area-inset-bottom)
++ 35px
+);
+
+min-height:100dvh;
 
 }
 
@@ -609,7 +615,18 @@ padding:
 16px
 120px;
 
-padding-top:95px;
+padding-top:
+calc(
+env(safe-area-inset-top)
++ 95px
+);
+
+padding-bottom:
+calc(
+120px
++
+env(safe-area-inset-bottom)
+);
 
 }
 
@@ -619,8 +636,17 @@ display:flex;
 
 position:fixed;
 
-top:18px;
-right:18px;
+top:
+calc(
+env(safe-area-inset-top)
++ 14px
+);
+
+right:
+max(
+14px,
+env(safe-area-inset-right)
+);
 
 z-index:1000;
 
@@ -1144,7 +1170,7 @@ sidebar.classList
 });
 
 </script>
-<script src="../js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
