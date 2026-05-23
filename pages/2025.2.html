@@ -491,6 +491,14 @@ RESULTADO FINAL
 <div class="resumo"
 id="resumoResultado"></div>
 
+<button class="btn-responder"
+onclick="salvarProva()"
+style="margin-top:20px;">
+
+💾 Salvar Prova
+
+</button>
+
 <div class="lista-erros"
 id="listaErros"></div>
 
@@ -989,6 +997,44 @@ salvarMarcacoes();
 }
 
 });
+function salvarProva(){
+
+let total = acertos + erros;
+
+let porcentagem =
+total > 0
+? ((acertos / total) * 100).toFixed(1)
+: 0;
+
+let prova = {
+
+data: new Date().toLocaleString(),
+
+acertos: acertos,
+
+erros: erros,
+
+porcentagem: porcentagem,
+
+questoesErradas: questoesErradas
+
+};
+
+let provasSalvas =
+JSON.parse(
+localStorage.getItem("provas_salvas")
+) || [];
+
+provasSalvas.push(prova);
+
+localStorage.setItem(
+"provas_salvas",
+JSON.stringify(provasSalvas)
+);
+
+alert("✅ Prova salva com sucesso!");
+
+}
 </script>
 
 </body>

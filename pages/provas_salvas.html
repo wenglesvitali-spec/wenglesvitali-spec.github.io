@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Provas Salvas</title>
+
+<style>
+
+body{
+background:#0F1115;
+color:white;
+font-family:Arial;
+padding:20px;
+}
+
+.titulo{
+font-size:28px;
+margin-bottom:25px;
+color:#7CFFB2;
+}
+
+.prova{
+background:#171A21;
+padding:20px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.erro{
+background:#1D212B;
+padding:16px;
+border-radius:16px;
+margin-top:15px;
+}
+
+.btn{
+padding:12px 18px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:bold;
+margin-top:15px;
+background:#7CFFB2;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 class="titulo">
+📚 Provas Salvas
+</h1>
+
+<div id="conteudo"></div>
+
+<script>
+
+let provas =
+JSON.parse(
+localStorage.getItem("provas_salvas")
+) || [];
+
+let html = "";
+
+if(provas.length === 0){
+
+html = "<h2>Nenhuma prova salva.</h2>";
+
+}else{
+
+provas.reverse().forEach((prova,index)=>{
+
+html += `
+
+<div class="prova">
+
+<h2>
+📝 Prova ${provas.length - index}
+</h2>
+
+<p>
+📅 ${prova.data}
+</p>
+
+<p>
+✅ Acertos:
+<strong>${prova.acertos}</strong>
+</p>
+
+<p>
+❌ Erros:
+<strong>${prova.erros}</strong>
+</p>
+
+<p>
+📊 Aproveitamento:
+<strong>${prova.porcentagem}%</strong>
+</p>
+
+<h3 style="margin-top:20px;">
+Questões Erradas
+</h3>
+
+`;
+
+if(prova.questoesErradas.length === 0){
+
+html += `
+<p>
+🎉 Nenhuma questão errada!
+</p>
+`;
+
+}else{
+
+prova.questoesErradas.forEach(q=>{
+
+html += `
+
+<div class="erro">
+
+<h3>
+Questão ${q.numero}
+</h3>
+
+<p style="margin-top:10px;">
+${q.pergunta}
+</p>
+
+<p style="margin-top:10px;">
+❌ Sua resposta:
+<strong>${q.marcada}</strong>
+</p>
+
+<p style="margin-top:10px;">
+✅ Correta:
+<strong>${q.correta}</strong>
+</p>
+
+<p style="margin-top:10px;">
+💡 ${q.comentario || ""}
+</p>
+
+</div>
+
+`;
+
+});
+
+}
+
+html += `
+
+<button class="btn"
+onclick="deletarProva(${index})">
+
+🗑 Excluir prova
+
+</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+document.getElementById("conteudo")
+.innerHTML = html;
+
+function deletarProva(index){
+
+if(confirm("Deseja excluir esta prova?")){
+
+provas.splice(
+provas.length - 1 - index,
+1
+);
+
+localStorage.setItem(
+"provas_salvas",
+JSON.stringify(provas)
+);
+
+location.reload();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
