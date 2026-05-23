@@ -129,7 +129,7 @@ CONTAINER
 max-width:980px;
 margin:auto;
 
-padding-top:120px;
+padding-top:150px;
 padding-bottom:140px;
 }
 
@@ -381,49 +381,77 @@ transition:0.3s;
 GRADE QUESTOES
 ========================================= */
 
-.grade-questoes{
-display:none;
+/* =========================================
+BARRA GABARITO
+========================================= */
 
-flex-wrap:wrap;
+.barra-gabarito{
 
-gap:10px;
+position:fixed;
 
-padding:18px;
+top:76px;
 
-margin-bottom:22px;
+left:0;
+right:0;
 
-border-radius:28px;
+z-index:9998;
+
+padding-left:18px;
+padding-right:18px;
+
+padding-bottom:6px;
 
 background:
-rgba(255,255,255,0.03);
+linear-gradient(
+180deg,
+rgba(2,6,23,0.98),
+rgba(2,6,23,0.90)
+);
 
 backdrop-filter:blur(14px);
 
-border:
-1px solid rgba(255,255,255,0.04);
-
-animation:fadeGrade 0.25s ease;
 }
 
-@keyframes fadeGrade{
 
-from{
-opacity:0;
-transform:translateY(-5px);
+/* =========================================
+GRADE QUESTOES
+========================================= */
+
+.grade-questoes{
+
+cursor:grab;
+user-select:none;
+
+display:flex;
+
+gap:10px;
+
+overflow-x:auto;
+
+overflow-y:hidden;
+
+padding:12px 4px;
+
+scrollbar-width:none;
+
+-webkit-overflow-scrolling:touch;
 }
 
-to{
-opacity:1;
-transform:translateY(0);
+.grade-questoes.arrastando{
+cursor:grabbing;
 }
 
+.grade-questoes::-webkit-scrollbar{
+display:none;
 }
 
 .numero-questao{
-width:44px;
-height:44px;
 
-border-radius:14px;
+min-width:46px;
+width:46px;
+height:46px;
+
+border-radius:16px;
 
 display:flex;
 align-items:center;
@@ -441,6 +469,8 @@ background:#1E293B;
 
 border:
 2px solid transparent;
+
+flex-shrink:0;
 }
 
 .numero-questao:hover{
@@ -833,8 +863,48 @@ body{
 padding:12px;
 }
 
+.container{
+padding-top:145px;
+}
+
+.topo{
+
+padding:
+max(12px, env(safe-area-inset-top))
+14px
+14px
+14px;
+
+}
+
+.barra-gabarito{
+top:72px;
+padding-left:12px;
+padding-right:12px;
+}
+
 .logo-topo{
-font-size:22px;
+font-size:18px;
+}
+
+.header-left{
+gap:10px;
+}
+
+.estatisticas{
+gap:8px;
+}
+
+.estatistica{
+padding:10px 12px;
+font-size:12px;
+border-radius:14px;
+}
+
+.btn-menu{
+width:46px;
+height:46px;
+border-radius:15px;
 }
 
 .questao-box{
@@ -852,63 +922,20 @@ padding:16px;
 border-radius:18px;
 }
 
-.estatisticas{
-gap:8px;
-}
-
-.estatistica{
-padding:12px 14px;
-font-size:13px;
-}
-
-.toggle-grade{
-width:50px;
-height:50px;
-}
-
 .btn-nav,
 .btn-responder{
 padding:16px;
 }
-/* =========================================
-HEADER MOBILE
-========================================= */
 
-@media(max-width:768px){
-
-.topo{
-
-padding:
-max(12px, env(safe-area-inset-top))
-14px
-14px
-14px;
-
-}
-
-.header-left{
-gap:10px;
-}
-
-.logo-topo{
-font-size:18px;
-}
-
-.estatistica{
-padding:10px 12px;
-font-size:12px;
-border-radius:14px;
-}
-
-.toggle-grade,
-.btn-menu{
-width:46px;
-height:46px;
-border-radius:15px;
+.numero-questao{
+width:42px;
+min-width:42px;
+height:42px;
+font-size:13px;
 }
 
 }
-}
+
 /* =========================================
 BLOQUEAR ZOOM IOS / ANDROID
 ========================================= */
@@ -921,13 +948,9 @@ font-size:16px;
 touch-action:manipulation;
 }
 
-/* REMOVE HIGHLIGHT IOS */
-
 *{
 -webkit-tap-highlight-color:transparent;
 }
-
-/* BLOQUEIA ZOOM DOUBLE TAP */
 
 html{
 touch-action:manipulation;
@@ -972,14 +995,6 @@ INEP 2025.2
 
 <!-- GABARITO -->
 
-<div class="toggle-grade"
-onclick="toggleGradeQuestoes()">
-
-<span id="setaGrade">
-▾
-</span>
-
-</div>
 
 <!-- MENU -->
 
@@ -1027,10 +1042,17 @@ id="menuOpcoes">
 
 </div>
 
-<!-- GRADE -->
+<!-- GABARITO FIXO -->
 
-<div class="grade-questoes"
-id="gradeQuestoes"></div>
+<div class="barra-gabarito">
+
+<div
+class="grade-questoes"
+id="gradeQuestoes">
+
+</div>
+
+</div>
 
 <!-- QUESTAO -->
 
@@ -1304,37 +1326,6 @@ alert("📘 Modo estudo ativado");
 
 }
 
-/* =========================================
-TOGGLE QUESTOES
-========================================= */
-
-function toggleGradeQuestoes(){
-
-let grade =
-document.getElementById("gradeQuestoes");
-
-let seta =
-document.getElementById("setaGrade");
-
-if(grade.style.display === "flex"){
-
-grade.style.display = "none";
-
-seta.style.transform = "rotate(0deg)";
-
-seta.innerHTML = "▾";
-
-}else{
-
-grade.style.display = "flex";
-
-seta.style.transform = "rotate(180deg)";
-
-seta.innerHTML = "▴";
-
-}
-
-}
 
 /* =========================================
 GERAR GRADE
@@ -1410,19 +1401,6 @@ function irParaQuestao(index){
 
 questaoAtual = index;
 
-/* FECHA MENU QUESTOES */
-
-document.getElementById("gradeQuestoes")
-.style.display = "none";
-
-/* VOLTA ICONE */
-
-document.getElementById("setaGrade")
-.innerHTML = "☰";
-
-document.getElementById("setaGrade")
-.style.transform = "rotate(0deg)";
-
 /* SALVA */
 
 salvarProgresso();
@@ -1430,6 +1408,13 @@ salvarProgresso();
 /* CARREGA */
 
 carregarQuestao();
+
+/* SCROLL TOPO */
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 }
 
@@ -2001,7 +1986,65 @@ JSON.stringify(provas)
 alert("✅ Prova salva com sucesso!");
 
 }
+/* =========================================
+DRAG SCROLL GABARITO DESKTOP
+========================================= */
 
+const slider =
+document.getElementById("gradeQuestoes");
+
+let pressionado = false;
+
+let inicioX;
+
+let scrollInicial;
+
+slider.addEventListener("mousedown",(e)=>{
+
+pressionado = true;
+
+slider.classList.add("arrastando");
+
+inicioX =
+e.pageX - slider.offsetLeft;
+
+scrollInicial =
+slider.scrollLeft;
+
+});
+
+slider.addEventListener("mouseleave",()=>{
+
+pressionado = false;
+
+slider.classList.remove("arrastando");
+
+});
+
+slider.addEventListener("mouseup",()=>{
+
+pressionado = false;
+
+slider.classList.remove("arrastando");
+
+});
+
+slider.addEventListener("mousemove",(e)=>{
+
+if(!pressionado) return;
+
+e.preventDefault();
+
+const x =
+e.pageX - slider.offsetLeft;
+
+const distancia =
+(x - inicioX) * 2;
+
+slider.scrollLeft =
+scrollInicial - distancia;
+
+});
 </script>
 
 </body>
