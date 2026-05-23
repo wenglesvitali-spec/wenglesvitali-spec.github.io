@@ -29,3 +29,50 @@ seta.style.transform =
 }
 
 }
+/* =========================================
+MENU
+========================================= */
+
+function abrirMenu(){
+
+const menu =
+document.getElementById("menuOpcoes");
+
+menu.style.display =
+
+menu.style.display === "flex"
+? "none"
+: "flex";
+
+}
+
+/* =========================================
+HOME
+========================================= */
+
+function irHome(){
+
+window.location.href =
+"../dashboard.html";
+
+}
+
+/* =========================================
+FECHAR MENU CLICK FORA
+========================================= */
+
+document.addEventListener("click",function(e){
+
+const menu =
+document.getElementById("menuOpcoes");
+
+const wrapper =
+document.querySelector(".menu-wrapper");
+
+if(!wrapper.contains(e.target)){
+
+menu.style.display = "none";
+
+}
+
+});

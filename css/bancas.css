@@ -344,3 +344,197 @@ body::-webkit-scrollbar {
 body {
   scrollbar-width: none; /* Firefox */
 }
+
+/* =========================================
+HEADER PREMIUM
+========================================= */
+
+.topo{
+
+position:fixed;
+
+top:0;
+left:0;
+right:0;
+
+z-index:9999;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:
+max(12px, env(safe-area-inset-top))
+20px
+16px
+20px;
+
+background:
+rgba(9,11,16,0.92);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border-bottom:
+1px solid rgba(255,255,255,0.05);
+}
+
+/* =========================================
+HEADER LEFT
+========================================= */
+
+.header-left{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+}
+
+.logo-topo{
+
+font-size:24px;
+
+font-weight:900;
+
+letter-spacing:1px;
+
+color:#7CFFB2;
+}
+
+/* =========================================
+HEADER RIGHT
+========================================= */
+
+.header-right{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+}
+
+/* =========================================
+MENU
+========================================= */
+
+.menu-wrapper{
+
+position:relative;
+}
+
+.btn-menu{
+
+width:54px;
+height:54px;
+
+border:none;
+
+border-radius:18px;
+
+background:
+rgba(255,255,255,0.04);
+
+backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
+
+color:white;
+
+font-size:28px;
+
+cursor:pointer;
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+transition:0.25s;
+}
+
+.btn-menu:hover{
+
+transform:scale(1.05);
+
+background:#1E293B;
+}
+
+/* =========================================
+MENU DROPDOWN
+========================================= */
+
+.menu-opcoes{
+
+display:none;
+
+position:absolute;
+
+top:70px;
+right:0;
+
+width:220px;
+
+background:
+rgba(15,23,42,0.98);
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+border-radius:24px;
+
+padding:14px;
+
+z-index:9999;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,0.45);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+flex-direction:column;
+
+gap:10px;
+}
+
+.menu-opcoes button{
+
+padding:16px;
+
+border:none;
+
+border-radius:16px;
+
+background:#172033;
+
+color:white;
+
+font-weight:700;
+
+font-size:15px;
+
+cursor:pointer;
+
+transition:0.2s;
+}
+
+.menu-opcoes button:hover{
+
+transform:translateY(-2px);
+
+background:#1E293B;
+}
+
+/* =========================================
+CONTAINER AJUSTE
+========================================= */
+
+.container{
+
+padding-top:120px;
+}
