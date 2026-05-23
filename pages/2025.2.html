@@ -2,6 +2,17 @@
 <html lang="pt-BR">
 <head>
 
+<meta name="theme-color" content="#020617">
+
+<meta name="apple-mobile-web-app-status-bar-style"
+content="black">
+
+<meta name="apple-mobile-web-app-capable"
+content="yes">
+
+<meta name="mobile-web-app-capable"
+content="yes">
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -48,6 +59,24 @@ scrollbar-width:none;
 
 body::-webkit-scrollbar{
 display:none;
+}
+
+/* =========================================
+SAFE AREA IPHONE
+========================================= */
+
+body{
+padding-top:
+max(18px, env(safe-area-inset-top));
+
+padding-left:
+max(18px, env(safe-area-inset-left));
+
+padding-right:
+max(18px, env(safe-area-inset-right));
+
+padding-bottom:
+max(18px, env(safe-area-inset-bottom));
 }
 
 /* =========================================
@@ -1162,6 +1191,19 @@ IR QUESTAO
 function irParaQuestao(index){
 
 questaoAtual = index;
+
+/* FECHA MENU QUESTOES */
+
+document.getElementById("gradeQuestoes")
+.style.display = "none";
+
+/* VOLTA ICONE */
+
+document.getElementById("setaGrade")
+.innerHTML = "☰";
+
+document.getElementById("setaGrade")
+.style.transform = "rotate(0deg)";
 
 /* SALVA */
 
