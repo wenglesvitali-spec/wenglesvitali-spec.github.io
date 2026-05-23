@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
+<link rel="manifest" href="/manifest.json">
 <meta charset="UTF-8">
 
 <meta
@@ -13,6 +13,22 @@ user-scalable=no,
 viewport-fit=cover">
 
 <meta name="theme-color"
+content="#020617">
+
+<meta
+name="apple-mobile-web-app-capable"
+content="yes">
+
+<meta
+name="mobile-web-app-capable"
+content="yes">
+
+<meta
+name="apple-mobile-web-app-status-bar-style"
+content="black-translucent">
+
+<meta
+name="theme-color"
 content="#020617">
 
 <title>Provas Salvas</title>
@@ -40,11 +56,45 @@ sans-serif;
 BODY
 ========================================= */
 
-html,
-body{
+html{
+
 width:100%;
-min-height:100%;
+height:100%;
+
 overflow-x:hidden;
+
+background:#020617;
+
+scroll-behavior:smooth;
+
+-webkit-text-size-adjust:100%;
+
+touch-action:manipulation;
+
+}
+
+body{
+
+width:100%;
+
+min-height:100dvh;
+
+overflow-x:hidden;
+overflow-y:auto;
+
+margin:0;
+
+padding-top:
+calc(env(safe-area-inset-top) + 16px);
+
+padding-left:
+max(16px, env(safe-area-inset-left));
+
+padding-right:
+max(16px, env(safe-area-inset-right));
+
+padding-bottom:
+calc(env(safe-area-inset-bottom) + 24px);
 
 background:
 linear-gradient(
@@ -54,10 +104,8 @@ linear-gradient(
 );
 
 color:#F8FAFC;
-}
 
-body{
-padding:20px;
+-webkit-overflow-scrolling:touch;
 }
 
 /* =========================================
@@ -77,13 +125,16 @@ HEADER
 
 position:sticky;
 
-top:0;
+top:
+env(safe-area-inset-top);
 
-z-index:999;
+z-index:1000;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
+
+gap:14px;
 
 padding:18px;
 
@@ -94,10 +145,15 @@ border-radius:24px;
 background:
 rgba(15,23,42,0.92);
 
-backdrop-filter:blur(18px);
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
 
 border:
 1px solid rgba(255,255,255,0.05);
+
+overflow:visible;
+
 }
 
 .logo{
@@ -400,15 +456,27 @@ line-height:1.8;
 /* =========================================
 RESPONSIVO
 ========================================= */
-
 @media(max-width:768px){
 
 body{
-padding:12px;
+
+padding-top:
+calc(env(safe-area-inset-top) + 12px);
+
+padding-left:
+max(12px, env(safe-area-inset-left));
+
+padding-right:
+max(12px, env(safe-area-inset-right));
+
+padding-bottom:
+calc(env(safe-area-inset-bottom) + 20px);
+
 }
 
 .topo{
 padding:14px;
+border-radius:20px;
 }
 
 .logo{
@@ -435,6 +503,42 @@ width:100%;
 
 }
 
+/* =========================================
+APP FIX IOS / ANDROID
+========================================= */
+
+*{
+-webkit-tap-highlight-color:transparent;
+}
+
+input,
+textarea,
+select,
+button{
+font-size:16px;
+touch-action:manipulation;
+}
+
+img{
+max-width:100%;
+height:auto;
+display:block;
+}
+
+.prova-card,
+.questao-erro,
+.comentario,
+.topo{
+
+overflow:hidden;
+
+}
+
+/* MELHOR SCROLL IOS */
+
+*{
+-webkit-overflow-scrolling:touch;
+}
 </style>
 
 </head>
@@ -770,6 +874,9 @@ function voltarPagina(){
 history.back();
 
 }
+document.addEventListener("gesturestart",function(e){
+e.preventDefault();
+});
 
 </script>
 
