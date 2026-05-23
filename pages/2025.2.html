@@ -371,7 +371,7 @@ color:#000;
 user-select:text;
 -webkit-user-select:text;
 }
-mark{
+.highlight{
 background:#FFE96A;
 color:#000;
 padding:2px 4px;
@@ -929,26 +929,48 @@ function sairProva(){
 location.reload();
 
 }
-document.getElementById("enunciado")
-.addEventListener("mouseup", function(){
 
-let selection = window.getSelection();
+function ativarMarcacao(){
+
+const enunciado =
+document.getElementById("enunciado");
+
+function aplicarMarcacao(){
+
+let selection =
+window.getSelection();
 
 if(!selection.rangeCount) return;
 
-let texto = selection.toString().trim();
+let texto =
+selection.toString().trim();
 
 if(texto.length < 2) return;
 
 try{
 
-let range = selection.getRangeAt(0);
+let range =
+selection.getRangeAt(0);
 
-let mark = document.createElement("mark");
+let span =
+document.createElement("span");
 
-mark.className = "highlight";
+span.style.background =
+"#FFE96A";
 
-range.surroundContents(mark);
+span.style.color =
+"#000";
+
+span.style.padding =
+"2px 4px";
+
+span.style.borderRadius =
+"4px";
+
+span.className =
+"highlight";
+
+range.surroundContents(span);
 
 selection.removeAllRanges();
 
@@ -956,11 +978,37 @@ salvarMarcacoes();
 
 }catch(e){
 
-console.log("Seleção inválida");
+console.log(
+"Erro ao marcar texto"
+);
 
 }
 
+}
+
+/* DESKTOP */
+
+enunciado.addEventListener(
+"mouseup",
+aplicarMarcacao
+);
+
+/* IPHONE / IPAD */
+
+enunciado.addEventListener(
+"touchend",
+function(){
+
+setTimeout(
+aplicarMarcacao,
+200
+);
+
 });
+
+}
+
+ativarMarcacao();
 
 function salvarMarcacoes(){
 
@@ -992,7 +1040,11 @@ document.getElementById("enunciado")
 }
 document.addEventListener("click", function(e){
 
-if(e.target.tagName === "MARK"){
+if(
+e.target.classList.contains(
+"highlight"
+)
+){
 
 let texto =
 e.target.innerText;
