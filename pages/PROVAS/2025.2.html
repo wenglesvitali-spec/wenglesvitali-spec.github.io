@@ -151,6 +151,10 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
+flex-wrap:wrap;
+
+gap:10px;
+
 padding:
 max(12px, env(safe-area-inset-top))
 20px
@@ -186,7 +190,9 @@ overflow:hidden;
 .header-right{
 display:flex;
 align-items:center;
-gap:12px;
+gap:10px;
+
+flex-shrink:0;
 }
 
 .logo-topo{
@@ -978,7 +984,41 @@ font-size:13px;
 }
 
 }
+/* =========================================
+IPAD FIX
+========================================= */
 
+@media(max-width:1024px){
+
+.topo{
+padding-bottom:12px;
+}
+
+.container{
+padding-top:170px;
+}
+
+.logo-topo{
+font-size:16px;
+max-width:140px;
+}
+
+.estatistica{
+padding:8px 10px;
+font-size:11px;
+}
+
+.btn-menu{
+width:42px;
+height:42px;
+font-size:22px;
+}
+
+.barra-gabarito{
+top:92px;
+}
+
+}
 /* =========================================
 BLOQUEAR ZOOM IOS / ANDROID
 ========================================= */
