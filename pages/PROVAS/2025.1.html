@@ -24,10 +24,10 @@ content="yes">
 <meta name="apple-mobile-web-app-status-bar-style"
 content="black">
 
-<title>INEP 2025.2</title>
+<title>INEP 2025.1</title>
 <script>
 
-const NOME_PROVA = "INEP 2025.2";
+const NOME_PROVA = "INEP 2025.1";
 
 </script>
 
@@ -995,6 +995,10 @@ onclick="abrirMenu()">
 <div class="menu-opcoes"
 id="menuOpcoes">
 
+<button type="button" onclick="irHome()">
+🏠 Home
+</button>
+
 <button onclick="ativarModoProva()">
 📝 Modo Prova
 </button>
@@ -1011,12 +1015,12 @@ id="menuOpcoes">
 🔎 Diminuir Texto
 </button>
 
-<button onclick="finalizarProva()">
-🏁 Finalizar
+<button onclick="sairProva()">
+🚪 Limpar prova
 </button>
 
-<button onclick="sairProva()">
-🚪 Sair
+<button onclick="finalizarProva()">
+🏁 Finalizar
 </button>
 
 </div>
@@ -1219,7 +1223,7 @@ document.getElementById("erros")
 CARREGAR JSON
 ========================================= */
 
-fetch("../../conteudo/revalida_2025_2.json")
+fetch("../../conteudo/revalida_2025_1.json")
 
 .then(res => res.json())
 
@@ -1931,6 +1935,12 @@ localStorage.removeItem(STORAGE_KEY);
 location.reload();
 
 }
+
+function irHome(){
+
+window.location.href = "../../dashboard.html";
+
+}
 /* =========================================
 SALVAR PROVA
 ========================================= */
@@ -1954,6 +1964,12 @@ if(statusQuestoes[index] === "errou"){
 questoesErradas.push({
 
 numero:q.numero,
+
+enunciado:
+q.pergunta || "",
+
+alternativas:
+q.alternativas || [],
 
 respostaUsuario:
 q.alternativas[
