@@ -2,10 +2,18 @@
 <html lang="pt-BR">
 <head>
 
-<meta name="theme-color" content="#020617">
+<meta charset="UTF-8">
 
-<meta name="apple-mobile-web-app-status-bar-style"
-content="black">
+<meta
+name="viewport"
+content="width=device-width,
+initial-scale=1,
+maximum-scale=1,
+user-scalable=no,
+viewport-fit=cover">
+
+<meta name="theme-color"
+content="#020617">
 
 <meta name="apple-mobile-web-app-capable"
 content="yes">
@@ -13,19 +21,8 @@ content="yes">
 <meta name="mobile-web-app-capable"
 content="yes">
 
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<meta name="apple-mobile-web-app-capable"
-content="yes">
-
 <meta name="apple-mobile-web-app-status-bar-style"
-content="black-translucent">
-
-<meta name="theme-color"
-content="#0F172A">
+content="black">
 
 <title>INEP 2025.2</title>
 
@@ -51,10 +48,20 @@ sans-serif;
 
 html,
 body{
+width:100%;
 height:100%;
-scroll-behavior:smooth;
+overflow-x:hidden;
 overflow-y:auto;
+scroll-behavior:smooth;
 scrollbar-width:none;
+
+background:#020617;
+
+touch-action:pan-y;
+
+overscroll-behavior:none;
+
+-webkit-text-size-adjust:100%;
 }
 
 body::-webkit-scrollbar{
@@ -66,6 +73,9 @@ SAFE AREA IPHONE
 ========================================= */
 
 body{
+
+min-height:100vh;
+
 padding-top:
 max(18px, env(safe-area-inset-top));
 
@@ -77,6 +87,14 @@ max(18px, env(safe-area-inset-right));
 
 padding-bottom:
 max(18px, env(safe-area-inset-bottom));
+
+background:
+linear-gradient(
+180deg,
+#020617 0%,
+#0F172A 100%
+);
+
 }
 
 /* =========================================
@@ -723,7 +741,29 @@ padding:16px;
 }
 
 }
+/* =========================================
+BLOQUEAR ZOOM IOS / ANDROID
+========================================= */
 
+input,
+textarea,
+select,
+button{
+font-size:16px;
+touch-action:manipulation;
+}
+
+/* REMOVE HIGHLIGHT IOS */
+
+*{
+-webkit-tap-highlight-color:transparent;
+}
+
+/* BLOQUEIA ZOOM DOUBLE TAP */
+
+html{
+touch-action:manipulation;
+}
 </style>
 
 </head>
