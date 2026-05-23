@@ -43,3 +43,15 @@ color:white;
 padding:40px;
 flex:1;
 }
+html, body {
+  height: 100%;
+  overflow-y: scroll; /* rolagem funcional */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+}

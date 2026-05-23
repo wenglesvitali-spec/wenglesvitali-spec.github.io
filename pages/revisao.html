@@ -68,7 +68,18 @@ background:#22C55E;
 background:#EF4444;
 color:white;
 }
+html, body {
+  height: 100%;
+  overflow-y: scroll; /* rolagem funcional */
+}
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+}
 </style>
 
 </head>
