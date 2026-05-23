@@ -201,7 +201,11 @@ font-weight:900;
 letter-spacing:1px;
 color:#7CFFB2;
 
-white-space:nowrap;
+overflow:hidden;
+
+text-overflow:ellipsis;
+
+max-width:180px;
 }
 
 /* =========================================
@@ -1987,7 +1991,72 @@ behavior:"smooth"
 });
 
 }
+/* =========================================
+GRAFICO RESULTADO
+========================================= */
 
+function gerarGrafico(){
+
+const canvas =
+document.getElementById(
+"graficoResultado"
+);
+
+if(!canvas) return;
+
+if(window.graficoAtual){
+window.graficoAtual.destroy();
+}
+
+window.graficoAtual =
+new Chart(canvas,{
+
+type:"doughnut",
+
+data:{
+
+labels:[
+"Acertos",
+"Erros"
+],
+
+datasets:[{
+
+data:[
+acertos,
+erros
+],
+
+backgroundColor:[
+"#22C55E",
+"#EF4444"
+],
+
+borderWidth:0
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+labels:{
+color:"#FFFFFF"
+}
+}
+
+}
+
+}
+
+});
+
+}
 /* =========================================
 SAIR
 ========================================= */
