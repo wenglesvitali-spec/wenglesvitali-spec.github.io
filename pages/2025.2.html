@@ -660,6 +660,7 @@ document.getElementById("erros")
 
 questoesErradas.push({
 
+
 numero:q.numero,
 pergunta:q.pergunta,
 marcada:q.alternativas[selecionada],
@@ -667,7 +668,7 @@ correta:q.alternativas[q.correta],
 comentario:q.comentario
 
 });
-
+salvarRevisao(q, selecionada);
 }
 
 }
@@ -1033,6 +1034,62 @@ JSON.stringify(provasSalvas)
 );
 
 alert("✅ Prova salva com sucesso!");
+
+}
+function salvarRevisao(q, selecionada){
+
+let revisoes =
+JSON.parse(
+localStorage.getItem("revisoes")
+) || [];
+
+let hoje = new Date();
+
+let amanha = new Date();
+
+amanha.setDate(
+hoje.getDate() + 1
+);
+
+let item = {
+
+numero:q.numero,
+
+pergunta:q.pergunta,
+
+alternativas:q.alternativas,
+
+correta:q.correta,
+
+comentario:q.comentario,
+
+nivel:1,
+
+ultimaRevisao:hoje.toISOString(),
+
+proximaRevisao:amanha.toISOString(),
+
+acertos:0,
+
+erros:1
+
+};
+
+let existe =
+revisoes.find(r =>
+r.numero === q.numero
+);
+
+if(!existe){
+
+revisoes.push(item);
+
+}
+
+localStorage.setItem(
+"revisoes",
+JSON.stringify(revisoes)
+);
 
 }
 </script>
