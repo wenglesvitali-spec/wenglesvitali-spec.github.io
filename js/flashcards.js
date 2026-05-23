@@ -13,7 +13,7 @@ flashcard.addEventListener("click", () => {
 
 });
 
-fetch("../flashcards/flashcards.json")
+fetch("../conteudo/flashcards.json")
 
 .then(res => res.json())
 
@@ -139,7 +139,7 @@ document
 
     let valor = this.value;
 
-    fetch("../flashcards/flashcards.json")
+    fetch("../conteudo/flashcards.json")
 
     .then(res => res.json())
 
