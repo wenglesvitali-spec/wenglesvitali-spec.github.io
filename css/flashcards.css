@@ -10,14 +10,46 @@ RESET
 }
 
 /* ==================================================
+HTML
+================================================== */
+
+html{
+    height:-webkit-fill-available;
+    overflow-x:hidden;
+}
+
+/* ==================================================
 BODY
 ================================================== */
 
 body{
-    background:#050505;
+
+    background:
+    radial-gradient(
+        circle at top,
+        #101010 0%,
+        #050505 60%
+    );
+
     color:#fff;
+
     min-height:100vh;
-    padding:20px;
+    min-height:-webkit-fill-available;
+
+    padding:18px;
+
+    overflow-x:hidden;
+
+    display:flex;
+    justify-content:center;
+
+    scrollbar-width:none;
+
+    -webkit-font-smoothing:antialiased;
+}
+
+body::-webkit-scrollbar{
+    display:none;
 }
 
 /* ==================================================
@@ -25,8 +57,18 @@ CONTAINER
 ================================================== */
 
 .container{
-    max-width:1200px;
-    margin:auto;
+
+    width:100%;
+
+    max-width:1400px;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
 }
 
 /* ==================================================
@@ -38,27 +80,62 @@ header{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    margin-bottom:10px;
+    margin-bottom:12px;
+}
+
+.logo{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        #00ff88,
+        #00cc6f
+    );
+
+    font-size:36px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+    0 10px 30px rgba(0,255,136,0.25);
 }
 
 /* ==================================================
-TITULO
+TITLE
 ================================================== */
 
 header h1{
-    font-size:36px;
+
+    font-size:42px;
+
     color:#00ff88;
+
     margin-bottom:8px;
+
     text-align:center;
+
+    font-weight:800;
 }
 
 /* ==================================================
-SUBTITULO
+SUBTITLE
 ================================================== */
 
 header p{
-    color:#999;
-    font-size:15px;
+
+    color:#aaa;
+
+    font-size:16px;
+
     text-align:center;
 }
 
@@ -67,15 +144,18 @@ ACTIONS
 ================================================== */
 
 .actions{
+
     width:100%;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    gap:12px;
+    gap:14px;
 
-    margin-top:25px;
+    margin-top:28px;
     margin-bottom:28px;
 }
 
@@ -84,22 +164,25 @@ SELECT
 ================================================== */
 
 select{
-    padding:14px 18px;
+
+    padding:16px 20px;
 
     border:none;
+
     outline:none;
 
-    border-radius:16px;
+    border-radius:20px;
 
     background:#121212;
 
     color:#fff;
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:
+    1px solid rgba(255,255,255,0.08);
 
     font-size:15px;
 
-    min-width:230px;
+    min-width:240px;
 
     transition:0.3s;
 }
@@ -109,22 +192,23 @@ select:focus{
 }
 
 /* ==================================================
-BOTAO DARK
+BUTTON DARK
 ================================================== */
 
 .actions button{
-    width:52px;
-    height:52px;
+
+    width:58px;
+    height:58px;
 
     border:none;
 
-    border-radius:16px;
+    border-radius:20px;
 
     background:#00ff88;
 
     color:#000;
 
-    font-size:20px;
+    font-size:22px;
 
     cursor:pointer;
 
@@ -134,6 +218,7 @@ BOTAO DARK
 }
 
 .actions button:hover{
+
     transform:translateY(-2px);
 
     box-shadow:
@@ -141,22 +226,20 @@ BOTAO DARK
 }
 
 /* ==================================================
-STATS PEQUENO HORIZONTAL
+STATS
 ================================================== */
 
 .stats{
+
     display:flex;
 
     justify-content:center;
 
     align-items:center;
 
-    gap:12px;
+    gap:14px;
 
-    margin-top:10px;
-    margin-bottom:28px;
-
-    flex-wrap:nowrap;
+    margin-bottom:30px;
 }
 
 /* ==================================================
@@ -164,9 +247,8 @@ BOX
 ================================================== */
 
 .box{
-    flex:1;
 
-    min-width:0;
+    flex:1;
 
     background:
     linear-gradient(
@@ -178,49 +260,35 @@ BOX
     border:
     1px solid rgba(255,255,255,0.08);
 
-    border-radius:18px;
+    border-radius:24px;
 
-    padding:12px 10px;
+    padding:18px 12px;
 
     text-align:center;
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(20px);
 
     box-shadow:
-    0 5px 18px rgba(0,0,0,0.25);
+    0 10px 35px rgba(0,0,0,0.25);
 }
 
-/* ==================================================
-TEXTOS BOX
-================================================== */
-
 .box span{
+
     display:block;
 
     color:#999;
 
-    font-size:11px;
+    font-size:13px;
 
-    margin-bottom:4px;
-
-    font-weight:500;
+    margin-bottom:6px;
 }
-
-/* ==================================================
-NUMEROS
-================================================== */
 
 .box h2{
-    font-size:17px;
 
-    font-weight:bold;
+    font-size:22px;
 
-    margin:0;
+    font-weight:800;
 }
-
-/* ==================================================
-CORES
-================================================== */
 
 #acertos{
     color:#00ff88;
@@ -235,22 +303,30 @@ FLASHCARD
 ================================================== */
 
 .flashcard{
+
     width:100%;
 
-    height:520px;
+    min-height:68vh;
 
-    perspective:1200px;
+    perspective:1400px;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 
     cursor:pointer;
+
+    transition:0.3s;
+}
+
+.flashcard:hover{
+    transform:translateY(-4px);
 }
 
 /* ==================================================
-CARD INTERNO
+CARD INNER
 ================================================== */
 
 .card-inner{
+
     width:100%;
     height:100%;
 
@@ -261,10 +337,6 @@ CARD INTERNO
     transition:0.8s;
 }
 
-/* ==================================================
-FLIP
-================================================== */
-
 .flashcard.flip .card-inner{
     transform:rotateY(180deg);
 }
@@ -274,14 +346,15 @@ CARD
 ================================================== */
 
 .card{
+
     position:absolute;
 
     width:100%;
     height:100%;
 
-    border-radius:32px;
+    border-radius:38px;
 
-    padding:35px;
+    padding:45px;
 
     backface-visibility:hidden;
 
@@ -297,12 +370,19 @@ CARD
 
     text-align:center;
 
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
     box-shadow:
-    0 10px 35px rgba(0,0,0,0.35);
+    0 20px 60px rgba(0,0,0,0.45);
 }
 
 /* ==================================================
-FRENTE
+FRONT
 ================================================== */
 
 .front{
@@ -313,14 +393,10 @@ FRENTE
         rgba(0,255,136,0.12),
         rgba(255,255,255,0.03)
     );
-
-    border:
-    1px solid rgba(0,255,136,0.2);
-
 }
 
 /* ==================================================
-VERSO
+BACK
 ================================================== */
 
 .back{
@@ -332,11 +408,7 @@ VERSO
         rgba(0,255,136,0.08)
     );
 
-    border:
-    1px solid rgba(255,255,255,0.08);
-
     transform:rotateY(180deg);
-
 }
 
 /* ==================================================
@@ -344,24 +416,24 @@ BADGE
 ================================================== */
 
 .badge{
-    padding:10px 18px;
 
-    border-radius:14px;
+    padding:12px 22px;
+
+    border-radius:16px;
 
     background:#00ff88;
 
     color:#000;
 
-    font-weight:bold;
+    font-weight:800;
 
-    margin-bottom:25px;
+    margin-bottom:28px;
 
     font-size:14px;
 }
 
 .badge.white{
     background:#fff;
-    color:#000;
 }
 
 /* ==================================================
@@ -369,13 +441,16 @@ QUESTION
 ================================================== */
 
 .question{
-    font-size:28px;
 
-    line-height:1.8;
+    font-size:34px;
 
-    margin-bottom:25px;
+    line-height:1.7;
 
-    font-weight:600;
+    margin-bottom:28px;
+
+    font-weight:700;
+
+    max-width:900px;
 }
 
 /* ==================================================
@@ -383,9 +458,12 @@ ANSWER
 ================================================== */
 
 .answer{
-    font-size:24px;
+
+    font-size:30px;
 
     line-height:1.8;
+
+    max-width:900px;
 }
 
 /* ==================================================
@@ -393,11 +471,12 @@ SMALL
 ================================================== */
 
 small{
+
     color:#999;
 
-    font-size:14px;
+    font-size:15px;
 
-    margin-top:20px;
+    margin-top:24px;
 }
 
 /* ==================================================
@@ -405,58 +484,69 @@ CONTROLS
 ================================================== */
 
 .controls{
+
     display:grid;
 
     grid-template-columns:
     repeat(4,1fr);
 
-    gap:15px;
+    gap:16px;
 }
 
 /* ==================================================
-BOTOES
+BUTTONS
 ================================================== */
 
 .controls button{
+
+    min-height:68px;
+
     padding:18px;
 
     border:none;
 
-    border-radius:18px;
+    border-radius:24px;
 
-    background:#141414;
+    background:
+    linear-gradient(
+        145deg,
+        #151515,
+        #0f0f0f
+    );
 
     color:#fff;
 
     cursor:pointer;
 
-    font-size:15px;
+    font-size:16px;
 
-    font-weight:bold;
+    font-weight:700;
 
     transition:0.3s;
 
     border:
     1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 6px 18px rgba(0,0,0,0.25);
 }
 
 .controls button:hover{
+
     transform:translateY(-2px);
 
     border:1px solid #00ff88;
 }
 
-/* ==================================================
-PRIMARY
-================================================== */
-
 .controls .primary{
+
     background:#00ff88;
+
     color:#000;
 }
 
 /* ==================================================
-RESPONSIVO TABLET
+TABLET
 ================================================== */
 
 @media(max-width:900px){
@@ -465,8 +555,62 @@ RESPONSIVO TABLET
         grid-template-columns:1fr 1fr;
     }
 
+    .question{
+        font-size:28px;
+    }
+
+    .answer{
+        font-size:24px;
+    }
+
+}
+
+/* ==================================================
+MOBILE
+================================================== */
+
+@media(max-width:768px){
+
+    body{
+        padding:14px;
+    }
+
+    header h1{
+        font-size:32px;
+    }
+
+    .logo{
+        width:70px;
+        height:70px;
+    }
+
+    .actions{
+        gap:10px;
+    }
+
+    select{
+        flex:1;
+        min-width:0;
+    }
+
+    .stats{
+        gap:10px;
+    }
+
+    .box{
+        padding:14px 10px;
+    }
+
+    .box h2{
+        font-size:16px;
+    }
+
     .flashcard{
-        height:470px;
+        min-height:72vh;
+    }
+
+    .card{
+        padding:28px 22px;
     }
 
     .question{
@@ -477,165 +621,14 @@ RESPONSIVO TABLET
         font-size:20px;
     }
 
-}
-
-/* ==================================================
-RESPONSIVO CELULAR
-================================================== */
-
-@media(max-width:768px){
-
-    body{
-        padding:14px;
-        overflow-x:hidden;
-    }
-
-    /* ==========================================
-    HEADER
-    ========================================== */
-
-    header h1{
-        font-size:28px;
-    }
-
-    header p{
-        font-size:14px;
-    }
-
-    /* ==========================================
-    ACTIONS
-    ========================================== */
-
-    .actions{
-        width:100%;
-
-        gap:10px;
-
-        margin-top:22px;
-        margin-bottom:22px;
-    }
-
-    select{
-        flex:1;
-
-        width:100%;
-
-        min-width:0;
-
-        padding:14px;
-
-        font-size:14px;
-    }
-
-    .actions button{
-        width:50px;
-        height:50px;
-        min-width:50px;
-    }
-
-    /* ==========================================
-    STATS
-    ========================================== */
-
-    .stats{
-        display:flex;
-
-        flex-direction:row;
-
-        justify-content:space-between;
-
-        align-items:center;
-
-        gap:8px;
-
-        margin-bottom:22px;
-    }
-
-    .box{
-        flex:1;
-
-        min-width:0;
-
-        padding:10px 6px;
-
-        border-radius:16px;
-    }
-
-    .box span{
-        font-size:10px;
-    }
-
-    .box h2{
-        font-size:14px;
-    }
-
-    /* ==========================================
-    FLASHCARD
-    ========================================== */
-
-    .flashcard{
-        height:420px;
-        margin-bottom:25px;
-    }
-
-    .card{
-        padding:24px 18px;
-
-        border-radius:24px;
-    }
-
-    /* ==========================================
-    QUESTION
-    ========================================== */
-
-    .question{
-        font-size:20px;
-
-        line-height:1.7;
-    }
-
-    /* ==========================================
-    ANSWER
-    ========================================== */
-
-    .answer{
-        font-size:18px;
-
-        line-height:1.7;
-    }
-
-    /* ==========================================
-    BADGE
-    ========================================== */
-
-    .badge{
-        font-size:13px;
-
-        padding:9px 14px;
-    }
-
-    /* ==========================================
-    CONTROLS
-    ========================================== */
-
     .controls{
         grid-template-columns:1fr 1fr;
-
-        gap:12px;
-    }
-
-    .controls button{
-        padding:16px 12px;
-
-        font-size:14px;
-
-        border-radius:16px;
     }
 
 }
 
 /* ==================================================
-CELULARES PEQUENOS
+SMALL MOBILE
 ================================================== */
 
 @media(max-width:480px){
@@ -644,58 +637,20 @@ CELULARES PEQUENOS
         padding:10px;
     }
 
-    header h1{
-        font-size:24px;
-    }
-
     .flashcard{
-        height:390px;
+        min-height:75vh;
     }
 
     .question{
-        font-size:18px;
+        font-size:21px;
     }
 
     .answer{
-        font-size:16px;
+        font-size:18px;
     }
 
     .controls{
         grid-template-columns:1fr;
     }
 
-    .controls button{
-        width:100%;
-    }
-
-    .stats{
-        gap:6px;
-    }
-
-    .box{
-        padding:9px 5px;
-
-        border-radius:14px;
-    }
-
-    .box span{
-        font-size:9px;
-    }
-
-    .box h2{
-        font-size:13px;
-    }
-
-}
-html, body {
-  height: 100%;
-  overflow-y: scroll; /* rolagem funcional */
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  scrollbar-width: none; /* Firefox */
 }
