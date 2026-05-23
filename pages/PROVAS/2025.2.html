@@ -25,6 +25,11 @@ content="yes">
 content="black">
 
 <title>INEP 2025.2</title>
+<script>
+
+const NOME_PROVA = "INEP 2025.2";
+
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -729,7 +734,86 @@ font-size:20px;
 
 line-height:2;
 }
+/* =========================================
+QUESTOES ERRADAS
+========================================= */
 
+.questoes-erradas{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.questao-erro-card{
+
+background:
+rgba(255,255,255,0.03);
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+border-radius:24px;
+
+padding:20px;
+}
+
+.questao-erro-titulo{
+font-size:18px;
+font-weight:800;
+color:#FF7B7B;
+margin-bottom:14px;
+}
+
+.questao-erro-info{
+line-height:1.8;
+color:#E2E8F0;
+}
+
+.btn-toggle-erro{
+
+margin-top:16px;
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:16px;
+
+background:#172033;
+
+color:#7CFFB2;
+
+font-weight:800;
+
+cursor:pointer;
+
+transition:0.2s;
+}
+
+.btn-toggle-erro:hover{
+background:#1E293B;
+}
+
+.comentario-erro{
+
+display:none;
+
+margin-top:16px;
+
+padding:18px;
+
+border-radius:18px;
+
+background:#13261B;
+
+line-height:1.8;
+
+border:
+1px solid rgba(124,255,178,0.10);
+}
 /* =========================================
 SELECTION
 ========================================= */
@@ -1610,7 +1694,23 @@ div.style.display === "block"
 : "block";
 
 }
+/* =========================================
+TOGGLE COMENTARIO ERRO
+========================================= */
 
+function toggleComentarioErro(index){
+
+const div =
+document.getElementById(
+`comentario-erro-${index}`
+);
+
+div.style.display =
+div.style.display === "block"
+? "none"
+: "block";
+
+}
 /* =========================================
 CORTAR
 ========================================= */
@@ -1694,15 +1794,88 @@ FINALIZAR
 
 function finalizarProva(){
 
+/* ESCONDE BOTAO FINALIZAR */
+
+document.getElementById("menuOpcoes")
+.style.display = "none";
+
+/* MOSTRA RESULTADOS */
+
 document.getElementById("resultados")
 .style.display = "block";
 
 let total = acertos + erros;
 
-let porcentagem =
+let porcentagemAcertos =
 total > 0
 ? ((acertos / total) * 100).toFixed(1)
 : 0;
+
+let porcentagemErros =
+total > 0
+? ((erros / total) * 100).toFixed(1)
+: 0;
+
+/* QUESTOES ERRADAS */
+
+let htmlErros = "";
+
+questoes.forEach((q,index)=>{
+
+if(statusQuestoes[index] === "errou"){
+
+const respostaUsuario =
+respostasUsuario[index];
+
+htmlErros += `
+
+<div class="questao-erro-card">
+
+<div class="questao-erro-titulo">
+❌ Questão ${q.numero}
+</div>
+
+<div class="questao-erro-info">
+
+<p>
+<b>Sua resposta:</b>
+${q.alternativas[respostaUsuario]}
+</p>
+
+<br>
+
+<p>
+<b>Resposta correta:</b>
+${q.alternativas[q.correta]}
+</p>
+
+</div>
+
+<button
+class="btn-toggle-erro"
+onclick="toggleComentarioErro(${index})">
+
+⬇ Ver comentário
+
+</button>
+
+<div
+class="comentario-erro"
+id="comentario-erro-${index}">
+
+${q.comentario || "Comentário não disponível."}
+
+</div>
+
+</div>
+
+`;
+
+}
+
+});
+
+/* HTML RESULTADO */
 
 document.getElementById("resumoResultado")
 .innerHTML = `
@@ -1710,56 +1883,39 @@ document.getElementById("resumoResultado")
 <p>
 ✅ Acertos:
 <strong>${acertos}</strong>
+(${porcentagemAcertos}%)
 </p>
 
 <p>
 ❌ Erros:
 <strong>${erros}</strong>
+(${porcentagemErros}%)
 </p>
 
-<p>
-📊 Aproveitamento:
-<strong>${porcentagem}%</strong>
-</p>
+<div class="questoes-erradas">
+
+${htmlErros}
+
+</div>
+
+<button
+class="btn-responder"
+style="margin-top:30px;"
+onclick="salvarProvaLocal()">
+
+💾 Salvar prova
+
+</button>
 
 `;
 
 gerarGrafico();
 
-}
+/* SCROLL RESULTADO */
 
-/* =========================================
-GRAFICO
-========================================= */
-
-function gerarGrafico(){
-
-const ctx =
-document.getElementById("graficoResultado");
-
-new Chart(ctx,{
-
-type:"doughnut",
-
-data:{
-
-labels:["Acertos","Erros"],
-
-datasets:[{
-
-data:[acertos,erros],
-
-backgroundColor:[
-"#22C55E",
-"#EF4444"
-],
-
-borderWidth:0
-
-}]
-
-}
-
+document.getElementById("resultados")
+.scrollIntoView({
+behavior:"smooth"
 });
 
 }
@@ -1773,6 +1929,76 @@ function sairProva(){
 localStorage.removeItem(STORAGE_KEY);
 
 location.reload();
+
+}
+/* =========================================
+SALVAR PROVA
+========================================= */
+
+function salvarProvaLocal(){
+
+const provas =
+JSON.parse(
+localStorage.getItem("provas_salvas")
+|| "[]"
+);
+
+/* QUESTOES ERRADAS */
+
+let questoesErradas = [];
+
+questoes.forEach((q,index)=>{
+
+if(statusQuestoes[index] === "errou"){
+
+questoesErradas.push({
+
+numero:q.numero,
+
+respostaUsuario:
+q.alternativas[
+respostasUsuario[index]
+],
+
+respostaCorreta:
+q.alternativas[q.correta],
+
+comentario:
+q.comentario ||
+"Comentário não disponível."
+
+});
+
+}
+
+});
+
+const novaProva = {
+
+nomeProva:NOME_PROVA,
+
+data:
+new Date().toLocaleString(),
+
+acertos,
+erros,
+
+questoesErradas,
+
+respostasUsuario,
+
+statusQuestoes
+
+};
+
+provas.push(novaProva);
+
+localStorage.setItem(
+"provas_salvas",
+JSON.stringify(provas)
+);
+
+alert("✅ Prova salva com sucesso!");
 
 }
 

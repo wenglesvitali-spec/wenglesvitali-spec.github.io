@@ -2,207 +2,737 @@
 <html lang="pt-BR">
 <head>
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-<meta name="apple-mobile-web-app-title" content="Revalida">
-
-<meta name="mobile-web-app-capable" content="yes">
-
-<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+
+<meta
+name="viewport"
+content="width=device-width,
+initial-scale=1,
+maximum-scale=1,
+user-scalable=no,
+viewport-fit=cover">
+
+<meta name="theme-color"
+content="#020617">
 
 <title>Provas Salvas</title>
 
 <style>
 
+/* =========================================
+RESET
+========================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+font-family:
+Inter,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
+}
+
+/* =========================================
+BODY
+========================================= */
+
+html,
 body{
-background:#0F1115;
-color:white;
-font-family:Arial;
+width:100%;
+min-height:100%;
+overflow-x:hidden;
+
+background:
+linear-gradient(
+180deg,
+#020617 0%,
+#0F172A 100%
+);
+
+color:#F8FAFC;
+}
+
+body{
 padding:20px;
 }
 
-.titulo{
-font-size:28px;
-margin-bottom:25px;
+/* =========================================
+CONTAINER
+========================================= */
+
+.container{
+max-width:980px;
+margin:auto;
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.topo{
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px;
+
+margin-bottom:24px;
+
+border-radius:24px;
+
+background:
+rgba(15,23,42,0.92);
+
+backdrop-filter:blur(18px);
+
+border:
+1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+font-size:24px;
+font-weight:900;
 color:#7CFFB2;
 }
 
-.prova{
-background:#171A21;
-padding:20px;
-border-radius:20px;
-margin-bottom:25px;
+/* =========================================
+BOTOES
+========================================= */
+
+.topo-botoes{
+display:flex;
+gap:12px;
 }
 
-.erro{
-background:#1D212B;
-padding:16px;
-border-radius:16px;
-margin-top:15px;
-}
+.btn-topo{
 
-.btn{
-padding:12px 18px;
+padding:14px 18px;
+
 border:none;
-border-radius:12px;
+
+border-radius:16px;
+
+font-weight:800;
+
 cursor:pointer;
-font-weight:bold;
-margin-top:15px;
+
+transition:0.25s;
+}
+
+.btn-voltar{
+background:#172033;
+color:white;
+}
+
+.btn-apagar{
+background:#3A1C1C;
+color:#FF7B7B;
+}
+
+.btn-topo:hover{
+transform:translateY(-2px);
+}
+
+/* =========================================
+LISTA
+========================================= */
+
+.lista-provas{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+/* =========================================
+CARD
+========================================= */
+
+.prova-card{
+
+background:
+rgba(255,255,255,0.03);
+
+backdrop-filter:blur(14px);
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+border-radius:30px;
+
+padding:24px;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* =========================================
+HEADER CARD
+========================================= */
+
+.prova-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.prova-titulo{
+font-size:22px;
+font-weight:900;
+color:#7CFFB2;
+}
+
+.prova-data{
+font-size:14px;
+color:#94A3B8;
+}
+
+/* =========================================
+STATS
+========================================= */
+
+.stats{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.stat{
+
+padding:14px 18px;
+
+border-radius:18px;
+
+font-weight:800;
+
+font-size:15px;
+}
+
+.stat-acertos{
+background:#103222;
+color:#7CFFB2;
+}
+
+.stat-erros{
+background:#3A1C1C;
+color:#FF7B7B;
+}
+
+.stat-total{
+background:#172033;
+color:#E2E8F0;
+}
+
+/* =========================================
+ACOES
+========================================= */
+
+.acoes{
+display:flex;
+gap:12px;
+margin-top:24px;
+flex-wrap:wrap;
+}
+
+.btn-acao{
+
+flex:1;
+
+padding:16px;
+
+border:none;
+
+border-radius:18px;
+
+font-weight:800;
+
+cursor:pointer;
+
+transition:0.25s;
+}
+
+.btn-detalhes{
 background:#7CFFB2;
+color:#052E16;
 }
 
-html, body {
-  height: 100%;
-  overflow-y: scroll; /* rolagem funcional */
+.btn-excluir{
+background:#3A1C1C;
+color:#FF7B7B;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+.btn-acao:hover{
+transform:translateY(-2px);
 }
 
-body {
-  scrollbar-width: none; /* Firefox */
+/* =========================================
+DETALHES
+========================================= */
+
+.detalhes{
+
+display:none;
+
+margin-top:24px;
+
+padding-top:24px;
+
+border-top:
+1px solid rgba(255,255,255,0.06);
 }
+
+/* =========================================
+QUESTAO ERRO
+========================================= */
+
+.questao-erro{
+
+background:
+rgba(255,255,255,0.03);
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+border-radius:22px;
+
+padding:20px;
+
+margin-bottom:18px;
+}
+
+.questao-erro h3{
+color:#FF7B7B;
+margin-bottom:16px;
+}
+
+.questao-erro p{
+line-height:1.8;
+margin-bottom:10px;
+color:#E2E8F0;
+}
+
+/* =========================================
+COMENTARIO
+========================================= */
+
+.btn-comentario{
+
+width:100%;
+
+padding:14px;
+
+margin-top:14px;
+
+border:none;
+
+border-radius:16px;
+
+background:#172033;
+
+color:#7CFFB2;
+
+font-weight:800;
+
+cursor:pointer;
+}
+
+.comentario{
+
+display:none;
+
+margin-top:14px;
+
+padding:18px;
+
+border-radius:18px;
+
+background:#13261B;
+
+line-height:1.8;
+
+border:
+1px solid rgba(124,255,178,0.10);
+}
+
+/* =========================================
+VAZIO
+========================================= */
+
+.vazio{
+
+text-align:center;
+
+padding:80px 20px;
+
+background:
+rgba(255,255,255,0.03);
+
+border-radius:30px;
+
+border:
+1px solid rgba(255,255,255,0.05);
+}
+
+.vazio h2{
+font-size:28px;
+margin-bottom:12px;
+color:#7CFFB2;
+}
+
+.vazio p{
+color:#94A3B8;
+line-height:1.8;
+}
+
+/* =========================================
+RESPONSIVO
+========================================= */
+
+@media(max-width:768px){
+
+body{
+padding:12px;
+}
+
+.topo{
+padding:14px;
+}
+
+.logo{
+font-size:20px;
+}
+
+.prova-card{
+padding:20px;
+border-radius:24px;
+}
+
+.prova-header{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.acoes{
+flex-direction:column;
+}
+
+.btn-acao{
+width:100%;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
-<h1 class="titulo">
+<div class="container">
+
+<!-- =========================================
+TOPO
+========================================= -->
+
+<div class="topo">
+
+<div class="logo">
 📚 Provas Salvas
-</h1>
-
-<div id="conteudo"></div>
-
-<script>
-
-let provas =
-JSON.parse(
-localStorage.getItem("provas_salvas")
-) || [];
-
-let html = "";
-
-if(provas.length === 0){
-
-html = "<h2>Nenhuma prova salva.</h2>";
-
-}else{
-
-provas.reverse().forEach((prova,index)=>{
-
-html += `
-
-<div class="prova">
-
-<h2>
-📝 Prova ${provas.length - index}
-</h2>
-
-<p>
-📅 ${prova.data}
-</p>
-
-<p>
-✅ Acertos:
-<strong>${prova.acertos}</strong>
-</p>
-
-<p>
-❌ Erros:
-<strong>${prova.erros}</strong>
-</p>
-
-<p>
-📊 Aproveitamento:
-<strong>${prova.porcentagem}%</strong>
-</p>
-
-<h3 style="margin-top:20px;">
-Questões Erradas
-</h3>
-
-`;
-
-if(prova.questoesErradas.length === 0){
-
-html += `
-<p>
-🎉 Nenhuma questão errada!
-</p>
-`;
-
-}else{
-
-prova.questoesErradas.forEach(q=>{
-
-html += `
-
-<div class="erro">
-
-<h3>
-Questão ${q.numero}
-</h3>
-
-<p style="margin-top:10px;">
-${q.pergunta}
-</p>
-
-<p style="margin-top:10px;">
-❌ Sua resposta:
-<strong>${q.marcada}</strong>
-</p>
-
-<p style="margin-top:10px;">
-✅ Correta:
-<strong>${q.correta}</strong>
-</p>
-
-<p style="margin-top:10px;">
-💡 ${q.comentario || ""}
-</p>
-
 </div>
 
-`;
+<div class="topo-botoes">
 
-});
+<button
+class="btn-topo btn-voltar"
+onclick="voltarPagina()">
 
-}
+⬅ Voltar
 
-html += `
+</button>
 
-<button class="btn"
-onclick="deletarProva(${index})">
+<button
+class="btn-topo btn-apagar"
+onclick="apagarTodasProvas()">
 
-🗑 Excluir prova
+🗑 Limpar
 
 </button>
 
 </div>
 
+</div>
+
+<!-- =========================================
+LISTA
+========================================= -->
+
+<div
+class="lista-provas"
+id="listaProvas">
+
+</div>
+
+</div>
+
+<script>
+
+/* =========================================
+CARREGAR PROVAS
+========================================= */
+
+const provas =
+JSON.parse(
+localStorage.getItem("provas_salvas")
+|| "[]"
+);
+
+const lista =
+document.getElementById("listaProvas");
+
+/* =========================================
+SEM PROVAS
+========================================= */
+
+if(provas.length === 0){
+
+lista.innerHTML = `
+
+<div class="vazio">
+
+<h2>
+📭 Nenhuma prova salva
+</h2>
+
+<p>
+Finalize uma prova e clique em
+"Salvar prova".
+</p>
+
+</div>
+
+`;
+
+}else{
+
+renderizarProvas();
+
+}
+
+/* =========================================
+RENDER
+========================================= */
+
+function renderizarProvas(){
+
+let html = "";
+
+provas
+.slice()
+.reverse()
+.forEach((prova,indexReverso)=>{
+
+const index =
+provas.length - 1 - indexReverso;
+
+const total =
+prova.acertos + prova.erros;
+
+const porcentagem =
+total > 0
+? ((prova.acertos / total) * 100).toFixed(1)
+: 0;
+
+/* QUESTOES ERRADAS */
+
+let errosHtml = "";
+
+if(prova.questoesErradas){
+
+prova.questoesErradas.forEach((erro,i)=>{
+
+errosHtml += `
+
+<div class="questao-erro">
+
+<h3>
+❌ Questão ${erro.numero}
+</h3>
+
+<p>
+<b>Sua resposta:</b><br>
+${erro.respostaUsuario}
+</p>
+
+<p>
+<b>Resposta correta:</b><br>
+${erro.respostaCorreta}
+</p>
+
+<button
+class="btn-comentario"
+onclick="toggleComentario(${index}-${i})">
+
+⬇ Ver comentário
+
+</button>
+
+<div
+class="comentario"
+id="comentario-${index}-${i}">
+
+${erro.comentario}
+
+</div>
+
+</div>
+
 `;
 
 });
 
 }
 
-document.getElementById("conteudo")
-.innerHTML = html;
+html += `
 
-function deletarProva(index){
+<div class="prova-card">
 
-if(confirm("Deseja excluir esta prova?")){
+<div class="prova-header">
 
-provas.splice(
-provas.length - 1 - index,
-1
+<div>
+
+<div class="prova-titulo">
+📚 ${prova.nomeProva || `Prova ${index + 1}`}
+</div>
+
+<div class="prova-data">
+📅 ${prova.data}
+</div>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat stat-acertos">
+✅ ${prova.acertos} acertos
+</div>
+
+<div class="stat stat-erros">
+❌ ${prova.erros} erros
+</div>
+
+<div class="stat stat-total">
+📊 ${porcentagem}%
+</div>
+
+</div>
+
+<div class="acoes">
+
+<button
+class="btn-acao btn-detalhes"
+onclick="toggleDetalhes(${index})">
+
+📖 Ver erros
+
+</button>
+
+<button
+class="btn-acao btn-excluir"
+onclick="excluirProva(${index})">
+
+🗑 Excluir
+
+</button>
+
+</div>
+
+<div
+class="detalhes"
+id="detalhes-${index}">
+
+${errosHtml || `
+<p style="
+color:#94A3B8;
+line-height:1.8;
+">
+🎉 Nenhuma questão errada nesta prova.
+</p>
+`}
+
+</div>
+
+</div>
+
+`;
+
+});
+
+lista.innerHTML = html;
+
+}
+
+/* =========================================
+TOGGLE DETALHES
+========================================= */
+
+function toggleDetalhes(index){
+
+const div =
+document.getElementById(
+`detalhes-${index}`
 );
+
+div.style.display =
+div.style.display === "block"
+? "none"
+: "block";
+
+}
+
+/* =========================================
+TOGGLE COMENTARIO
+========================================= */
+
+function toggleComentario(id){
+
+const div =
+document.getElementById(
+`comentario-${id}`
+);
+
+div.style.display =
+div.style.display === "block"
+? "none"
+: "block";
+
+}
+
+/* =========================================
+EXCLUIR PROVA
+========================================= */
+
+function excluirProva(index){
+
+if(!confirm(
+"Deseja excluir esta prova?"
+)) return;
+
+provas.splice(index,1);
 
 localStorage.setItem(
 "provas_salvas",
@@ -212,6 +742,32 @@ JSON.stringify(provas)
 location.reload();
 
 }
+
+/* =========================================
+APAGAR TODAS
+========================================= */
+
+function apagarTodasProvas(){
+
+if(!confirm(
+"Apagar todas as provas salvas?"
+)) return;
+
+localStorage.removeItem(
+"provas_salvas"
+);
+
+location.reload();
+
+}
+
+/* =========================================
+VOLTAR
+========================================= */
+
+function voltarPagina(){
+
+history.back();
 
 }
 
