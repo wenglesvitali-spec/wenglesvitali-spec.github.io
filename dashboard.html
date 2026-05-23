@@ -624,9 +624,18 @@ document.getElementById("sidebar")
 
 function sair(){
 
-localStorage.clear();
+let confirmar = confirm(
+"Deseja realmente sair?"
+);
 
-location.reload();
+if(confirmar){
+
+localStorage.removeItem("logado");
+
+window.location.href =
+"login.html";
+
+}
 
 }
 
