@@ -86,26 +86,25 @@ font-weight:bold;
 
 .estatisticas{
 display:flex;
-justify-content:center;
-gap:20px;
-margin-bottom:25px;
+justify-content:flex-start;
+gap:10px;
+margin-bottom:18px;
 }
 
 .estatistica{
-padding:14px 20px;
-border-radius:16px;
-font-weight:bold;
-background:#171A21;
+padding:0;
+font-weight:700;
+font-size:13px;
+background:none;
+border:none;
 }
 
 .acertos-box{
 color:#22C55E;
-border:2px solid #22C55E;
 }
 
 .erros-box{
 color:#EF4444;
-border:2px solid #EF4444;
 }
 
 .questao-box{
@@ -115,9 +114,14 @@ border-radius:28px;
 }
 
 .titulo{
-text-align:center;
+display:flex;
+align-items:center;
+justify-content:flex-start;
 margin-bottom:25px;
 color:#7CFFB2;
+font-size:20px;
+font-weight:700;
+letter-spacing:1px;
 }
 
 .enunciado{
@@ -360,13 +364,11 @@ id="menuOpcoes">
 <div class="estatisticas">
 
 <div class="estatistica acertos-box">
-👍 Certas:
-<span id="acertos">0</span>
+👍 <span id="acertos">0</span>
 </div>
 
 <div class="estatistica erros-box">
-👎 Erradas:
-<span id="erros">0</span>
+👎 <span id="erros">0</span>
 </div>
 
 </div>
