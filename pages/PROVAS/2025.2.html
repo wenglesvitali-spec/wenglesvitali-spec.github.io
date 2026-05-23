@@ -34,7 +34,6 @@ const NOME_PROVA = "INEP 2025.2";
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-
 /* =========================================
 RESET
 ========================================= */
@@ -54,17 +53,11 @@ sans-serif;
 html,
 body{
 width:100%;
-
 min-height:100%;
-
 overflow-x:hidden;
-
 scroll-behavior:smooth;
-
 scrollbar-width:none;
-
 background:#020617;
-
 -webkit-text-size-adjust:100%;
 }
 
@@ -73,13 +66,23 @@ display:none;
 }
 
 /* =========================================
-SAFE AREA IPHONE
+BODY
 ========================================= */
 
 body{
 
-min-height:100vh;
+margin:0;
 
+background:
+linear-gradient(
+180deg,
+#020617 0%,
+#0F172A 100%
+);
+
+color:#F8FAFC;
+
+overflow-x:hidden;
 overflow-y:auto;
 
 -webkit-overflow-scrolling:touch;
@@ -90,35 +93,10 @@ max(18px, env(safe-area-inset-left));
 padding-right:
 max(18px, env(safe-area-inset-right));
 
-padding-bottom:
-120px;
-
-background:
-linear-gradient(
-180deg,
-#020617 0%,
-#0F172A 100%
-);
-
-}
-
-/* =========================================
-BODY
-========================================= */
-
-body{
-background:
-linear-gradient(
-180deg,
-#020617 0%,
-#0F172A 100%
-);
-
-color:#F8FAFC;
-
-padding:18px;
+padding-bottom:120px;
 
 transition:0.25s;
+
 }
 
 /* =========================================
@@ -126,15 +104,19 @@ CONTAINER
 ========================================= */
 
 .container{
+
 max-width:980px;
+
 margin:auto;
 
-padding-top:150px;
+padding-top:190px;
+
 padding-bottom:140px;
+
 }
 
 /* =========================================
-TOPO
+HEADER FIXO
 ========================================= */
 
 .topo{
@@ -145,29 +127,33 @@ top:0;
 left:0;
 right:0;
 
-z-index:9999;
+height:88px;
+
+z-index:99999;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-flex-wrap:wrap;
-
-gap:10px;
+gap:12px;
 
 padding:
 max(12px, env(safe-area-inset-top))
 20px
-16px
+14px
 20px;
 
 background:
-rgba(2,6,23,0.92);
+rgba(2,6,23,0.96);
 
 backdrop-filter:blur(18px);
 
+-webkit-backdrop-filter:blur(18px);
+
 border-bottom:
 1px solid rgba(255,255,255,0.05);
+
+overflow:hidden;
 
 }
 
@@ -195,17 +181,27 @@ gap:10px;
 flex-shrink:0;
 }
 
+/* =========================================
+LOGO
+========================================= */
+
 .logo-topo{
+
 font-size:24px;
 font-weight:900;
 letter-spacing:1px;
 color:#7CFFB2;
+
+white-space:nowrap;
 
 overflow:hidden;
 
 text-overflow:ellipsis;
 
 max-width:180px;
+
+flex-shrink:0;
+
 }
 
 /* =========================================
@@ -217,15 +213,20 @@ position:relative;
 }
 
 .btn-menu{
+
 width:54px;
 height:54px;
+
 border:none;
+
 border-radius:18px;
 
 background:
 rgba(255,255,255,0.04);
 
 backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
 
 color:white;
 
@@ -237,6 +238,8 @@ border:
 1px solid rgba(255,255,255,0.05);
 
 transition:0.25s;
+
+flex-shrink:0;
 }
 
 .btn-menu:hover{
@@ -245,6 +248,7 @@ background:#1E293B;
 }
 
 .menu-opcoes{
+
 display:none;
 
 position:absolute;
@@ -264,12 +268,14 @@ border-radius:24px;
 
 padding:14px;
 
-z-index:9999;
+z-index:999999;
 
 box-shadow:
 0 20px 40px rgba(0,0,0,0.45);
 
 backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
 
 flex-direction:column;
 
@@ -277,6 +283,7 @@ gap:10px;
 }
 
 .menu-opcoes button{
+
 padding:16px;
 
 border:none;
@@ -302,18 +309,6 @@ background:#1E293B;
 }
 
 /* =========================================
-TOP ACTIONS
-========================================= */
-
-.top-actions{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:22px;
-gap:12px;
-}
-
-/* =========================================
 ESTATISTICAS
 ========================================= */
 
@@ -326,6 +321,7 @@ flex-shrink:0;
 }
 
 .estatistica{
+
 padding:14px 20px;
 
 border-radius:18px;
@@ -336,11 +332,15 @@ font-size:14px;
 
 backdrop-filter:blur(12px);
 
+-webkit-backdrop-filter:blur(12px);
+
 border:
 1px solid rgba(255,255,255,0.04);
 
 box-shadow:
 0 8px 20px rgba(0,0,0,0.20);
+
+white-space:nowrap;
 }
 
 .acertos-box{
@@ -354,50 +354,6 @@ color:#FF7B7B;
 }
 
 /* =========================================
-BOTAO QUESTOES
-========================================= */
-
-.toggle-grade{
-width:54px;
-height:54px;
-
-border-radius:18px;
-
-background:
-rgba(255,255,255,0.04);
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-cursor:pointer;
-
-transition:0.25s;
-
-border:
-1px solid rgba(255,255,255,0.04);
-
-box-shadow:
-0 10px 25px rgba(0,0,0,0.25);
-}
-
-.toggle-grade:hover{
-transform:scale(1.06);
-background:#1E293B;
-}
-
-#setaGrade{
-font-size:22px;
-font-weight:900;
-color:#7CFFB2;
-transition:0.3s;
-}
-
-/* =========================================
-GRADE QUESTOES
-========================================= */
-
-/* =========================================
 BARRA GABARITO
 ========================================= */
 
@@ -405,29 +361,30 @@ BARRA GABARITO
 
 position:fixed;
 
-top:76px;
+top:88px;
 
 left:0;
 right:0;
 
-z-index:9998;
+z-index:99998;
 
 padding-left:18px;
 padding-right:18px;
 
-padding-bottom:6px;
+padding-bottom:8px;
 
 background:
 linear-gradient(
 180deg,
 rgba(2,6,23,0.98),
-rgba(2,6,23,0.90)
+rgba(2,6,23,0.92)
 );
 
 backdrop-filter:blur(14px);
 
-}
+-webkit-backdrop-filter:blur(14px);
 
+}
 
 /* =========================================
 GRADE QUESTOES
@@ -443,7 +400,6 @@ display:flex;
 gap:10px;
 
 overflow-x:auto;
-
 overflow-y:hidden;
 
 padding:12px 4px;
@@ -453,13 +409,17 @@ scrollbar-width:none;
 -webkit-overflow-scrolling:touch;
 }
 
+.grade-questoes::-webkit-scrollbar{
+display:none;
+}
+
 .grade-questoes.arrastando{
 cursor:grabbing;
 }
 
-.grade-questoes::-webkit-scrollbar{
-display:none;
-}
+/* =========================================
+NUMERO QUESTAO
+========================================= */
 
 .numero-questao{
 
@@ -507,10 +467,6 @@ background:#DC2626;
 color:white;
 }
 
-/* =========================================
-MODO PROVA
-========================================= */
-
 .numero-questao.respondida-prova{
 background:#EAB308;
 color:#000;
@@ -521,10 +477,17 @@ QUESTAO BOX
 ========================================= */
 
 .questao-box{
+
+position:relative;
+
+z-index:1;
+
 background:
 rgba(255,255,255,0.03);
 
 backdrop-filter:blur(14px);
+
+-webkit-backdrop-filter:blur(14px);
 
 border:
 1px solid rgba(255,255,255,0.05);
@@ -537,6 +500,10 @@ box-shadow:
 0 15px 35px rgba(0,0,0,0.25);
 }
 
+/* =========================================
+TITULO
+========================================= */
+
 .titulo{
 font-size:26px;
 font-weight:900;
@@ -544,7 +511,12 @@ color:#7CFFB2;
 margin-bottom:24px;
 }
 
+/* =========================================
+ENUNCIADO
+========================================= */
+
 .enunciado{
+
 font-size:18px;
 
 line-height:1.9;
@@ -556,6 +528,8 @@ margin-bottom:26px;
 white-space:pre-line;
 
 word-break:break-word;
+
+overflow-wrap:break-word;
 }
 
 /* =========================================
@@ -563,6 +537,7 @@ ALTERNATIVAS
 ========================================= */
 
 .alternativa{
+
 background:#172033;
 
 padding:20px;
@@ -578,6 +553,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
+gap:14px;
+
 transition:0.2s;
 }
 
@@ -590,12 +567,14 @@ transform:translateY(-2px);
 flex:1;
 cursor:pointer;
 line-height:1.8;
+word-break:break-word;
 }
 
 .cortar{
 margin-left:14px;
 font-size:20px;
 cursor:pointer;
+flex-shrink:0;
 }
 
 .selecionada{
@@ -623,6 +602,7 @@ BOTOES
 ========================================= */
 
 .btn-responder{
+
 width:100%;
 
 padding:18px;
@@ -655,6 +635,7 @@ transform:translateY(-2px);
 }
 
 .btn-comentario{
+
 width:100%;
 
 margin-top:18px;
@@ -686,6 +667,7 @@ COMENTARIO
 ========================================= */
 
 .comentario-dropdown{
+
 display:none;
 
 margin-top:18px;
@@ -700,6 +682,8 @@ line-height:1.9;
 
 border:
 1px solid rgba(124,255,178,0.12);
+
+overflow:hidden;
 }
 
 /* =========================================
@@ -707,12 +691,19 @@ NAVEGACAO
 ========================================= */
 
 .navegacao{
+
+position:relative;
+
+z-index:1;
+
 display:flex;
 gap:14px;
+
 margin-top:22px;
 }
 
 .btn-nav{
+
 flex:1;
 
 padding:18px;
@@ -749,6 +740,11 @@ RESULTADOS
 ========================================= */
 
 .resultados{
+
+position:relative;
+
+z-index:1;
+
 display:none;
 
 margin-top:28px;
@@ -762,6 +758,8 @@ rgba(255,255,255,0.03);
 
 backdrop-filter:blur(14px);
 
+-webkit-backdrop-filter:blur(14px);
+
 border:
 1px solid rgba(255,255,255,0.04);
 }
@@ -773,13 +771,11 @@ margin:auto;
 
 .resumo{
 margin-top:24px;
-
 text-align:center;
-
 font-size:20px;
-
 line-height:2;
 }
+
 /* =========================================
 QUESTOES ERRADAS
 ========================================= */
@@ -802,6 +798,8 @@ border:
 border-radius:24px;
 
 padding:20px;
+
+overflow:hidden;
 }
 
 .questao-erro-titulo{
@@ -859,7 +857,10 @@ line-height:1.8;
 
 border:
 1px solid rgba(124,255,178,0.10);
+
+overflow:hidden;
 }
+
 /* =========================================
 SELECTION
 ========================================= */
@@ -870,13 +871,14 @@ color:#000;
 }
 
 /* =========================================
-IPAD / TABLET
+TABLET
 ========================================= */
 
 @media(max-width:900px){
 
 .logo-topo{
 font-size:18px;
+max-width:140px;
 }
 
 .estatistica{
@@ -904,40 +906,36 @@ RESPONSIVO
 
 @media(max-width:768px){
 
-body{
-padding:12px;
-}
-
 .container{
-padding-top:145px;
+padding-top:180px;
 }
 
 .topo{
 
+height:82px;
+
 padding:
-max(12px, env(safe-area-inset-top))
+max(10px, env(safe-area-inset-top))
 14px
-14px
+12px
 14px;
 
 }
 
 .barra-gabarito{
-top:72px;
-padding-left:12px;
-padding-right:12px;
+top:82px;
+padding-left:10px;
+padding-right:10px;
 }
 
 .logo-topo{
-font-size:18px;
-font-weight:900;
-letter-spacing:1px;
-color:#7CFFB2;
 
-white-space:normal;
+font-size:17px;
 
-overflow:hidden;
-text-overflow:ellipsis;
+white-space:nowrap;
+
+max-width:120px;
+
 }
 
 .header-left{
@@ -949,15 +947,16 @@ gap:8px;
 }
 
 .estatistica{
-padding:10px 12px;
-font-size:12px;
-border-radius:14px;
+padding:9px 10px;
+font-size:11px;
+border-radius:12px;
 }
 
 .btn-menu{
-width:46px;
-height:46px;
-border-radius:15px;
+width:44px;
+height:44px;
+font-size:24px;
+border-radius:14px;
 }
 
 .questao-box{
@@ -988,43 +987,37 @@ font-size:13px;
 }
 
 }
+
 /* =========================================
-IPAD FIX
+IPHONE PEQUENO
 ========================================= */
 
-@media(max-width:1024px){
-
-.topo{
-padding-bottom:12px;
-}
+@media(max-width:420px){
 
 .container{
-padding-top:170px;
+padding-top:175px;
 }
 
 .logo-topo{
-font-size:16px;
-max-width:140px;
+max-width:90px;
+font-size:15px;
 }
 
 .estatistica{
-padding:8px 10px;
-font-size:11px;
+padding:8px 8px;
+font-size:10px;
 }
 
-.btn-menu{
-width:42px;
-height:42px;
-font-size:22px;
-}
-
-.barra-gabarito{
-top:92px;
+.numero-questao{
+width:40px;
+min-width:40px;
+height:40px;
 }
 
 }
+
 /* =========================================
-BLOQUEAR ZOOM IOS / ANDROID
+ZOOM FIX
 ========================================= */
 
 input,
@@ -1065,11 +1058,11 @@ INEP 2025.2
 <div class="estatisticas">
 
 <div class="estatistica acertos-box">
-👍 <span id="acertos">0</span>
+✅ <span id="acertos">0</span>
 </div>
 
 <div class="estatistica erros-box">
-👎 <span id="erros">0</span>
+❌ <span id="erros">0</span>
 </div>
 
 </div>
