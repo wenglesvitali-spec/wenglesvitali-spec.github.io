@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>REVALIDA PRO</title>
+<title>INEP 2025.2</title>
 
 <style>
 
@@ -43,8 +43,7 @@ body.light-mode{
     color:#16181D;
 }
 
-body.light-mode .questao-box,
-body.light-mode .resultado-final{
+body.light-mode .questao-box{
     background:#FFFFFF;
     border:1px solid #E2E6EA;
     box-shadow:
@@ -64,13 +63,16 @@ body.light-mode .alternativa:hover{
 
 body.light-mode .comentario{
     background:#F2FFF7;
-    border-left:5px solid #5DFF9D;
 }
 
-body.light-mode .btn-tema{
+body.light-mode .menu-opcoes{
     background:#FFFFFF;
-    color:#16181D;
     border:1px solid #E2E6EA;
+}
+
+body.light-mode .menu-opcoes button{
+    background:#F4F6F8;
+    color:#16181D;
 }
 
 body.light-mode .voltar{
@@ -78,12 +80,14 @@ body.light-mode .voltar{
     color:#16181D;
 }
 
-body.light-mode .barra-fundo{
-    background:#E4E7EC;
-}
-
 body.light-mode .estatistica{
     background:#FFFFFF;
+    border:1px solid #E2E6EA;
+}
+
+body.light-mode .btn-menu{
+    background:#FFFFFF;
+    color:#16181D;
     border:1px solid #E2E6EA;
 }
 
@@ -97,90 +101,100 @@ CONTAINER
 }
 
 /* ==================================================
-TOPO
+TOPO CLEAN
 ================================================== */
 
 .topo{
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    gap:20px;
     margin-bottom:30px;
 }
 
 /* ==================================================
-BOTÕES
+LOGO
 ================================================== */
 
-.btn-topo{
-    width:64px;
-    height:64px;
+.logo-topo{
+    font-size:22px;
+    font-weight:700;
+    color:#7CFFB2;
+    letter-spacing:1px;
+}
+
+/* ==================================================
+MENU
+================================================== */
+
+.menu-wrapper{
+    position:relative;
+}
+
+/* ==================================================
+BOTAO ...
+================================================== */
+
+.btn-menu{
+    width:58px;
+    height:58px;
     border:none;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:24px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    transition:0.25s;
-    box-shadow:
-    0 8px 25px rgba(0,0,0,0.25);
-}
-
-.btn-topo:hover{
-    transform:translateY(-2px) scale(1.04);
-}
-
-/* ==================================================
-SAIR
-================================================== */
-
-.sair{
-    background:#FF6B6B;
-    color:#fff;
-}
-
-/* ==================================================
-FINALIZAR
-================================================== */
-
-.finalizar{
-    background:#7CFFB2;
-    color:#0F1115;
-}
-
-/* ==================================================
-BOTAO TEMA
-================================================== */
-
-.btn-tema{
-    width:84px;
-    height:84px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,0.08);
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,0.06),
-        rgba(255,255,255,0.02)
-    );
-    backdrop-filter:blur(12px);
+    border-radius:18px;
+    background:#171A21;
+    border:1px solid #2A2F3A;
     color:#F5F7FA;
     font-size:34px;
     cursor:pointer;
     display:flex;
     justify-content:center;
     align-items:center;
-    transition:0.3s;
+    transition:0.25s;
     box-shadow:
-    0 15px 40px rgba(0,0,0,0.35);
+    0 10px 30px rgba(0,0,0,0.25);
 }
 
-.btn-tema:hover{
-    transform:scale(1.05);
+.btn-menu:hover{
     border:1px solid #7CFFB2;
+    transform:translateY(-2px);
+}
+
+/* ==================================================
+MENU DROPDOWN
+================================================== */
+
+.menu-opcoes{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#171A21;
+    border:1px solid #2A2F3A;
+    border-radius:20px;
+    padding:12px;
+    display:none;
+    flex-direction:column;
+    gap:10px;
+    width:240px;
+    z-index:999;
     box-shadow:
-    0 0 25px rgba(124,255,178,0.25);
+    0 20px 40px rgba(0,0,0,0.35);
+}
+
+.menu-opcoes button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#1D212B;
+    color:#F5F7FA;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    text-align:left;
+    transition:0.25s;
+}
+
+.menu-opcoes button:hover{
+    background:#7CFFB2;
+    color:#0F1115;
 }
 
 /* ==================================================
@@ -204,8 +218,6 @@ ESTATISTICAS
     gap:8px;
     font-size:15px;
     font-weight:600;
-    box-shadow:
-    0 8px 25px rgba(0,0,0,0.2);
 }
 
 .acerto{
@@ -225,9 +237,6 @@ QUESTAO BOX
     border:1px solid #2A2F3A;
     border-radius:32px;
     padding:40px;
-    box-shadow:
-    0 20px 60px rgba(0,0,0,0.35);
-    transition:0.3s;
 }
 
 /* ==================================================
@@ -240,7 +249,6 @@ TITULO
     color:#7CFFB2;
     margin-bottom:28px;
     text-align:center;
-    letter-spacing:1px;
 }
 
 /* ==================================================
@@ -250,7 +258,6 @@ ENUNCIADO
 .enunciado{
     font-size:19px;
     line-height:1.9;
-    color:#F5F7FA;
     margin-bottom:30px;
 }
 
@@ -274,20 +281,17 @@ ALTERNATIVAS
 
 .alternativa:hover{
     border:1px solid #7CFFB2;
-    background:#222734;
-    transform:translateY(-1px);
 }
 
 .texto-alternativa{
     flex:1;
     line-height:1.8;
     font-size:16px;
-    color:#F5F7FA;
     cursor:pointer;
 }
 
 /* ==================================================
-BOTAO CORTAR
+CORTAR
 ================================================== */
 
 .cortar{
@@ -299,16 +303,7 @@ BOTAO CORTAR
     justify-content:center;
     align-items:center;
     cursor:pointer;
-    transition:0.25s;
 }
-
-.cortar:hover{
-    background:#FF6B6B20;
-}
-
-/* ==================================================
-ESTADOS
-================================================== */
 
 .cortada{
     opacity:0.35;
@@ -340,14 +335,6 @@ BOTAO RESPONDER
     font-weight:700;
     cursor:pointer;
     margin-top:24px;
-    transition:0.25s;
-    box-shadow:
-    0 10px 30px rgba(124,255,178,0.2);
-}
-
-.btn-responder:hover{
-    background:#5DFF9D;
-    transform:translateY(-2px);
 }
 
 /* ==================================================
@@ -361,16 +348,6 @@ COMENTARIO
     border-radius:22px;
     background:#13261B;
     border-left:5px solid #7CFFB2;
-}
-
-.comentario h3{
-    color:#7CFFB2;
-    margin-bottom:12px;
-}
-
-.comentario p{
-    line-height:1.8;
-    color:#D8DEE9;
 }
 
 /* ==================================================
@@ -391,11 +368,6 @@ NAVEGACAO
     cursor:pointer;
     font-size:15px;
     font-weight:700;
-    transition:0.25s;
-}
-
-.btn-nav:hover{
-    transform:translateY(-2px);
 }
 
 .voltar{
@@ -409,21 +381,6 @@ NAVEGACAO
 }
 
 /* ==================================================
-RESULTADO FINAL
-================================================== */
-
-.resultado-final{
-    display:none;
-    margin-top:30px;
-    background:#171A21;
-    border-radius:30px;
-    border:1px solid #2A2F3A;
-    padding:40px;
-    box-shadow:
-    0 20px 60px rgba(0,0,0,0.35);
-}
-
-/* ==================================================
 RESPONSIVO
 ================================================== */
 
@@ -433,25 +390,22 @@ RESPONSIVO
         padding:12px;
     }
 
-    .topo{
-        gap:14px;
+    .logo-topo{
+        font-size:18px;
     }
 
-    .btn-topo{
-        width:58px;
-        height:58px;
-        font-size:22px;
+    .btn-menu{
+        width:52px;
+        height:52px;
+        font-size:30px;
     }
 
-    .btn-tema{
-        width:74px;
-        height:74px;
-        font-size:28px;
+    .menu-opcoes{
+        width:220px;
     }
 
     .questao-box{
         padding:24px 18px;
-        border-radius:24px;
     }
 
     .titulo{
@@ -460,12 +414,6 @@ RESPONSIVO
 
     .enunciado{
         font-size:16px;
-        line-height:1.8;
-    }
-
-    .alternativa{
-        padding:15px;
-        border-radius:18px;
     }
 
     .texto-alternativa{
@@ -484,21 +432,43 @@ RESPONSIVO
 
 <div class="topo">
 
-<button class="btn-topo sair"
-onclick="sairProva()">
-🚪
+<div class="logo-topo">
+INEP 2025.2
+</div>
+
+<div class="menu-wrapper">
+
+<button class="btn-menu"
+onclick="abrirMenu()">
+⋯
 </button>
 
-<button class="btn-tema"
-onclick="trocarTema()"
-id="botaoTema">
-🌙
+<div class="menu-opcoes"
+id="menuOpcoes">
+
+<button onclick="trocarTema()">
+🌙 Dark Mode
 </button>
 
-<button class="btn-topo finalizar"
-onclick="finalizarProva()">
-🏁
+<button onclick="aumentarTexto()">
+🔍 Aumentar Texto
 </button>
+
+<button onclick="diminuirTexto()">
+🔎 Diminuir Texto
+</button>
+
+<button onclick="finalizarProva()">
+🏁 Finalizar Prova
+</button>
+
+<button onclick="sairProva()">
+🚪 Sair
+</button>
+
+</div>
+
+</div>
 
 </div>
 
@@ -559,13 +529,6 @@ Próxima ➜
 
 </div>
 
-<div class="resultado-final"
-id="resultadoFinal">
-
-<h1>🏁 Resultado Final</h1>
-
-</div>
-
 </div>
 
 <script>
@@ -578,11 +541,15 @@ let selecionada = null;
 
 let respondida = false;
 
+let tamanhoTexto =
+parseInt(localStorage.getItem("tamanhoTexto"))
+|| 19;
+
 /* ==================================================
 JSON
 ================================================== */
 
-fetch("revalida_2025_2.json")
+fetch("../flashcards/revalida_2025_2.json")
 
 .then(res => res.json())
 
@@ -658,6 +625,8 @@ function carregarQuestao(){
 
     document.getElementById("alternativas")
     .innerHTML = html;
+
+    aplicarTamanhoTexto();
 
 }
 
@@ -782,14 +751,7 @@ FINALIZAR
 
 function finalizarProva(){
 
-    document.getElementById("questaoBox")
-    .style.display = "none";
-
-    document.querySelector(".navegacao")
-    .style.display = "none";
-
-    document.getElementById("resultadoFinal")
-    .style.display = "block";
+    alert("Prova finalizada!");
 
 }
 
@@ -800,6 +762,27 @@ SAIR
 function sairProva(){
 
     location.reload();
+
+}
+
+/* ==================================================
+MENU
+================================================== */
+
+function abrirMenu(){
+
+    let menu =
+    document.getElementById("menuOpcoes");
+
+    if(menu.style.display === "flex"){
+
+        menu.style.display = "none";
+
+    }else{
+
+        menu.style.display = "flex";
+
+    }
 
 }
 
@@ -821,21 +804,56 @@ function trocarTema(){
         claro ? "light" : "dark"
     );
 
-    atualizarBotao();
+}
+
+/* ==================================================
+TAMANHO TEXTO
+================================================== */
+
+function aplicarTamanhoTexto(){
+
+    document.querySelector(".enunciado")
+    .style.fontSize =
+    tamanhoTexto + "px";
+
+    document.querySelectorAll(".texto-alternativa")
+    .forEach(item=>{
+
+        item.style.fontSize =
+        (tamanhoTexto - 3) + "px";
+
+    });
+
+    localStorage.setItem(
+        "tamanhoTexto",
+        tamanhoTexto
+    );
 
 }
 
-function atualizarBotao(){
+function aumentarTexto(){
 
-    let claro =
-    document.body.classList
-    .contains("light-mode");
+    tamanhoTexto += 2;
 
-    document.getElementById("botaoTema")
-    .innerHTML =
-    claro ? "☀️" : "🌙";
+    aplicarTamanhoTexto();
 
 }
+
+function diminuirTexto(){
+
+    if(tamanhoTexto > 14){
+
+        tamanhoTexto -= 2;
+
+        aplicarTamanhoTexto();
+
+    }
+
+}
+
+/* ==================================================
+ONLOAD
+================================================== */
 
 window.onload = function(){
 
@@ -848,8 +866,6 @@ window.onload = function(){
         .add("light-mode");
 
     }
-
-    atualizarBotao();
 
 }
 
