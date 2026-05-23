@@ -137,11 +137,31 @@ max(10px, env(safe-area-inset-top));
 margin-bottom:24px;
 }
 
+/* =========================================
+HEADER LEFT / RIGHT
+========================================= */
+
+.header-left{
+display:flex;
+align-items:center;
+gap:16px;
+
+min-width:0;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
 .logo-topo{
-font-size:28px;
+font-size:24px;
 font-weight:900;
 letter-spacing:1px;
 color:#7CFFB2;
+
+white-space:nowrap;
 }
 
 /* =========================================
@@ -255,7 +275,8 @@ ESTATISTICAS
 
 .estatisticas{
 display:flex;
-gap:12px;
+gap:10px;
+align-items:center;
 }
 
 .estatistica{
@@ -740,7 +761,42 @@ height:50px;
 .btn-responder{
 padding:16px;
 }
+/* =========================================
+HEADER MOBILE
+========================================= */
 
+@media(max-width:768px){
+
+.topo{
+padding:
+max(12px, env(safe-area-inset-top))
+14px
+14px
+14px;
+}
+
+.header-left{
+gap:10px;
+}
+
+.logo-topo{
+font-size:18px;
+}
+
+.estatistica{
+padding:10px 12px;
+font-size:12px;
+border-radius:14px;
+}
+
+.toggle-grade,
+.btn-menu{
+width:46px;
+height:46px;
+border-radius:15px;
+}
+
+}
 }
 /* =========================================
 BLOQUEAR ZOOM IOS / ANDROID
@@ -773,13 +829,48 @@ touch-action:manipulation;
 
 <div class="container">
 
-<!-- TOPO -->
+<!-- HEADER FIXO -->
 
 <div class="topo">
+
+<!-- ESQUERDA -->
+
+<div class="header-left">
 
 <div class="logo-topo">
 INEP 2025.2
 </div>
+
+<div class="estatisticas">
+
+<div class="estatistica acertos-box">
+👍 <span id="acertos">0</span>
+</div>
+
+<div class="estatistica erros-box">
+👎 <span id="erros">0</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- DIREITA -->
+
+<div class="header-right">
+
+<!-- GABARITO -->
+
+<div class="toggle-grade"
+onclick="toggleGradeQuestoes()">
+
+<span id="setaGrade">
+☰
+</span>
+
+</div>
+
+<!-- MENU -->
 
 <div class="menu-wrapper">
 
@@ -820,31 +911,6 @@ id="menuOpcoes">
 </div>
 
 </div>
-
-</div>
-
-<!-- TOPO ACTIONS -->
-
-<div class="top-actions">
-
-<div class="estatisticas">
-
-<div class="estatistica acertos-box">
-👍 <span id="acertos">0</span>
-</div>
-
-<div class="estatistica erros-box">
-👎 <span id="erros">0</span>
-</div>
-
-</div>
-
-<div class="toggle-grade"
-onclick="toggleGradeQuestoes()">
-
-<span id="setaGrade">
-☰
-</span>
 
 </div>
 
