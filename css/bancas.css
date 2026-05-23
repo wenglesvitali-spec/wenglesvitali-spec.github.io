@@ -1,0 +1,198 @@
+/* ==================================================
+RESET
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ==================================================
+BODY
+================================================== */
+
+body{
+    background:#070707;
+    color:#fff;
+    padding:20px;
+}
+
+/* ==================================================
+CONTAINER
+================================================== */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+/* ==================================================
+TITULO
+================================================== */
+
+.titulo{
+    font-size:40px;
+    margin-bottom:35px;
+    color:#00ff88;
+    text-align:center;
+}
+
+/* ==================================================
+BANCA
+================================================== */
+
+.banca{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:24px;
+    margin-bottom:25px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,0.35);
+}
+
+/* ==================================================
+HEADER BANCA
+================================================== */
+
+.banca-header{
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.banca-header:hover{
+    background:rgba(255,255,255,0.04);
+}
+
+.banca-nome{
+    font-size:28px;
+    color:#00ff88;
+    font-weight:bold;
+}
+
+/* ==================================================
+SETA
+================================================== */
+
+.seta{
+    font-size:26px;
+    transition:0.3s;
+}
+
+/* ==================================================
+CONTEUDO
+================================================== */
+
+.banca-conteudo{
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+/* ==================================================
+ABERTA
+================================================== */
+
+.banca.aberta .banca-conteudo{
+    max-height:1000px;
+    padding:20px;
+}
+
+.banca.aberta .seta{
+    transform:rotate(180deg);
+}
+
+/* ==================================================
+PROVAS
+================================================== */
+
+.prova{
+    padding:18px 22px;
+    margin-bottom:14px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.prova:hover{
+    border:1px solid #00ff88;
+    transform:translateY(-2px);
+}
+
+/* ==================================================
+TEXTO PROVA
+================================================== */
+
+.prova span{
+    font-size:18px;
+}
+
+/* ==================================================
+BOTAO
+================================================== */
+
+.botao{
+    padding:10px 18px;
+    border-radius:12px;
+    background:linear-gradient(
+        135deg,
+        #00ff88,
+        #00c96b
+    );
+    color:#000;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* ==================================================
+RESPONSIVO
+================================================== */
+
+@media(max-width:768px){
+
+    .titulo{
+        font-size:30px;
+    }
+
+    .banca-header{
+        padding:20px;
+    }
+
+    .banca-nome{
+        font-size:22px;
+    }
+
+    .prova{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .prova span{
+        font-size:16px;
+    }
+
+}
+.botao{
+    padding:10px 18px;
+    border-radius:12px;
+    background:linear-gradient(
+        135deg,
+        #00ff88,
+        #00c96b
+    );
+    color:#000;
+    font-weight:bold;
+    font-size:14px;
+    text-decoration:none;
+}

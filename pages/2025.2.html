@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>PROVA REVALIDA</title>
+
+<style>
+
+/* ==================================================
+RESET
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ==================================================
+BODY
+================================================== */
+
+body{
+    background:#050505;
+    color:#fff;
+    padding:20px;
+}
+
+/* ==================================================
+CONTAINER
+================================================== */
+
+.container{
+    max-width:950px;
+    margin:auto;
+}
+
+/* ==================================================
+TOPO
+================================================== */
+
+.topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+/* ==================================================
+BOTOES TOPO
+================================================== */
+
+.btn-topo{
+    padding:14px 22px;
+    border:none;
+    border-radius:16px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.sair{
+    background:#ff4d4d;
+    color:#fff;
+}
+
+.finalizar{
+    background:#00ff88;
+    color:#000;
+}
+
+.btn-topo:hover{
+    transform:translateY(-2px);
+}
+
+/* ==================================================
+ESTATISTICAS
+================================================== */
+
+.estatisticas{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-bottom:18px;
+}
+
+.estatistica{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.acerto{
+    color:#00ff88;
+}
+
+.erro{
+    color:#ff4d4d;
+}
+
+/* ==================================================
+QUESTAO
+================================================== */
+
+.questao-box{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    padding:35px;
+}
+
+/* ==================================================
+TITULO
+================================================== */
+
+.titulo{
+    font-size:28px;
+    color:#00ff88;
+    margin-bottom:30px;
+}
+
+/* ==================================================
+ENUNCIADO
+================================================== */
+
+.enunciado{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* ==================================================
+ALTERNATIVAS
+================================================== */
+
+.alternativa{
+    width:100%;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    transition:0.3s;
+}
+
+.alternativa:hover{
+    border:1px solid #00ff88;
+}
+
+/* ==================================================
+TEXTO
+================================================== */
+
+.texto-alternativa{
+    flex:1;
+    line-height:1.7;
+}
+
+/* ==================================================
+TESOURA
+================================================== */
+
+.cortar{
+    width:42px;
+    height:42px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.06);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cortar:hover{
+    background:rgba(255,0,0,0.15);
+}
+
+/* ==================================================
+CORTADA
+================================================== */
+
+.cortada{
+    opacity:0.35;
+    text-decoration:line-through;
+}
+
+/* ==================================================
+CORRETA
+================================================== */
+
+.correta{
+    background:rgba(0,255,136,0.12);
+    border:1px solid #00ff88;
+}
+
+/* ==================================================
+ERRADA
+================================================== */
+
+.errada{
+    background:rgba(255,0,0,0.12);
+    border:1px solid #ff4d4d;
+}
+
+/* ==================================================
+COMENTARIO
+================================================== */
+
+.comentario{
+    display:none;
+    margin-top:25px;
+    padding:22px;
+    border-radius:18px;
+    background:rgba(0,255,136,0.08);
+    border-left:5px solid #00ff88;
+}
+
+.comentario h3{
+    margin-bottom:12px;
+    color:#00ff88;
+}
+
+.comentario p{
+    line-height:1.8;
+}
+
+/* ==================================================
+BOTAO RESPONDER
+================================================== */
+
+.responder-area{
+    margin-top:25px;
+}
+
+.btn-responder{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+    background:#00ff88;
+    color:#000;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-responder:hover{
+    transform:translateY(-2px);
+}
+
+/* ==================================================
+NAVEGACAO
+================================================== */
+
+.navegacao{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.btn-nav{
+    padding:16px 28px;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.voltar{
+    background:#1f1f1f;
+    color:#fff;
+}
+
+.proximo{
+    background:#00ff88;
+    color:#000;
+}
+
+.btn-nav:hover{
+    transform:translateY(-2px);
+}
+
+/* ==================================================
+RESULTADO FINAL
+================================================== */
+
+.resultado-final{
+    display:none;
+    margin-top:25px;
+    background:rgba(255,255,255,0.04);
+    border-radius:28px;
+    padding:35px;
+}
+
+.resultado-final h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#00ff88;
+}
+
+/* ==================================================
+BARRAS
+================================================== */
+
+.barra-area{
+    margin-bottom:25px;
+}
+
+.barra-fundo{
+    width:100%;
+    height:45px;
+    background:#1a1a1a;
+    border-radius:18px;
+    overflow:hidden;
+    margin-bottom:15px;
+}
+
+.barra{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.barra-acertos{
+    background:#00ff88;
+    color:#000;
+}
+
+.barra-erros{
+    background:#ff4d4d;
+    color:#fff;
+}
+
+/* ==================================================
+QUESTOES ERRADAS
+================================================== */
+
+.questao-errada{
+    margin-top:18px;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,0,0,0.08);
+    border:1px solid rgba(255,0,0,0.2);
+}
+
+.questao-errada h3{
+    color:#ff4d4d;
+    margin-bottom:10px;
+}
+
+/* ==================================================
+RESPONSIVO
+================================================== */
+
+@media(max-width:768px){
+
+    .titulo{
+        font-size:24px;
+    }
+
+    .enunciado{
+        font-size:17px;
+    }
+
+    .questao-box{
+        padding:22px;
+    }
+
+    .topo{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .btn-topo{
+        width:100%;
+    }
+
+}
+/* ==================================================
+RESPONSIVO CELULAR
+================================================== */
+
+@media(max-width:768px){
+
+    /* ==========================================
+    BODY
+    ========================================== */
+
+    body{
+        padding:12px;
+        overflow-x:hidden;
+    }
+
+    /* ==========================================
+    CONTAINER
+    ========================================== */
+
+    .container{
+        width:100%;
+    }
+
+    /* ==========================================
+    TOPO
+    ========================================== */
+
+    .topo{
+        display:flex;
+        flex-direction:row;
+        gap:10px;
+        margin-bottom:18px;
+    }
+
+    .btn-topo{
+        flex:1;
+        padding:14px;
+        font-size:14px;
+        border-radius:14px;
+    }
+
+    /* ==========================================
+    ESTATISTICAS
+    ========================================== */
+
+    .estatisticas{
+        gap:18px;
+        margin-bottom:15px;
+    }
+
+    .estatistica{
+        font-size:14px;
+    }
+
+    /* ==========================================
+    QUESTAO
+    ========================================== */
+
+    .questao-box{
+        width:100%;
+        padding:20px 16px;
+        border-radius:22px;
+    }
+
+    /* ==========================================
+    TITULO
+    ========================================== */
+
+    .titulo{
+        font-size:22px;
+        margin-bottom:22px;
+        text-align:center;
+    }
+
+    /* ==========================================
+    ENUNCIADO
+    ========================================== */
+
+    .enunciado{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:22px;
+    }
+
+    /* ==========================================
+    ALTERNATIVAS
+    ========================================== */
+
+    .alternativa{
+        padding:14px;
+        border-radius:16px;
+        gap:10px;
+        align-items:flex-start;
+    }
+
+    /* ==========================================
+    TEXTO
+    ========================================== */
+
+    .texto-alternativa{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    /* ==========================================
+    TESOURA
+    ========================================== */
+
+    .cortar{
+        width:40px;
+        height:40px;
+        min-width:40px;
+        font-size:18px;
+        border-radius:12px;
+    }
+
+    /* ==========================================
+    BOTAO RESPONDER
+    ========================================== */
+
+    .btn-responder{
+        width:100%;
+        padding:16px;
+        font-size:15px;
+        border-radius:16px;
+    }
+
+    /* ==========================================
+    NAVEGACAO
+    ========================================== */
+
+    .navegacao{
+        margin-top:18px;
+        gap:10px;
+    }
+
+    .btn-nav{
+        flex:1;
+        padding:15px;
+        font-size:14px;
+        border-radius:16px;
+    }
+
+    /* ==========================================
+    COMENTARIO
+    ========================================== */
+
+    .comentario{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .comentario h3{
+        font-size:16px;
+    }
+
+    .comentario p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    /* ==========================================
+    RESULTADO FINAL
+    ========================================== */
+
+    .resultado-final{
+        padding:22px 16px;
+        border-radius:22px;
+    }
+
+    .resultado-final h1{
+        font-size:24px;
+    }
+
+    /* ==========================================
+    BARRAS
+    ========================================== */
+
+    .barra-fundo{
+        height:38px;
+        border-radius:14px;
+    }
+
+    /* ==========================================
+    QUESTAO ERRADA
+    ========================================== */
+
+    .questao-errada{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .questao-errada h3{
+        font-size:16px;
+    }
+
+    .questao-errada p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+}
+
+/* ==================================================
+CELULARES MUITO PEQUENOS
+================================================== */
+
+@media(max-width:420px){
+
+    body{
+        padding:10px;
+    }
+
+    .titulo{
+        font-size:20px;
+    }
+
+    .enunciado{
+        font-size:15px;
+    }
+
+    .texto-alternativa{
+        font-size:14px;
+    }
+
+    .btn-topo{
+        font-size:13px;
+        padding:12px;
+    }
+
+    .btn-nav{
+        font-size:13px;
+        padding:14px;
+    }
+
+    .btn-responder{
+        font-size:14px;
+    }
+
+    .estatistica{
+        font-size:13px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- ==================================================
+TOPO
+================================================== -->
+
+<div class="topo">
+
+<button class="btn-topo sair"
+onclick="sairProva()">
+
+🚪 Sair
+
+</button>
+
+<button class="btn-topo finalizar"
+onclick="finalizarProva()">
+
+🏁 Finalizar
+
+</button>
+
+</div>
+
+<!-- ==================================================
+ESTATISTICAS
+================================================== -->
+
+<div class="estatisticas">
+
+<div class="estatistica acerto">
+👍 <span id="acertos">0</span>
+</div>
+
+<div class="estatistica erro">
+👎 <span id="erros">0</span>
+</div>
+
+</div>
+
+<!-- ==================================================
+QUESTAO
+================================================== -->
+
+<div class="questao-box"
+id="questaoBox">
+
+<h1 class="titulo">
+PROVA REVALIDA
+</h1>
+
+<div class="enunciado"
+id="enunciado">
+
+Carregando...
+
+</div>
+
+<div id="alternativas"></div>
+
+<div class="responder-area">
+
+<button class="btn-responder"
+onclick="confirmarResposta()">
+
+Responder Questão
+
+</button>
+
+</div>
+
+<div class="comentario"
+id="comentario">
+
+<h3 id="respostaCorreta"></h3>
+
+<p id="comentarioTexto"></p>
+
+</div>
+
+</div>
+
+<!-- ==================================================
+NAVEGACAO
+================================================== -->
+
+<div class="navegacao">
+
+<button class="btn-nav voltar"
+onclick="voltarQuestao()">
+
+⬅ Voltar
+
+</button>
+
+<button class="btn-nav proximo"
+onclick="proximaQuestao()">
+
+Próxima ➜
+
+</button>
+
+</div>
+
+<!-- ==================================================
+RESULTADO FINAL
+================================================== -->
+
+<div class="resultado-final"
+id="resultadoFinal">
+
+<h1>
+🏁 Resultado Final
+</h1>
+
+<div class="barra-area">
+
+<div class="barra-fundo">
+
+<div class="barra barra-acertos"
+id="barraAcertos">
+
+0%
+
+</div>
+
+</div>
+
+<div class="barra-fundo">
+
+<div class="barra barra-erros"
+id="barraErros">
+
+0%
+
+</div>
+
+</div>
+
+</div>
+
+<h2 style="margin-bottom:20px;">
+❌ Questões Erradas
+</h2>
+
+<div id="listaErros"></div>
+
+</div>
+
+</div>
+
+<script>
+
+/* ==================================================
+QUESTOES
+================================================== */
+
+let questoes = [
+
+{
+    pergunta:
+    "Paciente com dor torácica irradiando para dorso e diferença de pulsos. Qual o diagnóstico?",
+
+    alternativas:[
+        "IAM",
+        "Dissecção Aguda de Aorta",
+        "TEP",
+        "Pneumotórax"
+    ],
+
+    correta:1,
+
+    comentario:
+    "A diferença de pulsos associada à dor irradiando para dorso é clássica de dissecção aguda de aorta."
+},
+
+{
+    pergunta:
+    "Gestante com PA 170x110 e proteinúria.",
+
+    alternativas:[
+        "Hipertensão crônica",
+        "Pré-eclâmpsia grave",
+        "HELLP",
+        "Eclâmpsia"
+    ],
+
+    correta:1,
+
+    comentario:
+    "Hipertensão grave após 20 semanas associada à proteinúria sugere pré-eclâmpsia grave."
+}
+
+];
+
+/* ==================================================
+VARIAVEIS
+================================================== */
+
+let questaoAtual = 0;
+
+let selecionada = null;
+
+let acertos =
+parseInt(localStorage.getItem("acertos")) || 0;
+
+let erros =
+parseInt(localStorage.getItem("erros")) || 0;
+
+let progresso =
+JSON.parse(localStorage.getItem("progresso"))
+|| {};
+
+/* ==================================================
+ATUALIZAR
+================================================== */
+
+function atualizarContadores(){
+
+    document.getElementById("acertos")
+    .innerHTML = acertos;
+
+    document.getElementById("erros")
+    .innerHTML = erros;
+
+}
+
+/* ==================================================
+CARREGAR QUESTAO
+================================================== */
+
+function carregarQuestao(){
+
+    selecionada = null;
+
+    let q = questoes[questaoAtual];
+
+    document.getElementById("enunciado")
+    .innerHTML = q.pergunta;
+
+    document.getElementById("comentario")
+    .style.display = "none";
+
+    let html = "";
+
+    q.alternativas.forEach((alt,index)=>{
+
+        html += `
+
+        <div class="alternativa"
+        id="alt-${index}">
+
+            <div class="texto-alternativa"
+            onclick="selecionarAlternativa(${index})">
+
+            ${alt}
+
+            </div>
+
+            <div class="cortar"
+            onclick="cortarAlternativa(event,${index})">
+
+            ✂️
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+    document.getElementById("alternativas")
+    .innerHTML = html;
+
+}
+
+/* ==================================================
+SELECIONAR
+================================================== */
+
+function selecionarAlternativa(index){
+
+    document.querySelectorAll(".alternativa")
+    .forEach(item=>{
+
+        item.style.border =
+        "1px solid rgba(255,255,255,0.08)";
+
+    });
+
+    let alt =
+    document.getElementById(`alt-${index}`);
+
+    alt.style.border =
+    "1px solid #00ff88";
+
+    selecionada = index;
+
+}
+
+/* ==================================================
+RESPONDER
+================================================== */
+
+function confirmarResposta(){
+
+    if(selecionada === null){
+
+        alert("Selecione uma alternativa.");
+
+        return;
+
+    }
+
+    let q = questoes[questaoAtual];
+
+    let alternativas =
+    document.querySelectorAll(".alternativa");
+
+    alternativas[q.correta]
+    .classList.add("correta");
+
+    if(selecionada !== q.correta){
+
+        alternativas[selecionada]
+        .classList.add("errada");
+
+        erros++;
+
+    }else{
+
+        acertos++;
+
+    }
+
+    atualizarContadores();
+
+    localStorage.setItem("acertos",acertos);
+
+    localStorage.setItem("erros",erros);
+
+    progresso[questaoAtual] = {
+
+        errada:
+        selecionada !== q.correta,
+
+        pergunta:q.pergunta,
+
+        correta:
+        q.alternativas[q.correta]
+
+    };
+
+    localStorage.setItem(
+        "progresso",
+        JSON.stringify(progresso)
+    );
+
+    document.getElementById("comentario")
+    .style.display = "block";
+
+    document.getElementById("respostaCorreta")
+    .innerHTML =
+    "✅ " +
+    q.alternativas[q.correta];
+
+    document.getElementById("comentarioTexto")
+    .innerHTML =
+    q.comentario;
+
+}
+
+/* ==================================================
+CORTAR
+================================================== */
+
+function cortarAlternativa(event,index){
+
+    event.stopPropagation();
+
+    let alt =
+    document.getElementById(`alt-${index}`);
+
+    alt.classList.toggle("cortada");
+
+}
+
+/* ==================================================
+PROXIMA
+================================================== */
+
+function proximaQuestao(){
+
+    if(questaoAtual < questoes.length - 1){
+
+        questaoAtual++;
+
+        carregarQuestao();
+
+    }
+
+}
+
+/* ==================================================
+VOLTAR
+================================================== */
+
+function voltarQuestao(){
+
+    if(questaoAtual > 0){
+
+        questaoAtual--;
+
+        carregarQuestao();
+
+    }
+
+}
+
+/* ==================================================
+FINALIZAR
+================================================== */
+
+function finalizarProva(){
+
+    document.getElementById("questaoBox")
+    .style.display = "none";
+
+    document.querySelector(".navegacao")
+    .style.display = "none";
+
+    document.getElementById("resultadoFinal")
+    .style.display = "block";
+
+    let total = acertos + erros;
+
+    let porcentagemAcertos =
+    total > 0
+    ? Math.round((acertos / total) * 100)
+    : 0;
+
+    let porcentagemErros =
+    total > 0
+    ? Math.round((erros / total) * 100)
+    : 0;
+
+    document.getElementById("barraAcertos")
+    .style.width =
+    porcentagemAcertos + "%";
+
+    document.getElementById("barraAcertos")
+    .innerHTML =
+    porcentagemAcertos + "%";
+
+    document.getElementById("barraErros")
+    .style.width =
+    porcentagemErros + "%";
+
+    document.getElementById("barraErros")
+    .innerHTML =
+    porcentagemErros + "%";
+
+    let lista =
+    document.getElementById("listaErros");
+
+    lista.innerHTML = "";
+
+    Object.values(progresso)
+    .forEach(item=>{
+
+        if(item.errada){
+
+            lista.innerHTML += `
+
+            <div class="questao-errada">
+
+                <h3>
+                Questão Errada
+                </h3>
+
+                <p>
+                ${item.pergunta}
+                </p>
+
+                <br>
+
+                <strong>
+                Resposta correta:
+                </strong>
+
+                ${item.correta}
+
+            </div>
+
+            `;
+
+        }
+
+    });
+
+}
+
+/* ==================================================
+SAIR
+================================================== */
+
+function sairProva(){
+
+    let confirmar =
+    confirm(
+        "Deseja apagar todo o progresso?"
+    );
+
+    if(confirmar){
+
+        localStorage.clear();
+
+        location.reload();
+
+    }
+
+}
+
+/* ==================================================
+INICIAR
+================================================== */
+
+atualizarContadores();
+
+carregarQuestao();
+
+</script>
+
+</body>
+</html>

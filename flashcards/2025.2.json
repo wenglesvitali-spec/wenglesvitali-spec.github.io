@@ -1,0 +1,31 @@
+[
+    {
+        "pergunta":"Paciente masculino de 65 anos apresenta dor torácica súbita irradiando para dorso e diferença de pressão arterial entre os braços. Qual o diagnóstico mais provável?",
+
+        "alternativas":[
+            "Infarto Agudo do Miocárdio",
+            "Dissecção Aguda de Aorta",
+            "Tromboembolismo Pulmonar",
+            "Pneumotórax Hipertensivo"
+        ],
+
+        "correta":1,
+
+        "comentario":"A dissecção aguda de aorta apresenta classicamente dor súbita intensa irradiando para dorso associada à assimetria de pulsos ou pressão arterial entre os membros."
+    },
+
+    {
+        "pergunta":"Gestante com 30 semanas apresenta PA de 170x110 mmHg e proteinúria. Qual o diagnóstico?",
+
+        "alternativas":[
+            "Hipertensão crônica",
+            "Eclâmpsia",
+            "Pré-eclâmpsia grave",
+            "Síndrome HELLP"
+        ],
+
+        "correta":2,
+
+        "comentario":"A presença de hipertensão grave associada à proteinúria após 20 semanas sugere pré-eclâmpsia grave."
+    }
+]
