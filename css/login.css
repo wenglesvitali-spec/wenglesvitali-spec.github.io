@@ -1,0 +1,216 @@
+/* ===== RESET ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+
+.login-body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:
+    linear-gradient(
+        135deg,
+        #050505,
+        #111111,
+        #0d0d0d
+    );
+    overflow:hidden;
+    position:relative;
+}
+
+/* ===== FUNDO EFEITO ===== */
+
+.login-body::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:rgba(0,255,136,0.08);
+    border-radius:50%;
+    filter:blur(120px);
+    top:-120px;
+    left:-120px;
+}
+
+.login-body::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:rgba(0,255,136,0.05);
+    border-radius:50%;
+    filter:blur(120px);
+    bottom:-120px;
+    right:-120px;
+}
+
+/* ===== LOGIN BOX ===== */
+
+.login-box{
+    width:100%;
+    max-width:420px;
+    padding:45px;
+    background:rgba(20,20,20,0.82);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    backdrop-filter:blur(18px);
+    box-shadow:
+    0 15px 45px rgba(0,0,0,0.55),
+    0 0 25px rgba(0,255,136,0.08);
+    position:relative;
+    z-index:2;
+    animation:fadeIn 0.7s ease;
+}
+
+/* ===== TITULO ===== */
+
+.login-box h1{
+    color:#fff;
+    text-align:center;
+    margin-bottom:35px;
+    font-size:34px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+/* ===== INPUTS ===== */
+
+.login-box input{
+    width:100%;
+    padding:16px;
+    margin-bottom:18px;
+    border:none;
+    outline:none;
+    border-radius:16px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.05);
+    color:#fff;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.login-box input::placeholder{
+    color:rgba(255,255,255,0.45);
+}
+
+.login-box input:focus{
+    border:1px solid #00ff88;
+    background:rgba(255,255,255,0.08);
+    box-shadow:0 0 18px rgba(0,255,136,0.18);
+}
+
+/* ===== BOTAO ===== */
+
+.login-box button{
+    width:100%;
+    padding:16px;
+    margin-top:10px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(
+        135deg,
+        #00ff88,
+        #00c96b
+    );
+    color:#000;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    letter-spacing:1px;
+}
+
+.login-box button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,255,136,0.25);
+}
+
+.login-box button:active{
+    transform:scale(0.98);
+}
+
+/* ===== ANIMAÇÃO ===== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===== TABLET ===== */
+
+@media(max-width:768px){
+
+    .login-box{
+        max-width:380px;
+        padding:35px;
+    }
+
+    .login-box h1{
+        font-size:30px;
+    }
+
+}
+
+/* ===== CELULAR ===== */
+
+@media(max-width:480px){
+
+    .login-body{
+        padding:15px;
+    }
+
+    .login-box{
+        width:100%;
+        padding:28px 22px;
+        border-radius:22px;
+    }
+
+    .login-box h1{
+        font-size:26px;
+        margin-bottom:28px;
+    }
+
+    .login-box input{
+        padding:15px;
+        font-size:15px;
+        border-radius:14px;
+    }
+
+    .login-box button{
+        padding:15px;
+        font-size:15px;
+        border-radius:14px;
+    }
+
+}
+
+/* ===== CELULARES MUITO PEQUENOS ===== */
+
+@media(max-width:340px){
+
+    .login-box{
+        padding:22px 16px;
+    }
+
+    .login-box h1{
+        font-size:22px;
+    }
+
+}
