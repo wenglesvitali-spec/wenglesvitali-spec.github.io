@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<link rel="manifest" href="/manifest.json">
+
 <meta charset="UTF-8">
 
 <meta
 name="viewport"
-content="width=device-width,
+content="
+width=device-width,
 initial-scale=1,
 maximum-scale=1,
 user-scalable=no,
-viewport-fit=cover">
+viewport-fit=cover
+">
 
-<meta name="theme-color"
+<meta
+name="theme-color"
 content="#020617">
 
 <meta
@@ -20,24 +24,22 @@ name="apple-mobile-web-app-capable"
 content="yes">
 
 <meta
-name="mobile-web-app-capable"
-content="yes">
-
-<meta
 name="apple-mobile-web-app-status-bar-style"
 content="black-translucent">
 
 <meta
-name="theme-color"
-content="#020617">
+name="mobile-web-app-capable"
+content="yes">
 
-<title>Provas Salvas</title>
+<title>
+📚 Provas Salvas
+</title>
 
 <style>
 
-/* =========================================
+/* ==================================================
 RESET
-========================================= */
+================================================== */
 
 *{
 margin:0;
@@ -50,11 +52,13 @@ Inter,
 BlinkMacSystemFont,
 "Segoe UI",
 sans-serif;
+
+-webkit-tap-highlight-color:transparent;
 }
 
-/* =========================================
-BODY
-========================================= */
+/* ==================================================
+HTML
+================================================== */
 
 html{
 
@@ -68,10 +72,11 @@ background:#020617;
 scroll-behavior:smooth;
 
 -webkit-text-size-adjust:100%;
-
-touch-action:manipulation;
-
 }
+
+/* ==================================================
+BODY
+================================================== */
 
 body{
 
@@ -82,16 +87,14 @@ min-height:100dvh;
 overflow-x:hidden;
 overflow-y:auto;
 
-margin:0;
-
 padding-top:
-calc(env(safe-area-inset-top) + 16px);
+calc(env(safe-area-inset-top) + 18px);
 
 padding-left:
-max(16px, env(safe-area-inset-left));
+max(18px, env(safe-area-inset-left));
 
 padding-right:
-max(16px, env(safe-area-inset-right));
+max(18px, env(safe-area-inset-right));
 
 padding-bottom:
 calc(env(safe-area-inset-bottom) + 24px);
@@ -108,18 +111,20 @@ color:#F8FAFC;
 -webkit-overflow-scrolling:touch;
 }
 
-/* =========================================
+/* ==================================================
 CONTAINER
-========================================= */
+================================================== */
 
 .container{
-max-width:980px;
+
+max-width:1100px;
+
 margin:auto;
 }
 
-/* =========================================
+/* ==================================================
 HEADER
-========================================= */
+================================================== */
 
 .topo{
 
@@ -131,44 +136,57 @@ env(safe-area-inset-top);
 z-index:1000;
 
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
 gap:14px;
 
 padding:18px;
 
-margin-bottom:24px;
+margin-bottom:26px;
 
-border-radius:24px;
+border-radius:28px;
 
 background:
 rgba(15,23,42,0.92);
 
-backdrop-filter:blur(12px);
+backdrop-filter:blur(16px);
 
--webkit-backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(16px);
 
 border:
 1px solid rgba(255,255,255,0.05);
 
-overflow:visible;
-
+box-shadow:
+0 10px 35px rgba(0,0,0,0.25);
 }
 
+/* ==================================================
+LOGO
+================================================== */
+
 .logo{
-font-size:24px;
+
+font-size:26px;
+
 font-weight:900;
+
 color:#7CFFB2;
 }
 
-/* =========================================
-BOTOES
-========================================= */
+/* ==================================================
+BUTTONS TOP
+================================================== */
 
 .topo-botoes{
+
 display:flex;
+
 gap:12px;
+
+flex-wrap:wrap;
 }
 
 .btn-topo{
@@ -177,93 +195,121 @@ padding:14px 18px;
 
 border:none;
 
-border-radius:16px;
+border-radius:18px;
 
 font-weight:800;
 
 cursor:pointer;
 
 transition:0.25s;
+
+font-size:14px;
 }
 
 .btn-voltar{
+
 background:#172033;
+
 color:white;
 }
 
 .btn-apagar{
+
 background:#3A1C1C;
+
 color:#FF7B7B;
 }
 
 .btn-topo:hover{
+
 transform:translateY(-2px);
 }
 
-/* =========================================
+/* ==================================================
 LISTA
-========================================= */
+================================================== */
 
 .lista-provas{
+
 display:flex;
+
 flex-direction:column;
-gap:22px;
+
+gap:24px;
 }
 
-/* =========================================
+/* ==================================================
 CARD
-========================================= */
+================================================== */
 
 .prova-card{
 
 background:
 rgba(255,255,255,0.03);
 
-backdrop-filter:blur(14px);
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
 
 border:
 1px solid rgba(255,255,255,0.05);
 
-border-radius:30px;
+border-radius:32px;
 
-padding:24px;
+padding:26px;
 
 box-shadow:
-0 15px 35px rgba(0,0,0,0.25);
+0 20px 45px rgba(0,0,0,0.25);
 }
 
-/* =========================================
+/* ==================================================
 HEADER CARD
-========================================= */
+================================================== */
 
 .prova-header{
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
 gap:16px;
+
 flex-wrap:wrap;
 }
 
 .prova-titulo{
-font-size:22px;
+
+font-size:24px;
+
 font-weight:900;
+
 color:#7CFFB2;
 }
 
 .prova-data{
+
 font-size:14px;
+
 color:#94A3B8;
+
+margin-top:6px;
 }
 
-/* =========================================
+/* ==================================================
 STATS
-========================================= */
+================================================== */
 
 .stats{
+
 display:flex;
+
 gap:12px;
+
 flex-wrap:wrap;
-margin-top:20px;
+
+margin-top:22px;
 }
 
 .stat{
@@ -278,28 +324,38 @@ font-size:15px;
 }
 
 .stat-acertos{
+
 background:#103222;
+
 color:#7CFFB2;
 }
 
 .stat-erros{
+
 background:#3A1C1C;
+
 color:#FF7B7B;
 }
 
 .stat-total{
+
 background:#172033;
+
 color:#E2E8F0;
 }
 
-/* =========================================
+/* ==================================================
 ACOES
-========================================= */
+================================================== */
 
 .acoes{
+
 display:flex;
+
 gap:12px;
+
 margin-top:24px;
+
 flex-wrap:wrap;
 }
 
@@ -311,32 +367,39 @@ padding:16px;
 
 border:none;
 
-border-radius:18px;
+border-radius:20px;
 
 font-weight:800;
 
 cursor:pointer;
 
 transition:0.25s;
+
+font-size:15px;
 }
 
 .btn-detalhes{
+
 background:#7CFFB2;
+
 color:#052E16;
 }
 
 .btn-excluir{
+
 background:#3A1C1C;
+
 color:#FF7B7B;
 }
 
 .btn-acao:hover{
+
 transform:translateY(-2px);
 }
 
-/* =========================================
+/* ==================================================
 DETALHES
-========================================= */
+================================================== */
 
 .detalhes{
 
@@ -350,9 +413,9 @@ border-top:
 1px solid rgba(255,255,255,0.06);
 }
 
-/* =========================================
-QUESTAO ERRO
-========================================= */
+/* ==================================================
+QUESTAO
+================================================== */
 
 .questao-erro{
 
@@ -362,100 +425,227 @@ rgba(255,255,255,0.03);
 border:
 1px solid rgba(255,255,255,0.05);
 
-border-radius:22px;
+border-radius:26px;
 
-padding:20px;
+padding:22px;
 
-margin-bottom:18px;
+margin-bottom:22px;
 }
 
 .questao-erro h3{
+
 color:#FF7B7B;
-margin-bottom:16px;
+
+margin-bottom:18px;
+
+font-size:20px;
 }
 
 .questao-erro p{
-line-height:1.8;
-margin-bottom:10px;
+
+line-height:1.9;
+
+margin-bottom:14px;
+
 color:#E2E8F0;
 }
 
-/* =========================================
+/* ==================================================
+ALTERNATIVAS
+================================================== */
+
+.alternativas{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+margin-top:18px;
+
+margin-bottom:20px;
+}
+
+.alternativa{
+
+padding:16px;
+
+border-radius:18px;
+
+background:
+rgba(255,255,255,0.04);
+
+border:
+1px solid rgba(255,255,255,0.05);
+
+line-height:1.7;
+}
+
+.alternativa.usuario{
+
+border:
+1px solid #FF7B7B;
+
+background:
+rgba(255,123,123,0.10);
+}
+
+.alternativa.correta{
+
+border:
+1px solid #7CFFB2;
+
+background:
+rgba(124,255,178,0.10);
+}
+
+/* ==================================================
 COMENTARIO
-========================================= */
+================================================== */
 
 .btn-comentario{
 
 width:100%;
 
-padding:14px;
+padding:15px;
 
-margin-top:14px;
+margin-top:16px;
 
 border:none;
 
-border-radius:16px;
+border-radius:18px;
 
 background:#172033;
 
 color:#7CFFB2;
 
-font-weight:800;
+font-weight:900;
 
 cursor:pointer;
+
+font-size:15px;
 }
 
 .comentario{
 
 display:none;
 
-margin-top:14px;
+margin-top:16px;
 
-padding:18px;
+padding:20px;
 
-border-radius:18px;
+border-radius:20px;
 
 background:#13261B;
 
-line-height:1.8;
+line-height:1.9;
 
 border:
 1px solid rgba(124,255,178,0.10);
 }
 
-/* =========================================
+/* ==================================================
+ANOTACAO
+================================================== */
+
+.anotacao{
+
+width:100%;
+
+min-height:160px;
+
+margin-top:18px;
+
+padding:18px;
+
+border:none;
+
+outline:none;
+
+resize:vertical;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,0.04);
+
+color:#F8FAFC;
+
+font-size:15px;
+
+line-height:1.8;
+
+border:
+1px solid rgba(255,255,255,0.05);
+}
+
+/* ==================================================
+SALVAR ANOTACAO
+================================================== */
+
+.btn-salvar-anotacao{
+
+width:100%;
+
+margin-top:14px;
+
+padding:16px;
+
+border:none;
+
+border-radius:18px;
+
+background:#7CFFB2;
+
+color:#052E16;
+
+font-weight:900;
+
+cursor:pointer;
+
+font-size:15px;
+}
+
+/* ==================================================
 VAZIO
-========================================= */
+================================================== */
 
 .vazio{
 
 text-align:center;
 
-padding:80px 20px;
+padding:90px 20px;
 
 background:
 rgba(255,255,255,0.03);
 
-border-radius:30px;
+border-radius:32px;
 
 border:
 1px solid rgba(255,255,255,0.05);
 }
 
 .vazio h2{
-font-size:28px;
-margin-bottom:12px;
+
+font-size:30px;
+
+margin-bottom:14px;
+
 color:#7CFFB2;
 }
 
 .vazio p{
+
 color:#94A3B8;
-line-height:1.8;
+
+line-height:1.9;
 }
 
-/* =========================================
+/* ==================================================
 RESPONSIVO
-========================================= */
+================================================== */
+
 @media(max-width:768px){
 
 body{
@@ -470,75 +660,81 @@ padding-right:
 max(12px, env(safe-area-inset-right));
 
 padding-bottom:
-calc(env(safe-area-inset-bottom) + 20px);
+calc(env(safe-area-inset-bottom) + 18px);
 
 }
 
 .topo{
-padding:14px;
-border-radius:20px;
-}
 
-.logo{
-font-size:20px;
-}
+padding:16px;
 
-.prova-card{
-padding:20px;
 border-radius:24px;
 }
 
+.logo{
+
+font-size:22px;
+}
+
+.prova-card{
+
+padding:20px;
+
+border-radius:26px;
+}
+
 .prova-header{
+
 flex-direction:column;
+
 align-items:flex-start;
 }
 
 .acoes{
+
 flex-direction:column;
 }
 
 .btn-acao{
+
 width:100%;
 }
 
+.questao-erro{
+
+padding:18px;
 }
 
-/* =========================================
-APP FIX IOS / ANDROID
-========================================= */
+.anotacao{
 
-*{
--webkit-tap-highlight-color:transparent;
+min-height:140px;
 }
+
+}
+
+/* ==================================================
+IOS / ANDROID FIX
+================================================== */
 
 input,
 textarea,
 select,
 button{
+
 font-size:16px;
+
 touch-action:manipulation;
 }
 
 img{
+
 max-width:100%;
+
 height:auto;
+
 display:block;
 }
 
-.prova-card,
-.questao-erro,
-.comentario,
-.topo{
-
-overflow:hidden;
-
-}
-
-/* MELHOR SCROLL IOS */
-
-*{
--webkit-overflow-scrolling:touch;
-}
 </style>
 
 </head>
@@ -547,9 +743,9 @@ overflow:hidden;
 
 <div class="container">
 
-<!-- =========================================
+<!-- ==================================================
 TOPO
-========================================= -->
+================================================== -->
 
 <div class="topo">
 
@@ -579,9 +775,9 @@ onclick="apagarTodasProvas()">
 
 </div>
 
-<!-- =========================================
+<!-- ==================================================
 LISTA
-========================================= -->
+================================================== -->
 
 <div
 class="lista-provas"
@@ -593,9 +789,9 @@ id="listaProvas">
 
 <script>
 
-/* =========================================
-CARREGAR PROVAS
-========================================= */
+/* ==================================================
+LOCAL STORAGE
+================================================== */
 
 const provas =
 JSON.parse(
@@ -606,9 +802,9 @@ localStorage.getItem("provas_salvas")
 const lista =
 document.getElementById("listaProvas");
 
-/* =========================================
+/* ==================================================
 SEM PROVAS
-========================================= */
+================================================== */
 
 if(provas.length === 0){
 
@@ -635,9 +831,9 @@ renderizarProvas();
 
 }
 
-/* =========================================
+/* ==================================================
 RENDER
-========================================= */
+================================================== */
 
 function renderizarProvas(){
 
@@ -659,8 +855,6 @@ total > 0
 ? ((prova.acertos / total) * 100).toFixed(1)
 : 0;
 
-/* QUESTOES ERRADAS */
-
 let errosHtml = "";
 
 if(prova.questoesErradas){
@@ -676,18 +870,48 @@ errosHtml += `
 </h3>
 
 <p>
-<b>Sua resposta:</b><br>
-${erro.respostaUsuario}
+<b>📖 Enunciado:</b><br>
+${erro.enunciado || "Não informado"}
+</p>
+
+<div class="alternativas">
+
+${(erro.alternativas || []).map(alternativa => `
+
+<div class="
+alternativa
+
+${alternativa === erro.respostaUsuario
+? 'usuario'
+: ''}
+
+${alternativa === erro.respostaCorreta
+? 'correta'
+: ''}
+
+">
+
+${alternativa}
+
+</div>
+
+`).join("")}
+
+</div>
+
+<p>
+<b>❌ Sua resposta:</b><br>
+${erro.respostaUsuario || "Não informado"}
 </p>
 
 <p>
-<b>Resposta correta:</b><br>
-${erro.respostaCorreta}
+<b>✅ Resposta correta:</b><br>
+${erro.respostaCorreta || "Não informado"}
 </p>
 
 <button
 class="btn-comentario"
-onclick="toggleComentario(${index}-${i})">
+onclick="toggleComentario('${index}-${i}')">
 
 ⬇ Ver comentário
 
@@ -697,9 +921,22 @@ onclick="toggleComentario(${index}-${i})">
 class="comentario"
 id="comentario-${index}-${i}">
 
-${erro.comentario}
+${erro.comentario || "Sem comentário"}
 
 </div>
+
+<textarea
+class="anotacao"
+id="anotacao-${index}-${i}"
+placeholder="✍️ Escreva por que você errou esta questão...">${erro.anotacao || ""}</textarea>
+
+<button
+class="btn-salvar-anotacao"
+onclick="salvarAnotacao(${index},${i})">
+
+💾 Salvar anotação
+
+</button>
 
 </div>
 
@@ -722,7 +959,7 @@ html += `
 </div>
 
 <div class="prova-data">
-📅 ${prova.data}
+📅 ${prova.data || "Sem data"}
 </div>
 
 </div>
@@ -732,11 +969,11 @@ html += `
 <div class="stats">
 
 <div class="stat stat-acertos">
-✅ ${prova.acertos} acertos
+✅ ${prova.acertos || 0} acertos
 </div>
 
 <div class="stat stat-erros">
-❌ ${prova.erros} erros
+❌ ${prova.erros || 0} erros
 </div>
 
 <div class="stat stat-total">
@@ -770,12 +1007,16 @@ class="detalhes"
 id="detalhes-${index}">
 
 ${errosHtml || `
+
 <p style="
 color:#94A3B8;
 line-height:1.8;
 ">
+
 🎉 Nenhuma questão errada nesta prova.
+
 </p>
+
 `}
 
 </div>
@@ -790,9 +1031,9 @@ lista.innerHTML = html;
 
 }
 
-/* =========================================
-TOGGLE DETALHES
-========================================= */
+/* ==================================================
+DETALHES
+================================================== */
 
 function toggleDetalhes(index){
 
@@ -808,9 +1049,9 @@ div.style.display === "block"
 
 }
 
-/* =========================================
-TOGGLE COMENTARIO
-========================================= */
+/* ==================================================
+COMENTARIO
+================================================== */
 
 function toggleComentario(id){
 
@@ -826,9 +1067,36 @@ div.style.display === "block"
 
 }
 
-/* =========================================
+/* ==================================================
+SALVAR ANOTACAO
+================================================== */
+
+function salvarAnotacao(
+provaIndex,
+questaoIndex
+){
+
+const textarea =
+document.getElementById(
+`anotacao-${provaIndex}-${questaoIndex}`
+);
+
+provas[provaIndex]
+.questoesErradas[questaoIndex]
+.anotacao = textarea.value;
+
+localStorage.setItem(
+"provas_salvas",
+JSON.stringify(provas)
+);
+
+alert("✅ Anotação salva!");
+
+}
+
+/* ==================================================
 EXCLUIR PROVA
-========================================= */
+================================================== */
 
 function excluirProva(index){
 
@@ -847,9 +1115,9 @@ location.reload();
 
 }
 
-/* =========================================
+/* ==================================================
 APAGAR TODAS
-========================================= */
+================================================== */
 
 function apagarTodasProvas(){
 
@@ -865,18 +1133,28 @@ location.reload();
 
 }
 
-/* =========================================
+/* ==================================================
 VOLTAR
-========================================= */
+================================================== */
 
 function voltarPagina(){
 
 history.back();
 
 }
-document.addEventListener("gesturestart",function(e){
+
+/* ==================================================
+IOS FIX
+================================================== */
+
+document.addEventListener(
+"gesturestart",
+function(e){
+
 e.preventDefault();
-});
+
+}
+);
 
 </script>
 
