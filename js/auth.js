@@ -44,3 +44,13 @@ entrar();
 }
 
 });
+
+if(
+localStorage.getItem("logado")
+=== "true"
+){
+
+window.location.href =
+"dashboard.html";
+
+}
