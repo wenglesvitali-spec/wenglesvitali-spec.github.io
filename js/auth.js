@@ -1,16 +1,46 @@
 function entrar(){
 
-let login = document.getElementById('login').value;
-let senha = document.getElementById('senha').value;
+let login =
+document.getElementById("login")
+.value.trim();
 
-if(login === 'revalida2026' && senha === 'revalida2026'){
+let senha =
+document.getElementById("senha")
+.value.trim();
 
-localStorage.setItem('logado','sim');
-window.location.href = 'dashboard.html';
+if(
+login === "revalida2026" &&
+senha === "revalida2026"
+){
+
+localStorage.setItem(
+"logado",
+"true"
+);
+
+window.location.href =
+"dashboard.html";
 
 }else{
 
-alert('Login inválido');
+alert(
+"Usuário ou senha inválidos."
+);
 
 }
+
 }
+
+/* ENTER */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+if(e.key === "Enter"){
+
+entrar();
+
+}
+
+});
