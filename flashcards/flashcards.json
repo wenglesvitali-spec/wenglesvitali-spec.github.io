@@ -1,0 +1,3032 @@
+[
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Qual o diagnóstico quando há sangramento + dor + colo pérvio na gestação inicial?",
+    "resposta": "Abortamento em evolução (inevitável)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Qual a principal diferença entre ameaça de abortamento e abortamento em evolução?",
+    "resposta": "Ameaça = colo fechado | Em evolução = colo aberto"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta no abortamento em evolução em paciente estável?",
+    "resposta": "Oferecer: AMIU/curetagem OU conduta expectante"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Presença de restos ovulares + colo aberto indica qual tipo de aborto?",
+    "resposta": "Abortamento em evolução/incompleto"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Qual o diagnóstico em gestante com sangramento leve e colo uterino fechado?",
+    "resposta": "Ameaça de abortamento"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Qual achado indica viabilidade gestacional no início da gravidez?",
+    "resposta": "Elevação adequada do beta-hCG (aproximadamente dobra em 48h)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Qual a conduta na ameaça de abortamento com paciente estável?",
+    "resposta": "Repouso relativo e acompanhamento"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sangramento vaginal + colo fechado indica qual condição?",
+    "resposta": "Ameaça de abortamento"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "Qual tipo de abortamento apresenta colo uterino aberto?",
+    "resposta": "Abortamento em evolução ou incompleto"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Beta-hCG aumentando adequadamente afasta qual hipótese grave?",
+    "resposta": "Gestação ectópica (em geral cursa com elevação inadequada)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Gestante Rh negativo com sangramento no 1º trimestre deve receber o quê?",
+    "resposta": "Imunoglobulina anti-D"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Qual o objetivo da imunoglobulina anti-D na gestação?",
+    "resposta": "Prevenir isoimunização Rh"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Ameaça de abortamento com embrião vivo + hematoma subcoriônico: conduta principal?",
+    "resposta": "Acompanhamento + considerar anti-D se Rh negativo"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Em quanto tempo deve ser feita a profilaxia com anti-D após sangramento?",
+    "resposta": "O mais precoce possível (ideal até 72h)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Coombs indireto negativo em gestante Rh negativo indica o quê?",
+    "resposta": "Ainda não sensibilizada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sangramento leve + colo fechado + embrião vivo define qual diagnóstico?",
+    "resposta": "Ameaça de abortamento"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Mutação MTHFR isolada na gestação indica anticoagulação?",
+    "resposta": "Não, não indica tratamento específico"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "História de um único abortamento precoce (<10 semanas) indica investigação de trombofilia?",
+    "resposta": "Não"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Quando investigar trombofilia na gestação?",
+    "resposta": "Abortamentos recorrentes ou história de trombose"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Mutação MTHFR é considerada trombofilia de alto risco?",
+    "resposta": "Não"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Conduta em gestante com MTHFR sem história de trombose?",
+    "resposta": "Seguimento pré-natal habitual"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Uso de AAS e heparina é indicado em qual situação?",
+    "resposta": "Síndrome antifosfolípide ou trombofilia comprovada de risco"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Sangramento persistente no pós-parto + metástases pulmonares sugere qual diagnóstico?",
+    "resposta": "Coriocarcinoma"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Qual neoplasia gestacional cursa com metástase pulmonar precoce?",
+    "resposta": "Coriocarcinoma"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Útero aumentado + sangramento irregular no pós-parto deve levantar qual suspeita?",
+    "resposta": "Doença trofoblástica gestacional"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Qual exame ajuda no diagnóstico e seguimento do coriocarcinoma?",
+    "resposta": "Beta-hCG quantitativo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Coriocarcinoma pode ocorrer após qual evento obstétrico?",
+    "resposta": "Qualquer gestação (parto, aborto ou mola)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Achado de nódulos pulmonares em paciente com sangramento pós-parto indica o quê?",
+    "resposta": "Metástase de coriocarcinoma"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Principal causa de hemorragia pós-parto imediata com útero amolecido?",
+    "resposta": "Atonia uterina"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Conduta inicial na hemorragia pós-parto por atonia uterina?",
+    "resposta": "Massagem uterina bimanual + uterotônicos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sinais de atonia uterina no exame físico?",
+    "resposta": "Útero amolecido, aumentado e sangramento abundante"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Após falha de medidas clínicas iniciais na atonia uterina, qual próximo passo?",
+    "resposta": "Medidas mecânicas/cirúrgicas (balão, B-Lynch, histerectomia)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quais uterotônicos são usados na atonia uterina?",
+    "resposta": "Ocitocina, metilergometrina, misoprostol"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Choque hipovolêmico no pós-parto exige qual conduta associada?",
+    "resposta": "Reposição volêmica e hemocomponentes"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Elevação persistente ou ascendente do beta-hCG após esvaziamento molar indica o quê?",
+    "resposta": "Doença trofoblástica gestacional persistente"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Qual diagnóstico quando há invasão do miométrio após mola com beta-hCG crescente?",
+    "resposta": "Mola invasora"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Achado de miométrio heterogêneo e vascularização aumentada no Doppler sugere o quê?",
+    "resposta": "Invasão trofoblástica (mola invasora)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Conduta na mola invasora?",
+    "resposta": "Quimioterapia"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Radiografia de tórax normal exclui doença trofoblástica persistente?",
+    "resposta": "Não"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Principal critério de malignidade na doença trofoblástica?",
+    "resposta": "Elevação ou platô do beta-hCG"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sangramento intenso + colo aberto + restos ovulares indica qual diagnóstico?",
+    "resposta": "Aborto incompleto"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Conduta no aborto incompleto com instabilidade hemodinâmica?",
+    "resposta": "Estabilização + esvaziamento uterino (curetagem/AMIU)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Qual achado diferencia aborto incompleto de completo?",
+    "resposta": "Presença de restos ovulares"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Paciente com hipotensão e taquicardia no abortamento indica o quê?",
+    "resposta": "Instabilidade hemodinâmica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Primeiro passo diante de abortamento com instabilidade?",
+    "resposta": "Acesso venoso + reposição volêmica"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Aborto completo apresenta como está o colo e restos?",
+    "resposta": "Colo fechado e sem restos"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Hemorragia pós-parto por atonia uterina: qual medicação antifibrinolítica usar precocemente?",
+    "resposta": "Ácido tranexâmico EV"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Quando indicar ácido tranexâmico na hemorragia pós-parto?",
+    "resposta": "O mais precoce possível (até 3h), junto aos uterotônicos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento inicial da atonia uterina inclui o quê?",
+    "resposta": "Massagem uterina + uterotônicos + reposição volêmica"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Útero amolecido no pós-parto indica qual causa de hemorragia?",
+    "resposta": "Atonia uterina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Ácido tranexâmico depende da presença de laceração para ser usado?",
+    "resposta": "Não"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Sequência correta na hemorragia pós-parto?",
+    "resposta": "Medidas clínicas imediatas antes de cirurgia"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Gestação ectópica estável com BHCG <5000 e massa <3-4 cm sem batimento: conduta?",
+    "resposta": "Metotrexato"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Critérios para tratamento com metotrexato na ectópica?",
+    "resposta": "Estável, sem ruptura, BHCG baixo, massa pequena, sem BCF"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Quando indicar cirurgia na gestação ectópica?",
+    "resposta": "Instabilidade hemodinâmica ou ruptura"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Conduta expectante na ectópica é indicada quando?",
+    "resposta": "BHCG em queda espontânea e paciente estável"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Ausência de gestação intrauterina + massa anexial sugere o quê?",
+    "resposta": "Gestação ectópica"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Objetivo do metotrexato na ectópica?",
+    "resposta": "Interromper proliferação trofoblástica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sangramento leve + colo fechado + embrião vivo indica qual diagnóstico?",
+    "resposta": "Ameaça de abortamento"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta na ameaça de abortamento estável?",
+    "resposta": "Repouso relativo e acompanhamento ambulatorial"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hematoma subcoriônico pequeno muda a conduta inicial?",
+    "resposta": "Não, mantém conduta expectante"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Cerclagem é indicada em qual situação?",
+    "resposta": "Incompetência istmocervical (colo aberto/encurtado)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "AAS é indicado rotineiramente na ameaça de abortamento?",
+    "resposta": "Não"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Quando internar sangramento no 1º trimestre?",
+    "resposta": "Instabilidade hemodinâmica ou sangramento intenso"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "Mulher em idade fértil com dor abdominal + atraso menstrual deve pensar em quê?",
+    "resposta": "Gravidez ectópica até prova em contrário"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Tríade clássica da gravidez ectópica",
+    "resposta": "Atraso menstrual + dor abdominal + sangramento vaginal"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Conduta inicial suspeita de gravidez ectópica estável",
+    "resposta": "Dosar beta-hCG + ultrassonografia transvaginal"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Sinal de instabilidade hemodinâmica na ectópica",
+    "resposta": "Hipotensão + taquicardia"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "Principal diagnóstico diferencial de dor pélvica sem febre e com atraso menstrual",
+    "resposta": "Gravidez ectópica"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Quando indicar cirurgia imediata na ectópica",
+    "resposta": "Instabilidade hemodinâmica ou ruptura"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Colo uterino dilatado + sangramento na gestação inicial indica qual diagnóstico?",
+    "resposta": "Aborto inevitável (em evolução)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Diferença chave entre ameaça de aborto e aborto inevitável",
+    "resposta": "Ameaça: colo fechado | Inevitável: colo aberto"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Presença de BCF exclui aborto inevitável?",
+    "resposta": "Não"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Conduta no aborto inevitável",
+    "resposta": "Esvaziamento uterino ou expectante conforme caso"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Achados: colo aberto + sangramento + dor definem o quê?",
+    "resposta": "Aborto em curso/inevitável"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "No aborto retido como está o colo?",
+    "resposta": "Fechado, sem sangramento ativo"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "TIPOS DE CEFALEIAS?",
+    "resposta": "PRIMARIA SECUNDARIA"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "CEFALEIAS PRIMARIAS",
+    "resposta": "Migranea (ou enxaqueca) Cefaleia tensional Cefaleia em salvas"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "CEFALEIAS SECUNDARIAS",
+    "resposta": "NEOPLASIA ANEURISMA AVC MENINGITE ABSCESSO"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "RED FLAGS CEFALEIA",
+    "resposta": "\" MNEMONICO SNOOP \""
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "EXAME PARA CEFALEIA SECUNDARIA?",
+    "resposta": "TC RNM"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "QUADRO CLINICO CEFALIA TENSIONAL?",
+    "resposta": "Cefaleia bilateral (holocraniana) dor apero ou pulsatil duracao de 30min ate 7 dias nao acompanha nauseas/vomitos ou foto/fonofobia"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "TTO CEFALEIA TENSIONAL?",
+    "resposta": "AINES (DIPIRONA,PARACETAMOL)"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "TTO PROFILACTICO CEFALEIA TENSIONAL",
+    "resposta": "Antidepressivos triciclicos Amitriptilina nortriptilina"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "Tipos de Migraneas",
+    "resposta": "\" Migrânea sem aura (enxaqueca comum) Migrânea com aura (enxaqueca clássica). Migrânea semaura (enxaqueca comum) Migrânea com aura (enxaqueca clássica). \""
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "Migranea com aura caracteristicas?",
+    "resposta": "Escotomas perversao do olfato parestesias enxaqueca hemiplegica sintomas neurologicos focais transitorios duram 5-60min"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "TTO Migranea ou enxaqueca",
+    "resposta": "Leves -> analgesicos simples ou associar anti-inflamatorio nao hormonal ou corticoide moderados/graves -> TRIPTANOS com anti-inflamatorios, antiemeticos, antipsicoticos. FALHA TERAPEUTICA, ASSOCIAR dexametasona"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "tto profilatico migranea",
+    "resposta": "propanolol e o mais usado amitriptilina, topiramato, valproato e candesartana"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "quadro clinico migranea",
+    "resposta": "dor unilateral interfere em atividades rotineiras dura 4h a 3 dias habitualmente acompanha nauseas/vomitos/fono/fotofobia"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "Cefaleia em salvas quadro clinico?",
+    "resposta": "dor excruciante na regiao periorbitaria dor estritamente unilateral e sempre do mesmo lado dura de 15min a 3 horas e pode repetir ate oito vezes por dia"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "Cefaleias em salva e mais comum em homens ou mulheres?",
+    "resposta": "homens forte associacao com etilismo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "tto abortivo cefalia em salvas",
+    "resposta": "Oxigenio a 12l/min (GOLD STANDAR) Triptanos e injecao intransal de lidocaina"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "tto profilatico cefaleia em salvas",
+    "resposta": "Verapamil e topiramato Ja indicar na primeira CRISE!"
+  },
+  {
+    "categoria": "Neurologia",
+    "pergunta": "Sintomas Cefaleia em salvas",
+    "resposta": "SEMPRE DO LADO AFETADO Rinorreia congestao conjuintival edema periorbitario lacrimejamento sudorese frontal e facial miose,ptose e/ou edema palpebral"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Fases da apendice",
+    "resposta": "INFLAMATORIA OU EDEMATOSA SUPORATIVA OU FIBRINOSA GANGRENOSA OU ISQUEMICA PERFURATIVA"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Causas de apendicite",
+    "resposta": "fecalitos hiperplasia dos foliculos linfoides (criancas) parasitas obstrucao do lumen apendicular"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Clinica de apendicite",
+    "resposta": "dor abdominal iniciamente periumbilical migra em 12-24 horas para FID Mudanca na localizacao e caracter da dor dor a descompressao em FID anorexia nauseas e vomitos"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Exame fisico apendicite",
+    "resposta": "BLUMBERG - dor a descompresao brusca ponto McBurney ROVSING - Comprime FIE e dor aparece em FID PSOAS - Extensao da coxa sobre o quadril leva dor abdominal OBTURADOR - dor a rotacao interna do quadril DUNPHY - dor a tosse durante compressao da FID"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Posicoes do apendice",
+    "resposta": "retrocecal (mas comum) paracecal pre-ileal pos-ileal subileal pelvico"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "exames complementares para apendice?",
+    "resposta": "HMG USG TC (PADRAO OURO)"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "achados usg na apendicite?",
+    "resposta": "apendice espessado acima de 6mm liquido periapendicular sinais de abscesso e presenca de fecalito sinal do alvo"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "achados na TC em apendicite",
+    "resposta": "borramento da gordura mesenterica avaliacao completa de toda cavidade apendicolito flegmao abscesso ou liquido livre"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "qual escala diagnostica apendice e da a conduta?",
+    "resposta": "\" ESCALA DE ALVARADO M migracao da dor 1pts A norexia 1pts N nauseas/vomitos 1pts D dor em FID 1pts R ebote (dor a descomprsao em FID) 2pts E elevacao da temperatura (febre) 1pts L leucocitose 2pts D desvio a esquerda 1pts 7 fecha dx sem demais avaliacoes \""
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "tto apendicite nao complicada",
+    "resposta": "internacao, dieta zero hidratacao parenteral analgesia e antiemeticos apendicectomia (laparotomia ou laparoscopia)"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "tto apendicite complicada",
+    "resposta": "internacao atb ev atb terapeutica: ceftriaxone+metronisazol por 1-2 sem drenagem percutanea guiada por TC se abcesso >4cm apendicectomia apos 6-8 sem APENDICITE COMPLICADA CONSIDERA-SE QUANDO HÁ A FORMAÇÃO DE UM PLASTRÃO, PODENDO HAVER ABSCESSO LOCALIZADO, SEM CONTAMINAÇÃO GERAL DA CAVIDADE ABDOMINAL, O PACIENTE PERMANECE ESTÁVEL, SEM SINAIS DE SEPSE, SEM OBSTRUÇÃO."
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Dx diferenciais de apendicite",
+    "resposta": "DIP GRAVIDEZ ECTOPICA CISTO OVARIANO ROTO TORSAO DE OVARIO LITIASE RENAL/URETERAL"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "complicacoes de apendicite",
+    "resposta": "abscesso de parede (mas comum) abscesso hepatico pileflebite fistula do coto apendicular sepse"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "apencite com peritonite conduta?",
+    "resposta": "LAPAROTOMIA INFRAUMBILICAL OU VIDEOLAPAROSCOPIA"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Ao nascer qual vacina?",
+    "resposta": "Pensar em BB B CG B HEPATITE B"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "2 meses qual vacina?",
+    "resposta": "4P P ENTAVALENTE P VIP (POLIOMELITE INATIVADA) P (PIRIRI) RATAVIRUS P PNEUMOCOCICA 10-VALENTE"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "3 meses qual vacina?",
+    "resposta": "Pensar em 3 DEITADO MENINGOCOCICA C"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Vacina dos 4 meses?",
+    "resposta": "REPETE 4P P ENTAVALENTE P VIP (VACINA INATIVADA POLIOMELITE) P (PIRIRI) ROTAVIRUS P PNEUMOCOCICA 10-VALENTE"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Vacina dos 5 meses?",
+    "resposta": "REPETE 3 DEITADO MENINGOCOCICA C"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Vacina 6 meses?",
+    "resposta": "NA NOSSA FESTA DE 6 MESES O *PIVO TROUXE GRIPE E COVID* PENTAVALENTE VIP INFLUENZA COVID"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "VACINAS 9 MESES?",
+    "resposta": "A CRIANCA GANHA 9 BALOES AMARELOS FEBRE AMARELA"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "VACINA 12 MESES?",
+    "resposta": "MELHORES PRESENTES SCR - TRIPLICE VIRAL MENINGOCOCICA C PNEUMOCOCICA 10-VALENTE"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "VACINAS 15 MESES?",
+    "resposta": "A DEBUTANTE VOMITA TEQUILA HEPATITE A - A DPT - DEBUTANTE VIP - VOMITA TETRAVIRAL - TEQUILA"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "VACINAS 4 ANOS?",
+    "resposta": "DA FERIAS DA VACINA DTP - DA FEBRE AMARELA - FERIAS VARICELA - VACINA"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Criterios de peso para vacina BCG",
+    "resposta": "> 2kg: vacinar < 2kg: adiar ate atingir peso adequado"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Qual o agente da BCG?",
+    "resposta": "Mycobacterium bovis atenuado"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Objetivo da BCG?",
+    "resposta": "Prevenir formas graves de TB (meníngea e miliar)"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Quando aplicar BCG?",
+    "resposta": "Ideal até 12h após nascimento"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN < 2 kg: conduta com BCG?",
+    "resposta": "Adiar até atingir peso adequado"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Ausência de cicatriz da BCG → revacinar?",
+    "resposta": "NÃO"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN de mãe bacilífera (<15 dias tratamento): conduta?",
+    "resposta": "Não vacinar + rifampicina 4 meses → depois BCG"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN de mãe com hepatite B: conduta?",
+    "resposta": "Vacina + imunoglobulina anti-HBs até 12h (máx 24h)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Até quando pode aplicar imunoglobulina anti-HBs?",
+    "resposta": "Até 7 dias de vida"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Contraindicação clássica da vacina rotavírus?",
+    "resposta": "Intussuscepção prévia"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Outras contraindicações do rotavírus?",
+    "resposta": "Malformação intestinal + imunossupressão grave"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Idade máxima 1ª dose rotavírus (nova regra)?",
+    "resposta": "11 meses e 29 dias"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Componentes da pentavalente?",
+    "resposta": "Difteria + Tétano + Coqueluche + Hep B + Hib"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Tipo da vacina da coqueluche na pentavalente?",
+    "resposta": "Celular (mais efeitos adversos)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Efeito adverso clássico da DTP?",
+    "resposta": "Episódio hipotônico-hiporresponsivo (HHE)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta após HHE com DTP?",
+    "resposta": "Substituir por dTpa (acelular)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Encefalopatia pós-vacinal → conduta?",
+    "resposta": "Nunca mais receber componente pertussis"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Mudança importante a partir de 2025?",
+    "resposta": "Fim da VOP (gotinha) → só VIP"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Esquema VIP?",
+    "resposta": "2, 4, 6 meses + reforço 15 meses"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Idade para vacina influenza em crianças?",
+    "resposta": "6 meses a 6 anos"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Primeira vacinação <9 anos: esquema?",
+    "resposta": "2 doses (intervalo 30 dias)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Idade para vacina COVID infantil?",
+    "resposta": "A partir de 6 meses"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Esquema febre amarela criança?",
+    "resposta": "9 meses + reforço aos 4 anos"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Pode aplicar febre amarela com outra vacina viva <2 anos?",
+    "resposta": "NÃO → intervalo de 30 dias"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "Esquema atual HPV (Brasil)?",
+    "resposta": "Dose única (9–14 anos)"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "Tipos cobertos HPV quadrivalente?",
+    "resposta": "6, 11, 16, 18"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Meningocócica ACWY: quando aplicar?",
+    "resposta": "11–14 anos (dose única)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Vacinas essenciais no idoso?",
+    "resposta": "Influenza + Pneumocócica + dT + Herpes zoster"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "dT no idoso: intervalo?",
+    "resposta": "A cada 10 anos"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Contraindicações absolutas de vacinas?",
+    "resposta": "Anafilaxia | Gestação (vacinas vivas) | Imunossupressão (vacinas vivas)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Mnemônico vacinas vivas?",
+    "resposta": "BRAVA DENGUOSA 34 (BCG, Rubéola, Amarela, Varicela, Dengue, Tríplice, Tetraviral)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Contato com varicela (imunocompetente)?",
+    "resposta": "Vacina até 5 dias (ideal 72h)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Contato com varicela (imunossuprimido)?",
+    "resposta": "Imunoglobulina"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Contato com sarampo?",
+    "resposta": "Tríplice viral até 72h"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Sarampo + contraindicação à vacina?",
+    "resposta": "Imunoglobulina"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "🦠 O que é Doença Inflamatória Pélvica (DIP)?",
+    "resposta": "Infecção ascendente do trato genital inferior → acomete endométrio, tubas e adjacências"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "🦠 Principais agentes da DIP?",
+    "resposta": "Chlamydia trachomatis + Neisseria gonorrhoeae (+ Mycoplasma, Ureaplasma)"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "⚠️ Fatores de risco para DIP?",
+    "resposta": "Múltiplos parceiros Parceiro com IST Idade 15–25 anos DIU (primeiros 20 dias) Imunossupressão"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "🔥 Critério diagnóstico de DIP?",
+    "resposta": "3 critérios maiores + 1 menor OU 1 critério elaborado"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "📍 Critérios maiores de DIP?",
+    "resposta": "Dor no hipogástrio Dor à palpação dos anexos Dor à mobilização do colo uterino"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "📍 Exemplos de critérios menores de DIP?",
+    "resposta": "Febre >37,5°C Leucorreia Leucocitose PCR/VHS elevado >5 leucócitos endocérvice IST confirmada"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "📍 Critérios elaborados de DIP?",
+    "resposta": "Endometrite histológica Abscesso tubo-ovariano Laparoscopia positiva"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "⚠️ Complicações da DIP?",
+    "resposta": "Infertilidade Gravidez ectópica Dor pélvica crônica Aderências"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "💊 Tratamento ambulatorial da DIP?",
+    "resposta": "Ceftriaxona IM dose única + Doxiciclina 14 dias + Metronidazol 14 dias"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "🏥 Tratamento hospitalar da DIP?",
+    "resposta": "Ceftriaxona EV + Doxiciclina + Metronidazol EV"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "🔪 Indicação de tratamento cirúrgico na DIP?",
+    "resposta": "Abscesso roto Abscesso >10 cm Falha clínica Hemoperitônio"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "🚨 Indicações de internação na DIP?",
+    "resposta": "Gestante Abscesso tubo-ovariano Falha em 72h Intolerância VO Estado grave Dúvida cirúrgica"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "⏰ Quando reavaliar tratamento ambulatorial da DIP?",
+    "resposta": "72 horas"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "👥 Conduta com parceiros na DIP?",
+    "resposta": "Tratar parceiros dos últimos 2 meses (gonococo + clamídia)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🦠 O que é crupe viral?",
+    "resposta": "Laringotraqueobronquite viral com inflamação subglótica difusa"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🦠 Principal agente do crupe viral?",
+    "resposta": "Vírus Parainfluenza (principal) Influenza VSR Adenovírus"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🔥 Tríade clássica do crupe (REVALIDA)?",
+    "resposta": "Rouquidão Tosse ladrante Estridor inspiratório"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "📊 Quadro clínico típico do crupe viral?",
+    "resposta": "Tosse ladrante Estridor inspiratório Febre baixa ou ausente Pródromos gripais Início gradual Sem toxemia"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "📸 Diagnóstico do crupe viral?",
+    "resposta": "Clínico Radiografia NÃO obrigatória"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "📸 Achado clássico no RX de crupe?",
+    "resposta": "\"Sinal da ponta de lápis (estreitamento subglótico) \""
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "⚠️ Radiografia é obrigatória no crupe?",
+    "resposta": "NÃO"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "📉 Como identificar crupe leve?",
+    "resposta": "Sem estridor em repouso Bom estado geral"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "📈 Como identificar crupe moderado/grave?",
+    "resposta": "Estridor em repouso Desconforto respiratório"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "💊 Tratamento do crupe viral?",
+    "resposta": "Hidratação Oxigênio se necessário Dexametasona Adrenalina nebulizada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "💊 Dose da dexametasona?",
+    "resposta": "0,6 mg/kg VO ou EV"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "💊 Dose de adrenalina?",
+    "resposta": "0,5 mg/kg máximo 5 ml"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "🟢 Conduta casos leves?",
+    "resposta": "Suporte Ambiente calmo Observação Evitar manipulação"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "🔴 Conduta casos moderados/graves?",
+    "resposta": "Adrenalina nebulizada Observação 3–4 horas"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "⚠️ Por que observar após adrenalina?",
+    "resposta": "Risco de recorrência dos sintomas"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🧠 Diferença crupe viral vs espasmódica?",
+    "resposta": "Viral: início gradual Pródromo viral Febre Espasmódica: início súbito Sem febre Noturno"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🚨 Diferença crupe viral vs bacteriano?",
+    "resposta": "Viral: febre baixa Sem toxemia Boa resposta Bacteriano: febre alta Toxemia Piora súbita"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🚨 Quando suspeitar de crupe bacteriano?",
+    "resposta": "Febre alta Toxemia Piora respiratória súbita"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "⚠️ Diagnósticos diferenciais?",
+    "resposta": "Traqueíte bacteriana Laringite espasmódica Laringomalácia Epiglotite"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "💡 Dica REVALIDA",
+    "resposta": "🚨 Estridor + febre alta + toxemia → pense em crupe bacteriano"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🦠 O que é crupe bacteriano?",
+    "resposta": "Traqueíte bacteriana Infecção grave dos tecidos moles da traqueia"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🦠 Principais agentes do crupe bacteriano?",
+    "resposta": "Staphylococcus aureus (MRSA) Streptococcus pneumoniae Haemophilus influenzae Moraxella catarrhalis"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "🔥 Quadro clínico típico do crupe bacteriano?",
+    "resposta": "Febre alta Estridor inspiratório progressivo Tosse persistente Secreção mucopurulenta espessa Toxemia Piora após melhora viral"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "🚨 Qual pista clássica diferencia do viral?",
+    "resposta": "⚠️ Piora súbita após melhora inicial de quadro viral"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "⚠️ Sinais de gravidade?",
+    "resposta": "Rebaixamento de consciência Cianose Incapacidade de manter saturação Obstrução iminente da via aérea"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "🚨 Indicação de intubação?",
+    "resposta": "Obstrução iminente de via aérea Insuficiência respiratória"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "💊 Conduta inicial?",
+    "resposta": "Avaliação da via aérea imediata Antibioticoterapia empírica imediata"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "💊 Esquema antibiótico?",
+    "resposta": "💉 Vancomicina + Ceftriaxona ou Cefotaxima ou Ampicilina-sulbactam"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "❌ Resposta à adrenalina?",
+    "resposta": "🚫 Não responde à adrenalina nebulizada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "🧠 Diferença viral vs bacteriano?",
+    "resposta": "🟢 Viral: Febre baixa Sem toxemia Boa resposta 🔴 Bacteriano: Febre alta Toxemia Piora súbita Sem resposta à adrenalina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Prematuro <34 semanas oque fazer?",
+    "resposta": "clampeamento imediato + mesa de reanimação"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN ≥34 semanas que não respira após nascimento: qual a conduta imediata?",
+    "resposta": "Levar à mesa + passos iniciais (30s). Se FC <100 ou respiração irregular → iniciar VPP com ar ambiente (21%) até 1 minuto."
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN pré-termo ativo e chorando ao nascer: qual a conduta com o cordão?",
+    "resposta": "Clampeamento tardio (30–60s) + manter no tórax materno aquecido. ❌ Não reanimar se boa vitalidade."
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "3 perguntas iniciais RN",
+    "resposta": "Respira? Tônus? Idade gestacional"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "ASPAS na reanimação",
+    "resposta": "Aquecer, Secar, Posicionar, Aspirar"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Aspirar vias aéreas no RN",
+    "resposta": "Só se obstrução"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "FC <100 no RN",
+    "resposta": "Iniciar VPP"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Frequência VPP RN",
+    "resposta": "40–60/min"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Relação compressão:ventilação RN",
+    "resposta": "3:1"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Local massagem cardíaca RN",
+    "resposta": "Terço inferior do esterno"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Profundidade compressão RN",
+    "resposta": "1/3 do tórax"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Adrenalina RN dose EV",
+    "resposta": "0,02 mg/kg"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Clampeamento cordão RN ≥34 sem",
+    "resposta": ">60 segundos"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Clampeamento cordão RN <34 sem",
+    "resposta": ">30 segundos"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN <34 semanas cuidado térmico",
+    "resposta": "Saco plástico + touca"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Oxigênio inicial RN ≥34 semanas",
+    "resposta": "Ar ambiente (21%)"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Oxigênio inicial RN <34 semanas",
+    "resposta": "FiO2 30%"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Máscara laríngea no RN",
+    "resposta": "Antes da intubação (>34 sem)"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Sequência reanimação neonatal",
+    "resposta": "ASPAS → VPP → IOT → Massagem → Adrenalina ASPAS AQUECER SECAR POSICIONAR ASPIRAR"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Passo inicial RN não vigoroso",
+    "resposta": "ASPAS"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Após ASPAS: FC <100",
+    "resposta": "Iniciar VPP"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Após VPP 30s: FC <100",
+    "resposta": "Reavaliar técnica + ventilar"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Após VPP eficaz: FC <60",
+    "resposta": "Massagem cardíaca"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Massagem cardíaca relação",
+    "resposta": "3:1"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Após massagem: FC <60",
+    "resposta": "Adrenalina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Via preferencial adrenalina",
+    "resposta": "Endovenosa (cateter umbilical)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Antes da IOT tentar",
+    "resposta": "Máscara laríngea (>34 sem)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Critério para parar escalonamento",
+    "resposta": "Melhora FC >100"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fezes afiladas + sangue + parada de flatos",
+    "resposta": "Câncer colorretal obstrutivo → cirurgia urgente"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Obstrução intestinal + cirurgia prévia + sem peritonite",
+    "resposta": "Bridas e adherencias → tratamento conservador (SNG + hidratação)"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Obstrução intestinal + sinais de peritonite",
+    "resposta": "Cirurgia imediata"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Obstrução colônica + ceco > 10 cm",
+    "resposta": "Risco de perfuração → laparotomia urgente 👉 Ceco ≥10–12 cm = perigo → NÃO conservador → cirurgia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Idoso acamado + constipação + massa fecal",
+    "resposta": "Fecaloma"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Inversão vasos mesentéricos + ausência processo uncinado",
+    "resposta": "Má rotação intestinal"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Idoso + emagrecimento + obstrução + só cólon dilatado",
+    "resposta": "\"Obstrução baixa → válvula ileocecal competente 🔥 Pulo do gato:"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Distensão + “U invertido” + sem gás no reto",
+    "resposta": "Volvo de sigmoide → descompressão endoscópica 👉 “grão de café / U invertido” = volvo"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Obstrução + cirurgia prévia + sem peritonite",
+    "resposta": "\"Brida → tratamento conservador inicial 🔥 Pulo do gato:"
+  },
+  {
+    "categoria": "Pneumologia",
+    "pergunta": "Crise leve a moderada de asma nao melhorou com SABA ?",
+    "resposta": "Repetir SABA em ciclos de 20/20min Associar corticoide oral ja"
+  },
+  {
+    "categoria": "Pneumologia",
+    "pergunta": "Ausência de sibilos na asma",
+    "resposta": "NÃO afasta diagnóstico (pode ser grave → tórax silencioso)"
+  },
+  {
+    "categoria": "Pneumologia",
+    "pergunta": "Sintomas diários + despertar semanal em asma",
+    "resposta": "\"Asma persistente moderada 🔥 Pulo do gato:"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Crise asmática com tiragem + batimento de asa do nariz",
+    "resposta": "SABA + ipratrópio + corticoide sistêmico Salbutamol+ipratropio+metilprednisolona 2mg/kg"
+  },
+  {
+    "categoria": "Pneumologia",
+    "pergunta": "Asma leve persistente (sintomas ≥2x/semana)",
+    "resposta": "Corticoide inalatório + SABA se necessário"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Crise asmática grave + Sat <90% + fala entrecortada",
+    "resposta": "O2 + SABA repetido + ipratrópio + corticoide + ajustar manutenção (ICS + LABA)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Crise asmática grave sem resposta ao SABA + corticoide",
+    "resposta": "Adicionar ipratrópio + sulfato de magnésio EV"
+  },
+  {
+    "categoria": "Pneumologia",
+    "pergunta": "Asma + rebaixamento + hipoxemia + PaCO2 normal/alto",
+    "resposta": "Falência respiratória → intubação imediata"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "O que é violência sexual?",
+    "resposta": "🚨 Qualquer ato sexual não consentido, forçado por coerção, ameaça ou violência."
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "Como se define violência sexual contra menores?",
+    "resposta": "👶 Atividade sexual imposta por adulto ou pessoa mais velha ⚠️ Relação de poder ou confiança"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quais são as formas de abuso sexual infantil?",
+    "resposta": "👉 Contato físico: toques, carícias, penetração 👉 Não físico: exposição, exibicionismo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que é exploração sexual?",
+    "resposta": "💰 Uso da criança para fins comerciais (prostituição, pornografia)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que caracteriza assédio sexual?",
+    "resposta": "🗣️ Falas, gestos ou propostas sexuais indesejadas"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que é estupro?",
+    "resposta": "❗ Penetração forçada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que é abuso sexual infantil?",
+    "resposta": "👶 Contato sexual com menor"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que é exploração sexual (classificação)?",
+    "resposta": "💵 Coerção em troca de benefícios"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Principais consequências físicas?",
+    "resposta": "🩸 Lesões genitais 🦠 ISTs 🤰 Gravidez indesejada ⚡ Dor crônica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Consequências psicológicas?",
+    "resposta": "🧠 TEPT 😔 Depressão 😰 Ansiedade 💀 Ideação suicida"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Consequências sociais?",
+    "resposta": "🚷 Estigmatização 🧍 Isolamento 💼 Dificuldades profissionais"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Primeiro passo no atendimento?",
+    "resposta": "🤝 Acolhimento humanizado 🗣️ “Você está segura agora”"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que investigar na anamnese?",
+    "resposta": "📅 Quando ocorreu ⚙️ Como foi 👤 Quem foi o agressor 🛡️ Preservativo 💦 Ejaculação 🩸 Lesões"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Como deve ser o exame físico?",
+    "resposta": "✔️ Com consentimento 👩‍⚕️ Presença de enfermeira 🔍 Buscar lesões e vestígios"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O exame físico é obrigatório?",
+    "resposta": "❌ Não ✔️ Deve ser explicado e consentido"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quais exames solicitar?",
+    "resposta": "🦠 HIV 🧪 Hepatite B e C 🧫 Sífilis 🔬 Gonorreia + Clamídia 🤰 BHCG 🧬 Transaminases"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Profilaxia para HIV?",
+    "resposta": "💊 Tenofovir + Lamivudina + Dolutegravir ⏱️ Até 72h 📅 28 dias"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Profilaxia para sífilis?",
+    "resposta": "💉 Penicilina benzatina 2.400.000 UI IM dose única"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Profilaxia gonorreia + clamídia?",
+    "resposta": "💉 Ceftriaxona 500 mg IM 💊 Azitromicina 1g VO dose única"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Profilaxia para tricomoníase?",
+    "resposta": "💊 Metronidazol 2g VO dose única"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Profilaxia para hepatite B?",
+    "resposta": "💉 Vacina + imunoglobulina ⏱️ Até 14 dias (não imunizados)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Esquema de levonorgestrel?",
+    "resposta": "💊 1,5 mg dose única OU 💊 0,75 mg 12/12h (2 doses)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Prazo contracepção de emergência?",
+    "resposta": "⏱️ Até 5 dias ⭐ Ideal: até 3 dias"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "A notificação é obrigatória?",
+    "resposta": "📢 Sim, notificação compulsória"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Boletim de ocorrência é obrigatório?",
+    "resposta": "❌ Não ✔️ Deve ser orientado"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Equipe envolvida?",
+    "resposta": "👩‍⚕️ Multidisciplinar 🧠 Psicólogo 🧑‍⚖️ Assistente social"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Aborto em violência sexual?",
+    "resposta": "⚖️ Permitido por lei 📅 Até 22 semanas ❌ Não exige BO ou prova"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Paciente com doença diverticular assintomática (achado em colonoscopia): qual a conduta? 🧠",
+    "resposta": "🟢 Dieta rica em fibras + aumento da ingestão hídrica 💧🌿"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Qual o tratamento inicial da doença diverticular dos cólons? 🍽️",
+    "resposta": "🟢 Aumentar fibras na dieta + ingestão hídrica 💧"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Doença diverticular precisa de antibiótico profilático? 💊",
+    "resposta": "❌ Não! Apenas se houver diverticulite"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Qual o gatilho mental para doença diverticular no Revalida? 🎯",
+    "resposta": "🟢 “DIVERTÍCULO CALMO = FIBRA + ÁGUA”"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Qual a diferença entre doença diverticular e diverticulite? ⚠️",
+    "resposta": "🟢 Doença diverticular: sem inflamação → fibra + água | Diverticulite: inflamação → antibiótico"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Em qual situação indicar antibiótico na doença diverticular? 🔴",
+    "resposta": "🟢 Apenas na diverticulite aguda"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Diverticulite aguda não complicada: conduta imediata? 🧠",
+    "resposta": "🟢 Antibioticoterapia + colonoscopia em 4–6 semanas"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Pode fazer colonoscopia na fase aguda da diverticulite? ⚠️",
+    "resposta": "❌ Não! Risco de perfuração"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Quando fazer colonoscopia após diverticulite? 📅",
+    "resposta": "🟢 Após 4–6 semanas da resolução"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Qual o gatilho mental para diverticulite no Revalida? 🎯",
+    "resposta": "🟢 “TRATA AGORA"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Quando indicar cirurgia na diverticulite? 🔴",
+    "resposta": "🟢 Sepse"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Principal exame diagnóstico da diverticulite aguda? 🧪",
+    "resposta": "🟢 Tomografia computadorizada de abdome"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Diverticulite aguda com massa em FIE (plastrão), sem sepse: conduta inicial?",
+    "resposta": "Antibióticos IV + suspensão da dieta oral + analgesia"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Paciente com diverticulite recorrente + episódio complicado prévio: conduta?",
+    "resposta": "Encaminhar para avaliação em Cirurgia Geral / Coloproctologia"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Diverticulite com abscesso pericolônico de 6 cm: conduta?",
+    "resposta": "Antibioticoterapia IV + drenagem do abscesso"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "abscesso com >4cm conduta?",
+    "resposta": "drenagem percutanea por TC"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Classificação de Hinchey: quais são os estágios? 🧠",
+    "resposta": "🟢 I (inflamação/microabscesso) | II (abscesso) | III (peritonite purulenta) | IV (peritonite fecal)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hinchey I: conduta? 🟢",
+    "resposta": "🟢 Antibiótico (± ambulatorial)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hinchey II: conduta? 🟡",
+    "resposta": "🟢 Antibiótico + drenagem percutânea"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hinchey III: conduta? 🔴",
+    "resposta": "🟢 Cirurgia de urgência (peritonite purulenta)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hinchey IV: conduta? ⚫",
+    "resposta": "🟢 Cirurgia (peritonite fecal, Hartmann)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Qual o gatilho mental da classificação de Hinchey? 🎯",
+    "resposta": "🟢 “1 ATB | 2 DRENA | 3-4 OPERA”"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Qual o critério clássico para drenagem na diverticulite? 📏",
+    "resposta": "🟢 Abscesso > 3–5 cm (Hinchey II)"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Diverticulite com abscesso pericólico (paciente estável): conduta após antibiótico?",
+    "resposta": "Drenagem percutânea guiada por tomografia"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Icterícia fisiológica: quando aparece? 🧠",
+    "resposta": "🟢 Após 24–36 horas de vida"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Valor máximo da icterícia fisiológica? 📊",
+    "resposta": "🟢 Até 12 mg/dL"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Pico da icterícia fisiológica? 📅",
+    "resposta": "🟢 3º ao 5º dia de vida"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Conduta na icterícia fisiológica? 🌞",
+    "resposta": "🟢 Observação + banho de sol"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Icterícia nas primeiras 24h significa o quê? ⚠️",
+    "resposta": "🔴 Sempre patológica"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Critério de icterícia patológica? 🚨",
+    "resposta": "🟢 12 mg/dL OU ↑ >5 mg/dL/dia"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Principal risco da icterícia neonatal? 🧠",
+    "resposta": "🔴 Kernicterus (encefalopatia bilirrubínica)"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Icterícia fisiológica vs patológica: principal diferença? 🎯",
+    "resposta": "🟢 Tempo de início (<24h = patológica)"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Icterícia prolongada (>21 dias) sugere o quê? ⏳",
+    "resposta": "🟢 Colestase / atresia de vias biliares"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Colúria + acolia fecal no RN indica? 💩",
+    "resposta": "🔴 Atresia de vias biliares"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Qual exame inicial na suspeita de atresia biliar? 🧪",
+    "resposta": "🟢 Ultrassonografia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento da atresia biliar? 🔪",
+    "resposta": "🟢 Cirurgia de Kasai"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Icterícia do aleitamento materno (precoce): causa? 🤱",
+    "resposta": "🟢 Baixa ingestão / pega inadequada"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Conduta na icterícia do aleitamento? 🟢",
+    "resposta": "🟢 Corrigir amamentação"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Icterícia do leite materno (tardia): mecanismo? 🧪",
+    "resposta": "🟢 ↑ glucuronidase → ↑ bilirrubina indireta"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Como confirmar icterícia do leite materno? 🧠",
+    "resposta": "🟢 Suspender leite 24h → melhora"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Níveis típicos na icterícia do leite materno? 📊",
+    "resposta": "🟢 >20 mg/dL"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Incompatibilidade ABO: quando ocorre? 🩸",
+    "resposta": "🟢 Primeiras 24h de vida"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Mãe típica na incompatibilidade ABO? 👩",
+    "resposta": "🟢 O+"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diagnóstico de ABO? 🧪",
+    "resposta": "🟢 Coombs direto"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Incompatibilidade Rh: mecanismo? ⚠️",
+    "resposta": "🟢 IgG materno contra RN Rh+"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diagnóstico de Rh? 🧪",
+    "resposta": "🟢 Coombs indireto"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Complicação grave da incompatibilidade Rh? 💀",
+    "resposta": "🟢 Hidropsia fetal"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que detecta o Coombs direto? 🧠",
+    "resposta": "🟢 Anticorpos ligados às hemácias do RN"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "O que detecta o Coombs indireto? 🧪",
+    "resposta": "🟢 Anticorpos livres no soro materno"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quando o Coombs direto é positivo? ⚠️",
+    "resposta": "🟢 Hemólise imune (ABO/Rh)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Quando pedir Coombs indireto? 📊",
+    "resposta": "🟢 Avaliar sensibilização materna (pré-natal)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diferença chave Coombs direto vs indireto? 🎯",
+    "resposta": "🟢 Direto: no RN | Indireto: na mãe"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Tratamento principal da icterícia neonatal? 💡",
+    "resposta": "🟢 Fototerapia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Critério geral para fototerapia? 📊",
+    "resposta": "🟢 Bilirrubina elevada conforme risco"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN com fator de risco: alvo de bilirrubina? ⚠️",
+    "resposta": "🟢 <15 mg/dL"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN sem fator de risco: alvo? 🟢",
+    "resposta": "🟢 <18 mg/dL"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN com icterícia com 15 horas de vida: diagnóstico e conduta?",
+    "resposta": "Icterícia patológica (provável hemólise) → investigar com Coombs direto + tipagem + bilirrubina"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Por que RN tem icterícia? 🧠",
+    "resposta": "🟢 ↑ hemólise + imaturidade hepática + ↑ circulação entero-hepática"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Tipo de bilirrubina na icterícia fisiológica? 🧪",
+    "resposta": "🟢 Indireta (não conjugada)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Enzima que conjuga bilirrubina? 🔬",
+    "resposta": "🟢 UDP-glucuroniltransferase"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "clasificacao de hinchey",
+    "resposta": "\" \""
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Melhor exame diagnóstico para malária?",
+    "resposta": "Gota espessa (padrão-ouro); Pode usar microaglutinação, mas principal é gota espessa; Método: sangue da polpa digital"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento da malária por Plasmodium falciparum?",
+    "resposta": "Arteméter + Primaquina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento da leptospirose?",
+    "resposta": "Penicilina G cristalina (casos graves); Doxiciclina (casos leves)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tríade clássica da forma grave da leptospirose?",
+    "resposta": "Icterícia + insuficiência renal + hemorragias; Síndrome de Weil"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quadro clínico típico da leptospirose?",
+    "resposta": "Febre Dor em panturrilhas Eritema/congestão conjuntival Icterícia"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Contexto epidemiológico da leptospirose?",
+    "resposta": "Enchentes/água contaminada Chuvas (verão) Contato com urina de roedores"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Dor em panturrilha + febre + olho vermelho → pensar em?",
+    "resposta": "Leptospirose"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quadro clinico classico de malaria",
+    "resposta": "Febre calafrio sudorese em ciclos"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Pós-parto com sintomas depressivos nas primeiras 2 semanas → é depressão pós-parto?",
+    "resposta": "\"Não. É baby blues (leve e autolimitado)."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Politrauma com hipotensão após volume → como classificar resposta e qual conduta no ABCDE?",
+    "resposta": "RESPOSTA TRANSITÓRIA = SANGRAMENTO ATIVO → TRANSFUSÃO PRECOCE (protocolo maciço 1:1:1) + controle do sangramento"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta C no ABCDE do trauma",
+    "resposta": "\" C (MATADOR):"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Politrauma com hipotensão + dor em hipocôndrio esquerdo + sinais de choque → qual a sequência inicial no atendimento?",
+    "resposta": "Oxigênio + 2 acessos venosos calibrosos + infusão de cristaloide aquecido (1–2 L) + reavaliação"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "👉 Após estabilização inicial, qual a prioridade cirúrgica? \"",
+    "resposta": "Craniotomia → Laparotomia → Drenagem torácica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "No politrauma com choque hemorrágico, qual a principal vantagem de infundir fluidos aquecidos ?",
+    "resposta": "Prevenir coagulopatia (evitar a tríade da morte: hipotermia + acidose + coagulopatia)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Politrauma grave (alta energia) + TCE + via aérea temporária (máscara laríngea) → qual a conduta completa?",
+    "resposta": "Garantir via aérea definitiva → TOMOGRAFIA DE CORPO INTEIRO"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "ABC SCORE TRAUMA",
+    "resposta": "\" 👉 Cada item = 1 ponto:"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Paciente pós-trauma com dreno torácico evolui após ~8 dias com febre + sintomas respiratórios. Qual a principal hipótese e conduta?",
+    "resposta": "\" ➡️ Empiema pleural"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "👉 Qual a conduta? \"",
+    "resposta": "\" ➡️ Derrame parapneumônico NÃO complicado"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Escala Bethesda",
+    "resposta": "\"👉 I → repete (insatisfatorio)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fluxograma C.A Tiroide",
+    "resposta": "EF -> TSH -> USG -> PAAF"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Qual a causa mais comum de sangramento uterino anormal pos-menopausa",
+    "resposta": "Atrofia do endometrio"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"FA + instabilidade hemodinâmica → [...] \"",
+    "resposta": "\"FA + instabilidade hemodinâmica → cardioversão elétrica sincronizada imediata"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"FA no ECG → [...] \"",
+    "resposta": "\"FA no ECG → ritmo irregular + ausência de onda P + ondas f"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Instabilidade na FA (hipotensão, dispneia, choque) → [...] \"",
+    "resposta": "\"Instabilidade na FA (hipotensão, dispneia, choque) → não esperar anticoagulação → cardioversão imediata"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Marca-passo é indicado em [...] , NÃO em taquiarritmias como FA \"",
+    "resposta": "\"Marca-passo é indicado em bradiarritmias , NÃO em taquiarritmias como FA"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Marca-passo é indicado em bradiarritmias , NÃO em [...] \"",
+    "resposta": "\"Marca-passo é indicado em bradiarritmias , NÃO em taquiarritmias como FA"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Procedimento que “necessita sedação/analgesia” em arritmia → [...] \"",
+    "resposta": "\"Procedimento que “necessita sedação/analgesia” em arritmia → cardioversão elétrica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Sindemia → [...] \"",
+    "resposta": "\"Sindemia → doenças interagem entre si + fatores sociais, aumentando gravidade"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Diferença: Comorbidade → doenças coexistem | Sindemia → [...] \"",
+    "resposta": "\"Diferença: Comorbidade → doenças coexistem | Sindemia → doenças interagem e se potencializam + determinantes sociais"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Diferença: Comorbidade → [...] | Sindemia → doenças interagem e se potencializam + determinantes sociais \"",
+    "resposta": "\"Diferença: Comorbidade → doenças coexistem | Sindemia → doenças interagem e se potencializam + determinantes sociais"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Abordagem sindêmica → [...] \"",
+    "resposta": "\"Abordagem sindêmica → ações biomédicas + intervenção nos determinantes sociais"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Erro comum → [...] \"",
+    "resposta": "\"Erro comum → achar que ampliar leitos resolve (visão só biomédica)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"COVID-19 como sindemia → [...] \"",
+    "resposta": "\"COVID-19 como sindemia → maior impacto em populações vulneráveis"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Parkinson + sintomas como anosmia, apatia, fadiga → [...] \"",
+    "resposta": "\"Parkinson + sintomas como anosmia, apatia, fadiga → evolução com sintomas não motores"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Sintomas não motores do Parkinson → [...] \"",
+    "resposta": "\"Sintomas não motores do Parkinson → anosmia, depressão/apatia, distúrbios do sono, disautonomia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Sintomas não motores → [...] \"",
+    "resposta": "\"Sintomas não motores → não respondem bem à levodopa"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Parkinsonismo por droga → [...] \"",
+    "resposta": "\"Parkinsonismo por droga → antipsicóticos e metoclopramida (bloqueio dopaminérgico)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Anosmia no Parkinson → [...] \"",
+    "resposta": "\"Anosmia no Parkinson → pode preceder sintomas motores por anos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Plaquetopenia isolada + petéquias + mucosa → [...] \"",
+    "resposta": "\"Plaquetopenia isolada + petéquias + mucosa → Púrpura Trombocitopênica Imune (PTI)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"PTI → [...] \"",
+    "resposta": "\"PTI → plaquetopenia isolada + macroplaquetas + coagulograma normal"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"PTI grave (<20.000 ou sangramento) → [...] \"",
+    "resposta": "\"PTI grave (<20.000 ou sangramento) → corticoide ± imunoglobulina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"PTT → [...] | SHU → insuficiência renal + diarreia prévia \"",
+    "resposta": "\"PTT → ADAMTS13 <10% + esquizócitos + sintomas neurológicos | SHU → insuficiência renal + diarreia prévia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"PTT → ADAMTS13 <10% + esquizócitos + sintomas neurológicos | SHU → [...] \"",
+    "resposta": "\"PTT → ADAMTS13 <10% + esquizócitos + sintomas neurológicos | SHU → insuficiência renal + diarreia prévia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Macroplaquetas → [...] \"",
+    "resposta": "\"Macroplaquetas → destruição periférica (medula funcionando)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Abscessos recorrentes em vulva/axila + cicatriz → [...] \"",
+    "resposta": "\"Abscessos recorrentes em vulva/axila + cicatriz → hidradenite supurativa"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Tríade da HS → [...] \"",
+    "resposta": "\"Tríade da HS → lesões recorrentes + áreas apócrinas + cicatrização/fístulas"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"HS → [...] \"",
+    "resposta": "\"HS → controle inflamatório (ATB, retinoides, biológicos) + medidas comportamentais"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Herpes → vesículas/úlceras superficiais | Sífilis → [...] \"",
+    "resposta": "\"Herpes → vesículas/úlceras superficiais | Sífilis → cancro duro indolor"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Herpes → [...] | Sífilis → cancro duro indolor \"",
+    "resposta": "\"Herpes → vesículas/úlceras superficiais | Sífilis → cancro duro indolor"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Locais típicos HS → [...] \"",
+    "resposta": "\"Locais típicos HS → axila, virilha, vulva, períneo, inframamário"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Dermatite ocupacional → [...] \"",
+    "resposta": "\"Dermatite ocupacional → afastar agente causal (pode exigir afastamento do trabalho)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Eczema de contato → [...] \"",
+    "resposta": "\"Eczema de contato → eritema + descamação + prurido após exposição"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Dermatite de contato → [...] \"",
+    "resposta": "\"Dermatite de contato → evitar exposição + emoliente ± corticoide tópico"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Antibiótico tópico → [...] \"",
+    "resposta": "\"Antibiótico tópico → só se infecção secundária"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "\"Doença ocupacional → [...] \"",
+    "resposta": "\"Doença ocupacional → necessita avaliação de nexo + pode gerar afastamento/CAT"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Lesão pruriginosa após piercing",
+    "resposta": "Dermatite de contato alérgica"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Síndrome de Turner – principais características",
+    "resposta": "Baixa estatura + pescoço alado + implantação baixa de orelhas + amenorreia primária"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Síndrome de Turner – tratamento",
+    "resposta": "Reposição estrogênica + GH (infância) + acompanhamento multidisciplinar"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Síndrome de Noonan – diferença principal",
+    "resposta": "Parece Turner, mas com puberdade geralmente normal"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Síndrome de Turner – cariótipo",
+    "resposta": "45,X (monossomia do X)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Citologia normal após 2 exames anuais normais",
+    "resposta": "Repetir em 3 anos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Achados benignos no Papanicolau",
+    "resposta": "Metaplasia escamosa + inflamação + bacilos de Döderlein"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Citologia normal – conduta",
+    "resposta": "Não tratar + seguimento de rotina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quando NÃO usar metronidazol",
+    "resposta": "Flora normal com bacilos de Döderlein"
+  },
+  {
+    "categoria": "Ginecologia",
+    "pergunta": "Rastreamento do colo uterino",
+    "resposta": "25–64 anos + 2 exames anuais → depois a cada 3 anos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sífilis secundária – tratamento",
+    "resposta": "Penicilina benzatina 2.400.000 UI IM dose única"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sífilis secundária – clínica",
+    "resposta": "Lesões palmo-plantares + rash disseminado + condiloma lata"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Gestante com sífilis – conduta",
+    "resposta": "Sempre penicilina (dessensibilizar se alergia)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sífilis latente – característica",
+    "resposta": "Assintomática"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Condiloma lata – definição",
+    "resposta": "Lesão úmida, elevada e altamente infectante"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "DM1 – seguimento",
+    "resposta": "Insulinoterapia contínua + apoio familiar"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tríade do DM1",
+    "resposta": "Poliúria + polidipsia + polifagia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "DM1 – tratamento",
+    "resposta": "Insulina obrigatória (não suspender)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diferença DM1 vs DM2",
+    "resposta": "DM1 sempre insulina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Cetoacidose diabética – sinal clássico",
+    "resposta": "Respiração de Kussmaul"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Suspeita de meningite – conduta inicial",
+    "resposta": "Punção lombar imediata se sem contraindicação"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tríade da meningite",
+    "resposta": "Febre + cefaleia + rigidez de nuca"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quando fazer TC antes da punção",
+    "resposta": "Déficit focal, papiledema, rebaixamento de consciência"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "LCR bacteriana vs viral",
+    "resposta": "Bacteriana: neutrófilos ↑ + glicose ↓ / Viral: linfócitos ↑ + glicose normal"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Pneumococo – característica",
+    "resposta": "Diplococo Gram-positivo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "HCO3 baixo + PCO2 alto",
+    "resposta": "Acidose mista (metabólica + respiratória)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Acidose metabólica",
+    "resposta": "HCO3 baixo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Acidose respiratória",
+    "resposta": "PCO2 alto"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Como identificar distúrbio misto",
+    "resposta": "Valores puxam o pH na mesma direção"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diarreia – distúrbio ácido-base",
+    "resposta": "Acidose metabólica por perda de bicarbonato"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Choque séptico – conduta inicial",
+    "resposta": "Cristaloide 30 mL/kg nas primeiras horas"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Critérios de choque séptico",
+    "resposta": "Hipotensão + lactato elevado + disfunção orgânica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Bundle da sepse",
+    "resposta": "Antibiótico precoce + volume + hemocultura + lactato"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quando transfundir na sepse",
+    "resposta": "Hemoglobina <7 g/dL"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Lactato ≥4 mmol/L",
+    "resposta": "Indica hipoperfusão grave → reposição volêmica imediata"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Pós-colecistectomia com icterícia e sepse",
+    "resposta": "Lesão de via biliar"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Padrão colestático",
+    "resposta": "FA e GGT elevadas + bilirrubina direta elevada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Lesão de via biliar – conduta",
+    "resposta": "Transferir + colangiorressonância + equipe especializada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta expectante em sepse biliar",
+    "resposta": "Errada"
+  },
+  {
+    "categoria": "Cirurgia",
+    "pergunta": "Colecistectomia laparoscópica",
+    "resposta": "Maior risco de lesão de via biliar que aberta"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Saúde indígena no Brasil",
+    "resposta": "Subsistema integrado ao SUS"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "DSEI – definição",
+    "resposta": "Organização por critérios étnicos, culturais e geográficos"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Gestão da saúde indígena",
+    "resposta": "Ministério da Saúde (SESAI)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "FUNAI – papel na saúde indígena",
+    "resposta": "Não gerencia assistência à saúde"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Subsistema indígena",
+    "resposta": "Necessita aperfeiçoamento contínuo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "IVCF-20 – definição",
+    "resposta": "Instrumento de triagem de vulnerabilidade do idoso"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Domínios do IVCF-20",
+    "resposta": "Cognição, humor, mobilidade, funcionalidade, comorbidades"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta após IVCF-20 alterado",
+    "resposta": "Realizar Avaliação Geriátrica Ampla (AGA)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "IVCF-20 não avalia",
+    "resposta": "Renda ou condição socioeconômica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "IVCF-20 – item importante",
+    "resposta": "Quedas no último ano"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Câncer de esôfago avançado com disfagia",
+    "resposta": "Gastrostomia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Neoplasia de esôfago – clínica",
+    "resposta": "Disfagia progressiva + perda de peso + tabagismo/etilismo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Doença irressecável – conduta",
+    "resposta": "Tratamento paliativo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Esofagectomia – indicação",
+    "resposta": "Tratamento curativo (não em doença avançada)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Disfagia que evolui de sólidos para líquidos",
+    "resposta": "Sugere neoplasia esofágica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Adolescente obeso com dor no quadril",
+    "resposta": "Epifisiólise femoral proximal"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Epifisiólise – fatores de risco",
+    "resposta": "Idade 10–16 anos + obesidade"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Epifisiólise – conduta",
+    "resposta": "Cirurgia urgente (fixação)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Dor no joelho em adolescente",
+    "resposta": "Pode ser dor referida do quadril"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Principal fator de risco da epifisiólise",
+    "resposta": "Obesidade"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conselho de Saúde – caráter",
+    "resposta": "Deliberativo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Composição do Conselho de Saúde",
+    "resposta": "50% usuários + 25% trabalhadores + 25% gestores"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Função do Conselho de Saúde",
+    "resposta": "Formular estratégias e controlar execução das ações"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conselho de Saúde NÃO é",
+    "resposta": "Consultivo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Paridade no Conselho de Saúde",
+    "resposta": "Usuários representam 50%"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Abscesso anorretal – tratamento",
+    "resposta": "Drenagem cirúrgica + antibiótico"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Abscesso profundo – clínica",
+    "resposta": "Dor + febre + sem sinais externos + achado ao toque"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Abscesso – erro comum",
+    "resposta": "Tratar apenas com antibiótico"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Ausência de sinais flogísticos",
+    "resposta": "Não exclui abscesso profundo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fator de risco para abscesso grave",
+    "resposta": "Diabetes"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Face fetal palpável no toque",
+    "resposta": "Apresentação de face (defletida 3º grau)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Apresentação de face – referência",
+    "resposta": "Mento"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta na apresentação de face",
+    "resposta": "Mento anterior: pode parto vaginal"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Apresentação bregmática",
+    "resposta": "Fontanela anterior (losango)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Deflexão máxima da cabeça fetal",
+    "resposta": "3º grau = apresentação de face"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hipercalemia refratária",
+    "resposta": "Indicação de diálise"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hipercalemia grave – critérios",
+    "resposta": "K+ >6 mEq/L + alteração no ECG"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento da hipercalemia",
+    "resposta": "Gluconato de cálcio + insulina + beta-agonista"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Creatinina elevada isolada",
+    "resposta": "Não indica diálise"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Indicações de diálise",
+    "resposta": "AEIOU (acidose, eletrólitos, intoxicação, overload, uremia)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "ITU em criança – diagnóstico",
+    "resposta": "Urocultura"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Cateterismo vesical – critério",
+    "resposta": "≥1.000 UFC/mL"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "ITU febril em criança",
+    "resposta": "Sugere pielonefrite"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Piúria isolada",
+    "resposta": "Não confirma ITU"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Jato médio – critério",
+    "resposta": "≥100.000 UFC/mL"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Febre maculosa – conduta inicial",
+    "resposta": "Iniciar doxiciclina imediatamente"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Febre maculosa – clínica",
+    "resposta": "Febre + exantema + exposição a carrapato"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "RIFI – como fazer",
+    "resposta": "Coletar na fase aguda + repetir em 14–21 dias"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Erro comum na febre maculosa",
+    "resposta": "Esperar resultado para tratar"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Contato de febre maculosa",
+    "resposta": "Não faz profilaxia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "LCR: linfócitos ↑ + proteína ↑ + glicose ↓",
+    "resposta": "Meningite tuberculosa"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Meningite tuberculosa – clínica",
+    "resposta": "Evolução subaguda + perda de peso"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Conduta na suspeita de TB meníngea",
+    "resposta": "Iniciar tratamento imediato"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Meningite viral – LCR",
+    "resposta": "Glicose normal"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Criptococose – exame",
+    "resposta": "Tinta nanquim positiva"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Insônia com boa resposta ao tratamento",
+    "resposta": "Manter conduta atual"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento da insônia leve",
+    "resposta": "Medidas não farmacológicas primeiro"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Práticas integrativas no SUS",
+    "resposta": "Podem ser mantidas se eficazes e seguras"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Uso de zolpidem",
+    "resposta": "Evitar se quadro controlado"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Auriculoterapia no SUS",
+    "resposta": "Permitida na atenção básica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Crosta láctea – diagnóstico",
+    "resposta": "Dermatite seborreica infantil"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Dermatite seborreica – característica",
+    "resposta": "Escamas gordurosas + sem prurido"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento da crosta láctea",
+    "resposta": "Óleo antes do banho + remoção suave"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Dermatite atópica – diferença",
+    "resposta": "Prurido + IgE elevada + eosinofilia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Dermatite seborreica – exames",
+    "resposta": "Normais"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Linfoma de Hodgkin – suspeita",
+    "resposta": "Linfonodos duros, fixos, indolores + sintomas B"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sintomas B",
+    "resposta": "Febre + sudorese noturna + perda de peso"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diagnóstico do linfoma",
+    "resposta": "Biópsia excisional do linfonodo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "PAAF em linfoma",
+    "resposta": "Não indicada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Estadiamento do linfoma",
+    "resposta": "PET-CT de corpo inteiro"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Insuficiência ovariana – padrão hormonal",
+    "resposta": "FSH elevado + estradiol baixo + inibina baixa"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Critério de insuficiência ovariana",
+    "resposta": "Amenorreia + FSH elevado"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tratamento da IOP",
+    "resposta": "Terapia hormonal até idade da menopausa"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "FSH baixo com amenorreia",
+    "resposta": "Hipogonadismo central"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Inibina na falência ovariana",
+    "resposta": "Baixa"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Febre amarela – prevenção",
+    "resposta": "Evitar contato com mosquito durante viremia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Período de viremia",
+    "resposta": "3–6 dias iniciais"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Febre amarela – notificação",
+    "resposta": "Imediata"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Vacina da febre amarela",
+    "resposta": "Dose única"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Vetor urbano da febre amarela",
+    "resposta": "Aedes aegypti"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Esclerose sistêmica com disfagia",
+    "resposta": "Dismotilidade esofágica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fisiopatologia da dismotilidade",
+    "resposta": "↓ peristalse + ↓ tônus do EEI"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diagnóstico da dismotilidade esofágica",
+    "resposta": "Manometria esofágica"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Dor torácica na esclerose sistêmica",
+    "resposta": "Pode ser refluxo (não cardíaco)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Órgão mais acometido na esclerose sistêmica",
+    "resposta": "Trato gastrointestinal"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "HSIL – conduta",
+    "resposta": "Colposcopia imediata"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "HSIL – definição",
+    "resposta": "Lesão pré-maligna de alto risco"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Colposcopia – função",
+    "resposta": "Visualização do colo + biópsia dirigida"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Erro comum no HSIL",
+    "resposta": "Repetir citologia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fluxo do câncer de colo",
+    "resposta": "Citologia → colposcopia → biópsia → tratamento"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Modelo de Dahlgren e Whitehead",
+    "resposta": "Determinantes sociais em camadas"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Centro do modelo DSS",
+    "resposta": "Idade, sexo e fatores genéticos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "ESF – abordagem dos DSS",
+    "resposta": "Considerar todos os níveis"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Erro comum nos DSS",
+    "resposta": "Focar apenas no estilo de vida"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Camada externa dos DSS",
+    "resposta": "Condições socioeconômicas, culturais e ambientais"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "ITU na gestante – conduta",
+    "resposta": "Sempre tratar"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diagnóstico de ITU",
+    "resposta": "Nitrito positivo + bacteriúria + sintomas"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Tratamento seguro na gestação",
+    "resposta": "Cefalexina ou nitrofurantoína"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Quinolonas na gestação",
+    "resposta": "Contraindicadas"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Seguimento da ITU na gestante",
+    "resposta": "Urocultura após tratamento"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Pielonefrite na gestante",
+    "resposta": "Internação + antibiótico EV"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Critérios de pielonefrite",
+    "resposta": "Febre + dor lombar + Giordano positivo"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Conduta na pielonefrite",
+    "resposta": "Iniciar antibiótico imediato"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diferença ITU baixa vs alta",
+    "resposta": "ITU alta tem sinais sistêmicos"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Gestante com ITU alta",
+    "resposta": "Internação obrigatória"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Febre ≥5 dias em criança + conjuntivite não purulenta + língua em morango + rash + alteração de extremidades (edema/descamação) → diagnóstico, complicação principal e tratamento?",
+    "resposta": "Doença de Kawasaki → risco de aneurisma de coronárias → tratar com imunoglobulina IV + AAS"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fatores de neoplasia de mama",
+    "resposta": "\" \""
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Rastreamento de câncer de mama segundo INCA?",
+    "resposta": "\"👉 50–74 anos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Ressangramento na HDA após primeira endoscopia: conduta?",
+    "resposta": "\"👉 Reanimar (volume) + repetir endoscopia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Vértebras em “H” → pensar em quê?",
+    "resposta": "\"👉 Doença falciforme"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Infarto de ventrículo direito → qual droga é contraindicada?",
+    "resposta": "\"👉 Nitratos"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Vesículas dolorosas agrupadas em vulva → diagnóstico?",
+    "resposta": "\"👉 Herpes genital"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Frequência de consultas no pré-natal de baixo risco?",
+    "resposta": "\"👉 Até 28 sem → mensal"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Pneumonia comunitária em criança (internada) → antibiótico de escolha?",
+    "resposta": "\"👉 Penicilina EV"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quais achados no USG sugerem malignidade em cisto ovariano?",
+    "resposta": "\"👉 Septações espessas"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Reticulócitos aumentados indicam o quê?",
+    "resposta": "Anemia regenerativa (hemólise ou sangramento) PENSAR EM G6PD"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Choque elétrico + urina escura → conduta inicial?",
+    "resposta": "Hidratação EV agressiva Monitorização cardíaca Transferir"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Corrimento amarelo-esverdeado + colo em morango → diagnóstico?",
+    "resposta": "Tricomoníase"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Diagnóstico da tricomoníase?",
+    "resposta": "\"👉 Exame a fresco"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Período de vazante em rio → qual acidente aumenta?",
+    "resposta": "Acidente com arraia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Histerectomia → classificação da cirurgia?",
+    "resposta": "Limpa-contaminada"
+  },
+  {
+    "categoria": "Preventiva",
+    "pergunta": "Antibioticoprofilaxia cirúrgica → quando fazer?",
+    "resposta": "Até 60 min antes da incisão"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Anticonvulsivante indutor enzimático + Anticonceptivo combinado oral → problema?",
+    "resposta": "\"👉 ↓ eficácia + sangramento"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fenitoína + anticoncepcional oral → conduta?",
+    "resposta": "\"👉 Evitar ACO"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "TB com cavitação em ápice pulmonar → tipo?",
+    "resposta": "Tuberculose pós-primária"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "CAD em criança + rebaixamento de consciência → complicação?",
+    "resposta": "Edema cerebral"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Edema cerebral na CAD → tratamento?",
+    "resposta": "Manitol EV"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Cantoplastia → por onde entra a tentacânula?",
+    "resposta": "\"👉 ~3 mm da margem lateral"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Cantoplastia → pontos-chave do procedimento?",
+    "resposta": "\"👉 Lidocaína sem vasoconstrictor"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Lesão em anel com centro claro → diagnóstico?",
+    "resposta": "Tinea corporis"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Tinea corporis extensa ou refratária → tratamento?",
+    "resposta": "Terbinafina oral"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "Vacinas obrigatórias na gestante?",
+    "resposta": "\"👉 Influenza (todo ano)"
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "dTpa na gestante → quando aplicar?",
+    "resposta": "\"👉 Entre 27–36 semanas"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "Vacinas aos 15 meses?",
+    "resposta": "\"👉 Tríplice viral (2ª dose)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Febre ≥5 dias + conjuntivite + língua framboesa → diagnóstico?",
+    "resposta": "Doença de Kawasaki"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Critérios da doença de Kawasaki?",
+    "resposta": "\" Febre ≥5 dias + 4:"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Complicacao de doenca de Kawasaki?",
+    "resposta": "aneurisma de coronaria tto -> imunoglobulina EV"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "LSIL em mulher ≥25 anos → conduta?",
+    "resposta": "Repetir citologia em 6 meses"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "ASC-US / LSIL / HSIL no INCA Como e feito?",
+    "resposta": "LSIL em pacientes < 25 anos: repetir citologia em 3 anos LSIL em pacientes ≥ 25 anos: repetir citologia em 6 meses HSIL em qualquer idade: encaminhar para colposcopia imediatamente"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Sífilis assintomática com tempo desconhecido → tratamento?",
+    "resposta": "\"👉 Latente tardia"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Fezes explosivas ao toque retal → diagnóstico?",
+    "resposta": "Doença de Hirschsprung"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Hirschsprung no enema contrastado → achado?",
+    "resposta": "\"👉 Zona de transição"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Esquistossomose com prevalência 20% → conduta?",
+    "resposta": "Tratar positivos + conviventes"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Cortes de prevalência na esquistossomose?",
+    "resposta": "<15% → positivos 15–25% → positivos + conviventes 25% → toda comunidade"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Ferida com contato com terra/asfalto → classificação?",
+    "resposta": "contaminada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Classificação de feridas traumáticas?",
+    "resposta": "\" Limpa → ambiente estéril"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Crise asmática grave sem resposta inicial → próximo passo?",
+    "resposta": "Ipratrópio + magnésio EV"
+  },
+  {
+    "categoria": "Pneumologia",
+    "pergunta": "Sequência do tratamento da asma aguda?",
+    "resposta": "\" Salbutamol"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Caxumba + dor abdominal → complicação?",
+    "resposta": "Pancreatite"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Pancreatite aguda → melhor exame de imagem?",
+    "resposta": "Tomografia computadorizada"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "SUA com necessidade de maior redução de sangramento → melhor tratamento?",
+    "resposta": "SIU com levonorgestrel"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "HBsAg + Anti-HBc IgM positivo → diagnóstico?",
+    "resposta": "Hepatite B aguda"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "Hepatite B aguda → tratar com antiviral?",
+    "resposta": "\"👉 NÃO (na maioria)"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "TCE leve → quando pedir TC?",
+    "resposta": "Vômito, perda de consciência, Glasgow <15"
+  },
+  {
+    "categoria": "Neonatologia",
+    "pergunta": "RN cianótico com cardiopatia → conduta imediata?",
+    "resposta": "Prostaglandina"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "HSIL + colposcopia satisfatória → conduta?",
+    "resposta": "👉 CAF (exérese da zona de transformação)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Quando fazer CAF (Cirurgia de Alta Frequência) OU LEEP vs conização?",
+    "resposta": "\"👉 Vê a lesão → CAF"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Câncer de próstata alto risco → próximo passo?",
+    "resposta": "Estadiamento - feito com TC"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "Critérios de alto risco no câncer de próstata?",
+    "resposta": "\"👉 Gleason ≥ 8"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "ASC-US em mulher ≥30 anos → conduta?",
+    "resposta": "Repetir citologia em 6 meses"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ qual distúrbio ácido-básico? \"",
+    "resposta": "\"🎯 Diagnóstico mais provável:"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "➡️ Quando iniciar PrEP ? \"",
+    "resposta": "\" 🎯 REGRA DE OURO"
+  },
+  {
+    "categoria": "Pediatria",
+    "pergunta": "➡️ qual exame pedir? \"",
+    "resposta": "\" 🔥 Câncer de cabeça de pâncreas TC DE ABDOMEM C/ CONTRASTE"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "➡️ o que fazer? \"",
+    "resposta": "\" ➡️ Solicitar:"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "➡️ o que acontece com os resultados? \"",
+    "resposta": "\" 🔥 Baixa especificidade"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "➡️ tratamento? [...] \"",
+    "resposta": "\" Criança com:"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ tipo de choque? \"",
+    "resposta": "\" ➡️ Choque distributivo (séptico)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ o que fazer?\"",
+    "resposta": "\" ➡️ Investigar tuberculose imediatamente."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ conduta?\"",
+    "resposta": "\" ➡️ Derrame pleural."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ conduta correta?\"",
+    "resposta": "\" ➡️ Educação em saúde + diálogo intercultural."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ diagnóstico?\"",
+    "resposta": "\" ➡️ Fibrilação atrial com alta resposta ventricular (FA + RVR)"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ melhor estratégia?\"",
+    "resposta": "\" ➡️ Compartilhar dados com comunidade + conselho local."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ conduta?\"",
+    "resposta": "\" ➡️ Repetir citologia em 3 anos."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ diagnóstico?\"",
+    "resposta": "\" ➡️ Cisto de Bartholin"
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ significa o quê?\"",
+    "resposta": "\" ➡️ Fator com possível efeito protetor."
+  },
+  {
+    "categoria": "Obstetrícia",
+    "pergunta": "→ aborto é permitido no Brasil?\"",
+    "resposta": "\" ➡️ NÃO."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ o que fazer?\"",
+    "resposta": "\" ➡️ Suspeita de lesão uretral."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ conduta?\"",
+    "resposta": "\" ➡️ Fazer imunoglobulina anti-D."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ conduta?\"",
+    "resposta": "\" ➡️ Antitérmico + orientação aos pais + alta."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ diagnóstico?\"",
+    "resposta": "\" ➡️ Síndrome torácica aguda."
+  },
+  {
+    "categoria": "Clínica Médica",
+    "pergunta": "→ diagnóstico?\"",
+    "resposta": "\" ➡️ Fecaloma + fissura anal."
+  }
+]
