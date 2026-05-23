@@ -1,26 +1,120 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Portal Revalida 2026</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* Reset e fontes */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;-webkit-tap-highlight-color:transparent;}
+body{background:#0B0D11;color:white;overflow-x:hidden;}
+html, body{height:100%;}
+
+/* Background app-like */
+.bg{position:fixed; inset:0; z-index:-2; background:linear-gradient(135deg,#0B0D11,#12151C);}
+.blur{position:absolute;width:400px;height:400px;border-radius:50%;filter:blur(120px);z-index:-1;opacity:0.3;}
+.blur1{background:#7CFFB2;top:-100px;left:-100px;}
+.blur2{background:#8B5CF6;bottom:-100px;right:-100px;}
+
+/* Header */
+header{width:100%; padding:20px 6%; display:flex; justify-content:space-between; align-items:center; position:fixed; top:0; left:0; z-index:100; background:rgba(9,11,16,0.95); border-radius:0 0 24px 24px; box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+.logo{font-size:28px;font-weight:800;color:#7CFFB2;letter-spacing:1px;}
+.btn-login{padding:12px 22px;border-radius:20px;font-weight:600;text-decoration:none;color:#07110A;background:linear-gradient(90deg,#22C55E,#7CFFB2);transition:0.3s;}
+.btn-login:hover{transform:translateY(-2px);}
+
+/* Hero */
+.hero{margin-top:90px; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:40px 6%;}
+.hero-container{display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:center; width:100%; max-width:1400px;}
+.hero-text h1{font-size:54px; line-height:1.1; font-weight:800; margin-bottom:20px;}
+.hero-text span{color:#7CFFB2;}
+.hero-text p{font-size:18px;color:#A1A1AA; max-width:550px;margin-bottom:30px;}
+.hero-buttons{display:flex; gap:20px; flex-wrap:wrap;}
+.hero-btn{padding:18px 32px;border-radius:24px;font-weight:700;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;transition:0.3s;}
+.hero-btn.primary{background:linear-gradient(90deg,#22C55E,#7CFFB2);color:#07110A;box-shadow:0 10px 35px rgba(124,255,178,0.2);}
+.hero-btn.primary:hover{transform:translateY(-3px);}
+.hero-btn.secondary{border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.04); color:white;}
+.hero-btn.secondary:hover{background:rgba(255,255,255,0.08);}
+
+/* Cards */
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-top:40px;}
+.card{background:rgba(23,26,33,0.95); padding:20px; border-radius:28px; text-align:center; position:relative; box-shadow:0 6px 18px rgba(0,0,0,0.35); transition:0.3s;}
+.card:hover{transform:translateY(-4px);}
+.card h3{color:#A1A1AA;font-size:14px;margin-bottom:8px;font-weight:500;}
+.card .numero{font-size:28px;font-weight:700;color:#7CFFB2;}
+
+/* Stats */
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:16px; margin-top:40px;}
+.stat{background:rgba(23,26,33,0.95); border-radius:24px; padding:16px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.35);}
+.stat h2{font-size:26px;color:#7CFFB2;margin-bottom:6px;}
+.stat p{font-size:13px;color:#A1A1AA;}
+
+/* Responsivo */
+@media(max-width:1100px){
+.hero-container{grid-template-columns:1fr;}
+.hero-text{text-align:center;}
+.hero-text h1{font-size:44px;}
+.hero-text p{margin:auto; margin-bottom:30px;}
+.hero-buttons{justify-content:center;}
+}
+
+@media(max-width:768px){
+header{padding:18px 5%;}
+.logo{font-size:22px;}
+.btn-login{padding:12px 18px; font-size:14px; border-radius:16px;}
+.hero{padding:100px 5% 40px;}
+.hero-text h1{font-size:36px;}
+.hero-text p{font-size:15px;}
+.hero-btn{width:100%; padding:16px; font-size:14px;}
+.hero-buttons{flex-direction:column;}
+.cards{grid-template-columns:1fr 1fr;}
+.card .numero{font-size:24px;}
+.stats{grid-template-columns:1fr;}
+.stat h2{font-size:22px;}
+}
+
+@media(max-width:500px){
+.cards{grid-template-columns:1fr;}
+.hero-text h1{font-size:28px;}
+.hero-text p{font-size:14px;}
+.hero-btn{font-size:14px;}
+.stat h2{font-size:20px;}
+}
+</style>
+
 </head>
 <body>
+<div class="bg"></div>
+<div class="blur blur1"></div>
+<div class="blur blur2"></div>
 
 <header>
-    <div class="logo">REVALIDA 2026</div>
-
-    <nav>
-        <a href="login.html" class="btn">Entrar</a>
-    </nav>
+<div class="logo">🩺 REVALIDA 2026</div>
+<a href="login.html" class="btn-login">Entrar</a>
 </header>
 
 <section class="hero">
-    <h1>O caminho mais rápido para aprovação no Revalida</h1>
-    <p>Resumos, flashcards, questões e simulados completos.</p>
-    <a href="login.html" class="hero-btn">ACESSAR PLATAFORMA</a>
+<div class="hero-container">
+<div class="hero-text">
+<h1>A plataforma definitiva para aprovação no <span>Revalida</span></h1>
+<p>Estude com revisões inteligentes, flashcards, simulados e questões comentadas para acelerar sua aprovação.</p>
+<div class="hero-buttons">
+<a href="login.html" class="hero-btn primary">🚀 ACESSAR PLATAFORMA</a>
+<a href="#" class="hero-btn secondary">📚 Conhecer Recursos</a>
+</div>
+<div class="stats">
+<div class="stat"><h2>+5000</h2><p>Questões</p></div>
+<div class="stat"><h2>24h</h2><p>Acesso Online</p></div>
+<div class="stat"><h2>100%</h2><p>Mobile</p></div>
+</div>
+</div>
+<div class="hero-card">
+<!-- Aqui você pode adicionar cards explicativos ou imagem estilo app -->
+</div>
+</div>
 </section>
-
 </body>
 </html>
