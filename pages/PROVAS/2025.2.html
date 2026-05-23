@@ -1159,7 +1159,11 @@ let questoesRespondidas = {};
 SALVAMENTO LOCAL
 ========================================= */
 
-const STORAGE_KEY = "revalida_progresso";
+const STORAGE_KEY =
+`revalida_progresso_${NOME_PROVA}`;
+
+const STORAGE_PROVAS =
+`provas_salvas_${NOME_PROVA}`;
 
 /* =========================================
 SALVAR
