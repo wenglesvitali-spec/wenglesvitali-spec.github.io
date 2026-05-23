@@ -995,6 +995,10 @@ onclick="abrirMenu()">
 <div class="menu-opcoes"
 id="menuOpcoes">
 
+<button type="button" onclick="irHome()">
+🏠 Home
+</button>
+
 <button onclick="ativarModoProva()">
 📝 Modo Prova
 </button>
@@ -1011,12 +1015,12 @@ id="menuOpcoes">
 🔎 Diminuir Texto
 </button>
 
-<button onclick="finalizarProva()">
-🏁 Finalizar
+<button onclick="sairProva()">
+🚪 Limpar prova
 </button>
 
-<button onclick="sairProva()">
-🚪 Sair
+<button onclick="finalizarProva()">
+🏁 Finalizar
 </button>
 
 </div>
@@ -1929,6 +1933,12 @@ function sairProva(){
 localStorage.removeItem(STORAGE_KEY);
 
 location.reload();
+
+}
+
+function irHome(){
+
+window.location.href = "../../dashboard.html";
 
 }
 /* =========================================
