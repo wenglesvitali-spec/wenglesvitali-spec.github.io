@@ -120,6 +120,8 @@ CONTAINER
 .container{
 max-width:980px;
 margin:auto;
+
+padding-top:120px;
 }
 
 /* =========================================
@@ -127,14 +129,33 @@ TOPO
 ========================================= */
 
 .topo{
+
+position:fixed;
+
+top:0;
+left:0;
+right:0;
+
+z-index:9999;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding-top:
-max(10px, env(safe-area-inset-top));
+padding:
+max(12px, env(safe-area-inset-top))
+20px
+16px
+20px;
 
-margin-bottom:24px;
+background:
+rgba(2,6,23,0.92);
+
+backdrop-filter:blur(18px);
+
+border-bottom:
+1px solid rgba(255,255,255,0.05);
+
 }
 
 /* =========================================
@@ -768,11 +789,13 @@ HEADER MOBILE
 @media(max-width:768px){
 
 .topo{
+
 padding:
 max(12px, env(safe-area-inset-top))
 14px
 14px
 14px;
+
 }
 
 .header-left{
