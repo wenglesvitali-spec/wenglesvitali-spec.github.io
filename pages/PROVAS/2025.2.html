@@ -34,6 +34,7 @@ const NOME_PROVA = "INEP 2025.2";
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
+
 /* =========================================
 RESET
 ========================================= */
@@ -53,11 +54,17 @@ sans-serif;
 html,
 body{
 width:100%;
+
 min-height:100%;
+
 overflow-x:hidden;
+
 scroll-behavior:smooth;
+
 scrollbar-width:none;
+
 background:#020617;
+
 -webkit-text-size-adjust:100%;
 }
 
@@ -66,23 +73,13 @@ display:none;
 }
 
 /* =========================================
-BODY
+SAFE AREA IPHONE
 ========================================= */
 
 body{
 
-margin:0;
+min-height:100vh;
 
-background:
-linear-gradient(
-180deg,
-#020617 0%,
-#0F172A 100%
-);
-
-color:#F8FAFC;
-
-overflow-x:hidden;
 overflow-y:auto;
 
 -webkit-overflow-scrolling:touch;
@@ -93,10 +90,35 @@ max(18px, env(safe-area-inset-left));
 padding-right:
 max(18px, env(safe-area-inset-right));
 
-padding-bottom:120px;
+padding-bottom:
+120px;
+
+background:
+linear-gradient(
+180deg,
+#020617 0%,
+#0F172A 100%
+);
+
+}
+
+/* =========================================
+BODY
+========================================= */
+
+body{
+background:
+linear-gradient(
+180deg,
+#020617 0%,
+#0F172A 100%
+);
+
+color:#F8FAFC;
+
+padding:18px;
 
 transition:0.25s;
-
 }
 
 /* =========================================
@@ -104,19 +126,15 @@ CONTAINER
 ========================================= */
 
 .container{
-
 max-width:980px;
-
 margin:auto;
 
-padding-top:190px;
-
+padding-top:120px;
 padding-bottom:140px;
-
 }
 
 /* =========================================
-HEADER FIXO
+TOPO
 ========================================= */
 
 .topo{
@@ -127,33 +145,25 @@ top:0;
 left:0;
 right:0;
 
-height:88px;
-
-z-index:99999;
+z-index:9999;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-gap:12px;
-
 padding:
 max(12px, env(safe-area-inset-top))
 20px
-14px
+16px
 20px;
 
 background:
-rgba(2,6,23,0.96);
+rgba(2,6,23,0.92);
 
 backdrop-filter:blur(18px);
 
--webkit-backdrop-filter:blur(18px);
-
 border-bottom:
 1px solid rgba(255,255,255,0.05);
-
-overflow:hidden;
 
 }
 
@@ -164,44 +174,24 @@ HEADER LEFT / RIGHT
 .header-left{
 display:flex;
 align-items:center;
-gap:12px;
+gap:16px;
 
 min-width:0;
-
-flex:1;
-
-overflow:hidden;
 }
 
 .header-right{
 display:flex;
 align-items:center;
-gap:10px;
-
-flex-shrink:0;
+gap:12px;
 }
 
-/* =========================================
-LOGO
-========================================= */
-
 .logo-topo{
-
 font-size:24px;
 font-weight:900;
 letter-spacing:1px;
 color:#7CFFB2;
 
 white-space:nowrap;
-
-overflow:hidden;
-
-text-overflow:ellipsis;
-
-max-width:180px;
-
-flex-shrink:0;
-
 }
 
 /* =========================================
@@ -213,20 +203,15 @@ position:relative;
 }
 
 .btn-menu{
-
 width:54px;
 height:54px;
-
 border:none;
-
 border-radius:18px;
 
 background:
 rgba(255,255,255,0.04);
 
 backdrop-filter:blur(10px);
-
--webkit-backdrop-filter:blur(10px);
 
 color:white;
 
@@ -238,8 +223,6 @@ border:
 1px solid rgba(255,255,255,0.05);
 
 transition:0.25s;
-
-flex-shrink:0;
 }
 
 .btn-menu:hover{
@@ -248,7 +231,6 @@ background:#1E293B;
 }
 
 .menu-opcoes{
-
 display:none;
 
 position:absolute;
@@ -268,14 +250,12 @@ border-radius:24px;
 
 padding:14px;
 
-z-index:999999;
+z-index:9999;
 
 box-shadow:
 0 20px 40px rgba(0,0,0,0.45);
 
 backdrop-filter:blur(18px);
-
--webkit-backdrop-filter:blur(18px);
 
 flex-direction:column;
 
@@ -283,7 +263,6 @@ gap:10px;
 }
 
 .menu-opcoes button{
-
 padding:16px;
 
 border:none;
@@ -309,19 +288,28 @@ background:#1E293B;
 }
 
 /* =========================================
+TOP ACTIONS
+========================================= */
+
+.top-actions{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:22px;
+gap:12px;
+}
+
+/* =========================================
 ESTATISTICAS
 ========================================= */
 
 .estatisticas{
 display:flex;
-gap:8px;
+gap:10px;
 align-items:center;
-
-flex-shrink:0;
 }
 
 .estatistica{
-
 padding:14px 20px;
 
 border-radius:18px;
@@ -332,15 +320,11 @@ font-size:14px;
 
 backdrop-filter:blur(12px);
 
--webkit-backdrop-filter:blur(12px);
-
 border:
 1px solid rgba(255,255,255,0.04);
 
 box-shadow:
 0 8px 20px rgba(0,0,0,0.20);
-
-white-space:nowrap;
 }
 
 .acertos-box{
@@ -354,36 +338,43 @@ color:#FF7B7B;
 }
 
 /* =========================================
-BARRA GABARITO
+BOTAO QUESTOES
 ========================================= */
 
-.barra-gabarito{
+.toggle-grade{
+width:54px;
+height:54px;
 
-position:fixed;
-
-top:88px;
-
-left:0;
-right:0;
-
-z-index:99998;
-
-padding-left:18px;
-padding-right:18px;
-
-padding-bottom:8px;
+border-radius:18px;
 
 background:
-linear-gradient(
-180deg,
-rgba(2,6,23,0.98),
-rgba(2,6,23,0.92)
-);
+rgba(255,255,255,0.04);
 
-backdrop-filter:blur(14px);
+display:flex;
+align-items:center;
+justify-content:center;
 
--webkit-backdrop-filter:blur(14px);
+cursor:pointer;
 
+transition:0.25s;
+
+border:
+1px solid rgba(255,255,255,0.04);
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.25);
+}
+
+.toggle-grade:hover{
+transform:scale(1.06);
+background:#1E293B;
+}
+
+#setaGrade{
+font-size:22px;
+font-weight:900;
+color:#7CFFB2;
+transition:0.3s;
 }
 
 /* =========================================
@@ -391,43 +382,48 @@ GRADE QUESTOES
 ========================================= */
 
 .grade-questoes{
+display:none;
 
-cursor:grab;
-user-select:none;
-
-display:flex;
+flex-wrap:wrap;
 
 gap:10px;
 
-overflow-x:auto;
-overflow-y:hidden;
+padding:18px;
 
-padding:12px 4px;
+margin-bottom:22px;
 
-scrollbar-width:none;
+border-radius:28px;
 
--webkit-overflow-scrolling:touch;
+background:
+rgba(255,255,255,0.03);
+
+backdrop-filter:blur(14px);
+
+border:
+1px solid rgba(255,255,255,0.04);
+
+animation:fadeGrade 0.25s ease;
 }
 
-.grade-questoes::-webkit-scrollbar{
-display:none;
+@keyframes fadeGrade{
+
+from{
+opacity:0;
+transform:translateY(-5px);
 }
 
-.grade-questoes.arrastando{
-cursor:grabbing;
+to{
+opacity:1;
+transform:translateY(0);
 }
 
-/* =========================================
-NUMERO QUESTAO
-========================================= */
+}
 
 .numero-questao{
+width:44px;
+height:44px;
 
-min-width:46px;
-width:46px;
-height:46px;
-
-border-radius:16px;
+border-radius:14px;
 
 display:flex;
 align-items:center;
@@ -445,8 +441,6 @@ background:#1E293B;
 
 border:
 2px solid transparent;
-
-flex-shrink:0;
 }
 
 .numero-questao:hover{
@@ -467,6 +461,10 @@ background:#DC2626;
 color:white;
 }
 
+/* =========================================
+MODO PROVA
+========================================= */
+
 .numero-questao.respondida-prova{
 background:#EAB308;
 color:#000;
@@ -477,17 +475,10 @@ QUESTAO BOX
 ========================================= */
 
 .questao-box{
-
-position:relative;
-
-z-index:1;
-
 background:
 rgba(255,255,255,0.03);
 
 backdrop-filter:blur(14px);
-
--webkit-backdrop-filter:blur(14px);
 
 border:
 1px solid rgba(255,255,255,0.05);
@@ -500,10 +491,6 @@ box-shadow:
 0 15px 35px rgba(0,0,0,0.25);
 }
 
-/* =========================================
-TITULO
-========================================= */
-
 .titulo{
 font-size:26px;
 font-weight:900;
@@ -511,12 +498,7 @@ color:#7CFFB2;
 margin-bottom:24px;
 }
 
-/* =========================================
-ENUNCIADO
-========================================= */
-
 .enunciado{
-
 font-size:18px;
 
 line-height:1.9;
@@ -528,8 +510,6 @@ margin-bottom:26px;
 white-space:pre-line;
 
 word-break:break-word;
-
-overflow-wrap:break-word;
 }
 
 /* =========================================
@@ -537,7 +517,6 @@ ALTERNATIVAS
 ========================================= */
 
 .alternativa{
-
 background:#172033;
 
 padding:20px;
@@ -553,8 +532,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-gap:14px;
-
 transition:0.2s;
 }
 
@@ -567,14 +544,12 @@ transform:translateY(-2px);
 flex:1;
 cursor:pointer;
 line-height:1.8;
-word-break:break-word;
 }
 
 .cortar{
 margin-left:14px;
 font-size:20px;
 cursor:pointer;
-flex-shrink:0;
 }
 
 .selecionada{
@@ -602,7 +577,6 @@ BOTOES
 ========================================= */
 
 .btn-responder{
-
 width:100%;
 
 padding:18px;
@@ -635,7 +609,6 @@ transform:translateY(-2px);
 }
 
 .btn-comentario{
-
 width:100%;
 
 margin-top:18px;
@@ -667,7 +640,6 @@ COMENTARIO
 ========================================= */
 
 .comentario-dropdown{
-
 display:none;
 
 margin-top:18px;
@@ -682,8 +654,6 @@ line-height:1.9;
 
 border:
 1px solid rgba(124,255,178,0.12);
-
-overflow:hidden;
 }
 
 /* =========================================
@@ -691,19 +661,12 @@ NAVEGACAO
 ========================================= */
 
 .navegacao{
-
-position:relative;
-
-z-index:1;
-
 display:flex;
 gap:14px;
-
 margin-top:22px;
 }
 
 .btn-nav{
-
 flex:1;
 
 padding:18px;
@@ -740,11 +703,6 @@ RESULTADOS
 ========================================= */
 
 .resultados{
-
-position:relative;
-
-z-index:1;
-
 display:none;
 
 margin-top:28px;
@@ -758,8 +716,6 @@ rgba(255,255,255,0.03);
 
 backdrop-filter:blur(14px);
 
--webkit-backdrop-filter:blur(14px);
-
 border:
 1px solid rgba(255,255,255,0.04);
 }
@@ -771,11 +727,13 @@ margin:auto;
 
 .resumo{
 margin-top:24px;
+
 text-align:center;
+
 font-size:20px;
+
 line-height:2;
 }
-
 /* =========================================
 QUESTOES ERRADAS
 ========================================= */
@@ -798,8 +756,6 @@ border:
 border-radius:24px;
 
 padding:20px;
-
-overflow:hidden;
 }
 
 .questao-erro-titulo{
@@ -857,10 +813,7 @@ line-height:1.8;
 
 border:
 1px solid rgba(124,255,178,0.10);
-
-overflow:hidden;
 }
-
 /* =========================================
 SELECTION
 ========================================= */
@@ -871,92 +824,17 @@ color:#000;
 }
 
 /* =========================================
-TABLET
-========================================= */
-
-@media(max-width:900px){
-
-.logo-topo{
-font-size:18px;
-max-width:140px;
-}
-
-.estatistica{
-padding:10px 12px;
-font-size:12px;
-border-radius:14px;
-}
-
-.btn-menu{
-width:46px;
-height:46px;
-font-size:24px;
-}
-
-.topo{
-padding-left:14px;
-padding-right:14px;
-}
-
-}
-
-/* =========================================
 RESPONSIVO
 ========================================= */
 
 @media(max-width:768px){
 
-.container{
-padding-top:180px;
-}
-
-.topo{
-
-height:82px;
-
-padding:
-max(10px, env(safe-area-inset-top))
-14px
-12px
-14px;
-
-}
-
-.barra-gabarito{
-top:82px;
-padding-left:10px;
-padding-right:10px;
+body{
+padding:12px;
 }
 
 .logo-topo{
-
-font-size:17px;
-
-white-space:nowrap;
-
-max-width:120px;
-
-}
-
-.header-left{
-gap:10px;
-}
-
-.estatisticas{
-gap:8px;
-}
-
-.estatistica{
-padding:9px 10px;
-font-size:11px;
-border-radius:12px;
-}
-
-.btn-menu{
-width:44px;
-height:44px;
-font-size:24px;
-border-radius:14px;
+font-size:22px;
 }
 
 .questao-box{
@@ -974,50 +852,65 @@ padding:16px;
 border-radius:18px;
 }
 
+.estatisticas{
+gap:8px;
+}
+
+.estatistica{
+padding:12px 14px;
+font-size:13px;
+}
+
+.toggle-grade{
+width:50px;
+height:50px;
+}
+
 .btn-nav,
 .btn-responder{
 padding:16px;
 }
-
-.numero-questao{
-width:42px;
-min-width:42px;
-height:42px;
-font-size:13px;
-}
-
-}
-
 /* =========================================
-IPHONE PEQUENO
+HEADER MOBILE
 ========================================= */
 
-@media(max-width:420px){
+@media(max-width:768px){
 
-.container{
-padding-top:175px;
+.topo{
+
+padding:
+max(12px, env(safe-area-inset-top))
+14px
+14px
+14px;
+
+}
+
+.header-left{
+gap:10px;
 }
 
 .logo-topo{
-max-width:90px;
-font-size:15px;
+font-size:18px;
 }
 
 .estatistica{
-padding:8px 8px;
-font-size:10px;
+padding:10px 12px;
+font-size:12px;
+border-radius:14px;
 }
 
-.numero-questao{
-width:40px;
-min-width:40px;
-height:40px;
+.toggle-grade,
+.btn-menu{
+width:46px;
+height:46px;
+border-radius:15px;
 }
 
 }
-
+}
 /* =========================================
-ZOOM FIX
+BLOQUEAR ZOOM IOS / ANDROID
 ========================================= */
 
 input,
@@ -1028,9 +921,13 @@ font-size:16px;
 touch-action:manipulation;
 }
 
+/* REMOVE HIGHLIGHT IOS */
+
 *{
 -webkit-tap-highlight-color:transparent;
 }
+
+/* BLOQUEIA ZOOM DOUBLE TAP */
 
 html{
 touch-action:manipulation;
@@ -1058,11 +955,11 @@ INEP 2025.2
 <div class="estatisticas">
 
 <div class="estatistica acertos-box">
-✅ <span id="acertos">0</span>
+👍 <span id="acertos">0</span>
 </div>
 
 <div class="estatistica erros-box">
-❌ <span id="erros">0</span>
+👎 <span id="erros">0</span>
 </div>
 
 </div>
@@ -1075,6 +972,14 @@ INEP 2025.2
 
 <!-- GABARITO -->
 
+<div class="toggle-grade"
+onclick="toggleGradeQuestoes()">
+
+<span id="setaGrade">
+▾
+</span>
+
+</div>
 
 <!-- MENU -->
 
@@ -1122,17 +1027,10 @@ id="menuOpcoes">
 
 </div>
 
-<!-- GABARITO FIXO -->
+<!-- GRADE -->
 
-<div class="barra-gabarito">
-
-<div
-class="grade-questoes"
-id="gradeQuestoes">
-
-</div>
-
-</div>
+<div class="grade-questoes"
+id="gradeQuestoes"></div>
 
 <!-- QUESTAO -->
 
@@ -1406,6 +1304,37 @@ alert("📘 Modo estudo ativado");
 
 }
 
+/* =========================================
+TOGGLE QUESTOES
+========================================= */
+
+function toggleGradeQuestoes(){
+
+let grade =
+document.getElementById("gradeQuestoes");
+
+let seta =
+document.getElementById("setaGrade");
+
+if(grade.style.display === "flex"){
+
+grade.style.display = "none";
+
+seta.style.transform = "rotate(0deg)";
+
+seta.innerHTML = "▾";
+
+}else{
+
+grade.style.display = "flex";
+
+seta.style.transform = "rotate(180deg)";
+
+seta.innerHTML = "▴";
+
+}
+
+}
 
 /* =========================================
 GERAR GRADE
@@ -1481,6 +1410,19 @@ function irParaQuestao(index){
 
 questaoAtual = index;
 
+/* FECHA MENU QUESTOES */
+
+document.getElementById("gradeQuestoes")
+.style.display = "none";
+
+/* VOLTA ICONE */
+
+document.getElementById("setaGrade")
+.innerHTML = "☰";
+
+document.getElementById("setaGrade")
+.style.transform = "rotate(0deg)";
+
 /* SALVA */
 
 salvarProgresso();
@@ -1488,13 +1430,6 @@ salvarProgresso();
 /* CARREGA */
 
 carregarQuestao();
-
-/* SCROLL TOPO */
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
 
 }
 
@@ -1984,72 +1919,7 @@ behavior:"smooth"
 });
 
 }
-/* =========================================
-GRAFICO RESULTADO
-========================================= */
 
-function gerarGrafico(){
-
-const canvas =
-document.getElementById(
-"graficoResultado"
-);
-
-if(!canvas) return;
-
-if(window.graficoAtual){
-window.graficoAtual.destroy();
-}
-
-window.graficoAtual =
-new Chart(canvas,{
-
-type:"doughnut",
-
-data:{
-
-labels:[
-"Acertos",
-"Erros"
-],
-
-datasets:[{
-
-data:[
-acertos,
-erros
-],
-
-backgroundColor:[
-"#22C55E",
-"#EF4444"
-],
-
-borderWidth:0
-
-}]
-
-},
-
-options:{
-
-responsive:true,
-
-plugins:{
-
-legend:{
-labels:{
-color:"#FFFFFF"
-}
-}
-
-}
-
-}
-
-});
-
-}
 /* =========================================
 SAIR
 ========================================= */
@@ -2131,65 +2001,7 @@ JSON.stringify(provas)
 alert("✅ Prova salva com sucesso!");
 
 }
-/* =========================================
-DRAG SCROLL GABARITO DESKTOP
-========================================= */
 
-const slider =
-document.getElementById("gradeQuestoes");
-
-let pressionado = false;
-
-let inicioX;
-
-let scrollInicial;
-
-slider.addEventListener("mousedown",(e)=>{
-
-pressionado = true;
-
-slider.classList.add("arrastando");
-
-inicioX =
-e.pageX - slider.offsetLeft;
-
-scrollInicial =
-slider.scrollLeft;
-
-});
-
-slider.addEventListener("mouseleave",()=>{
-
-pressionado = false;
-
-slider.classList.remove("arrastando");
-
-});
-
-slider.addEventListener("mouseup",()=>{
-
-pressionado = false;
-
-slider.classList.remove("arrastando");
-
-});
-
-slider.addEventListener("mousemove",(e)=>{
-
-if(!pressionado) return;
-
-e.preventDefault();
-
-const x =
-e.pageX - slider.offsetLeft;
-
-const distancia =
-(x - inicioX) * 2;
-
-slider.scrollLeft =
-scrollInicial - distancia;
-
-});
 </script>
 
 </body>
