@@ -690,8 +690,8 @@ QUESTAO
 <div class="questao-box"
 id="questaoBox">
 
-<h1 class="titulo">
-PROVA REVALIDA
+<h1 class="titulo" id="tituloQuestao">
+QUESTÃO 1
 </h1>
 
 <div class="enunciado"
@@ -795,48 +795,11 @@ id="barraErros">
 </div>
 
 <script>
-
 /* ==================================================
-QUESTOES
+QUESTOES JSON
 ================================================== */
 
-let questoes = [
-
-{
-    pergunta:
-    "Paciente com dor torácica irradiando para dorso e diferença de pulsos. Qual o diagnóstico?",
-
-    alternativas:[
-        "IAM",
-        "Dissecção Aguda de Aorta",
-        "TEP",
-        "Pneumotórax"
-    ],
-
-    correta:1,
-
-    comentario:
-    "A diferença de pulsos associada à dor irradiando para dorso é clássica de dissecção aguda de aorta."
-},
-
-{
-    pergunta:
-    "Gestante com PA 170x110 e proteinúria.",
-
-    alternativas:[
-        "Hipertensão crônica",
-        "Pré-eclâmpsia grave",
-        "HELLP",
-        "Eclâmpsia"
-    ],
-
-    correta:1,
-
-    comentario:
-    "Hipertensão grave após 20 semanas associada à proteinúria sugere pré-eclâmpsia grave."
-}
-
-];
+let questoes = [];
 
 /* ==================================================
 VARIAVEIS
@@ -845,6 +808,8 @@ VARIAVEIS
 let questaoAtual = 0;
 
 let selecionada = null;
+
+let respondida = false;
 
 let acertos =
 parseInt(localStorage.getItem("acertos")) || 0;
@@ -857,7 +822,35 @@ JSON.parse(localStorage.getItem("progresso"))
 || {};
 
 /* ==================================================
-ATUALIZAR
+CARREGAR JSON
+================================================== */
+
+fetch("../flashcards/revalida_2025_2.json")
+
+.then(res => res.json())
+
+.then(data => {
+
+    questoes = data;
+
+    atualizarContadores();
+
+    carregarQuestao();
+
+})
+
+.catch(error => {
+
+    console.log(error);
+
+    document.getElementById("enunciado")
+    .innerHTML =
+    "Erro ao carregar questões.";
+
+});
+
+/* ==================================================
+ATUALIZAR CONTADORES
 ================================================== */
 
 function atualizarContadores(){
@@ -876,15 +869,28 @@ CARREGAR QUESTAO
 
 function carregarQuestao(){
 
+    respondida = false;
+
     selecionada = null;
 
     let q = questoes[questaoAtual];
+
+    if(!q) return;
+    document.getElementById("tituloQuestao")
+.innerHTML =
+`QUESTÃO ${q.numero}`;
 
     document.getElementById("enunciado")
     .innerHTML = q.pergunta;
 
     document.getElementById("comentario")
     .style.display = "none";
+
+    document.getElementById("respostaCorreta")
+    .innerHTML = "";
+
+    document.getElementById("comentarioTexto")
+    .innerHTML = "";
 
     let html = "";
 
@@ -918,13 +924,19 @@ function carregarQuestao(){
     document.getElementById("alternativas")
     .innerHTML = html;
 
+    recuperarProgresso();
+
 }
 
 /* ==================================================
-SELECIONAR
+SELECIONAR ALTERNATIVA
 ================================================== */
 
 function selecionarAlternativa(index){
+
+    if(respondida) return;
+
+    selecionada = index;
 
     document.querySelectorAll(".alternativa")
     .forEach(item=>{
@@ -940,8 +952,6 @@ function selecionarAlternativa(index){
     alt.style.border =
     "1px solid #00ff88";
 
-    selecionada = index;
-
 }
 
 /* ==================================================
@@ -949,6 +959,8 @@ RESPONDER
 ================================================== */
 
 function confirmarResposta(){
+
+    if(respondida) return;
 
     if(selecionada === null){
 
@@ -958,24 +970,35 @@ function confirmarResposta(){
 
     }
 
+    respondida = true;
+
     let q = questoes[questaoAtual];
 
     let alternativas =
     document.querySelectorAll(".alternativa");
 
+    alternativas.forEach(item=>{
+
+        item.style.pointerEvents = "none";
+
+    });
+
     alternativas[q.correta]
     .classList.add("correta");
 
-    if(selecionada !== q.correta){
+    let acertou =
+    selecionada === q.correta;
+
+    if(acertou){
+
+        acertos++;
+
+    }else{
 
         alternativas[selecionada]
         .classList.add("errada");
 
         erros++;
-
-    }else{
-
-        acertos++;
 
     }
 
@@ -987,27 +1010,33 @@ function confirmarResposta(){
 
     progresso[questaoAtual] = {
 
-        errada:
-        selecionada !== q.correta,
+        respondida:true,
+
+        selecionada:selecionada,
+
+        correta:q.correta,
+
+        errada:!acertou,
 
         pergunta:q.pergunta,
 
-        correta:
-        q.alternativas[q.correta]
+        alternativas:q.alternativas,
+
+        respostaCorreta:
+        q.alternativas[q.correta],
+
+        comentario:q.comentario
 
     };
 
-    localStorage.setItem(
-        "progresso",
-        JSON.stringify(progresso)
-    );
+    salvarProgresso();
 
     document.getElementById("comentario")
     .style.display = "block";
 
     document.getElementById("respostaCorreta")
     .innerHTML =
-    "✅ " +
+    "✅ Resposta correta: " +
     q.alternativas[q.correta];
 
     document.getElementById("comentarioTexto")
@@ -1017,22 +1046,133 @@ function confirmarResposta(){
 }
 
 /* ==================================================
-CORTAR
+CORTAR ALTERNATIVA
 ================================================== */
 
 function cortarAlternativa(event,index){
 
     event.stopPropagation();
 
+    if(respondida) return;
+
     let alt =
     document.getElementById(`alt-${index}`);
 
     alt.classList.toggle("cortada");
 
+    if(!progresso[questaoAtual]){
+
+        progresso[questaoAtual] = {};
+
+    }
+
+    let cortadas = [];
+
+    document.querySelectorAll(".alternativa")
+    .forEach((item,i)=>{
+
+        if(item.classList.contains("cortada")){
+
+            cortadas.push(i);
+
+        }
+
+    });
+
+    progresso[questaoAtual].cortadas =
+    cortadas;
+
+    salvarProgresso();
+
 }
 
 /* ==================================================
-PROXIMA
+SALVAR PROGRESSO
+================================================== */
+
+function salvarProgresso(){
+
+    localStorage.setItem(
+        "progresso",
+        JSON.stringify(progresso)
+    );
+
+}
+
+/* ==================================================
+RECUPERAR PROGRESSO
+================================================== */
+
+function recuperarProgresso(){
+
+    let salvo = progresso[questaoAtual];
+
+    if(!salvo) return;
+
+    if(salvo.cortadas){
+
+        salvo.cortadas.forEach(index=>{
+
+            let alt =
+            document.getElementById(`alt-${index}`);
+
+            if(alt){
+
+                alt.classList.add("cortada");
+
+            }
+
+        });
+
+    }
+
+    if(salvo.respondida){
+
+        respondida = true;
+
+        selecionada =
+        salvo.selecionada;
+
+        let alternativas =
+        document.querySelectorAll(".alternativa");
+
+        alternativas.forEach((item,index)=>{
+
+            item.style.pointerEvents = "none";
+
+            if(index === salvo.correta){
+
+                item.classList.add("correta");
+
+            }
+
+        });
+
+        if(salvo.selecionada !== salvo.correta){
+
+            alternativas[salvo.selecionada]
+            .classList.add("errada");
+
+        }
+
+        document.getElementById("comentario")
+        .style.display = "block";
+
+        document.getElementById("respostaCorreta")
+        .innerHTML =
+        "✅ Resposta correta: " +
+        salvo.respostaCorreta;
+
+        document.getElementById("comentarioTexto")
+        .innerHTML =
+        salvo.comentario;
+
+    }
+
+}
+
+/* ==================================================
+PROXIMA QUESTAO
 ================================================== */
 
 function proximaQuestao(){
@@ -1048,7 +1188,7 @@ function proximaQuestao(){
 }
 
 /* ==================================================
-VOLTAR
+VOLTAR QUESTAO
 ================================================== */
 
 function voltarQuestao(){
@@ -1064,7 +1204,7 @@ function voltarQuestao(){
 }
 
 /* ==================================================
-FINALIZAR
+FINALIZAR PROVA
 ================================================== */
 
 function finalizarProva(){
@@ -1116,12 +1256,35 @@ function finalizarProva(){
 
         if(item.errada){
 
+            let alternativasHTML = "";
+
+            item.alternativas
+            .forEach((alt,index)=>{
+
+                alternativasHTML += `
+
+                <div style="
+                margin-top:8px;
+                padding:10px;
+                border-radius:10px;
+                background:
+                rgba(255,255,255,0.04);
+                ">
+
+                ${alt}
+
+                </div>
+
+                `;
+
+            });
+
             lista.innerHTML += `
 
             <div class="questao-errada">
 
                 <h3>
-                Questão Errada
+                ❌ Questão Errada
                 </h3>
 
                 <p>
@@ -1130,11 +1293,23 @@ function finalizarProva(){
 
                 <br>
 
+                ${alternativasHTML}
+
+                <br>
+
                 <strong>
-                Resposta correta:
+                ✅ Resposta correta:
                 </strong>
 
-                ${item.correta}
+                ${item.respostaCorreta}
+
+                <br><br>
+
+                <strong>
+                💬 Comentário:
+                </strong>
+
+                ${item.comentario}
 
             </div>
 
@@ -1147,7 +1322,7 @@ function finalizarProva(){
 }
 
 /* ==================================================
-SAIR
+SAIR PROVA
 ================================================== */
 
 function sairProva(){
@@ -1159,22 +1334,17 @@ function sairProva(){
 
     if(confirmar){
 
-        localStorage.clear();
+        localStorage.removeItem("acertos");
+
+        localStorage.removeItem("erros");
+
+        localStorage.removeItem("progresso");
 
         location.reload();
 
     }
 
 }
-
-/* ==================================================
-INICIAR
-================================================== */
-
-atualizarContadores();
-
-carregarQuestao();
-
 </script>
 
 </body>
