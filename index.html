@@ -2,70 +2,129 @@
 <html lang="pt-BR" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist Revalida 2026.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Revalida 2026.2</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="manifest" href="/manifest.json">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #030712; }
-        .liquid-card { background: rgba(13, 20, 36, 0.65); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-        .liquid-input { background: rgba(3, 7, 18, 0.6); border: 1px solid rgba(255, 255, 255, 0.07); backdrop-filter: blur(10px); }
-        .liquid-input:focus { border-color: rgba(99, 102, 241, 0.8); box-shadow: 0 0 15px rgba(99, 102, 241, 0.25); }
+        body { font-family: 'Inter', sans-serif; background-color: #020408; color: #f1f5f9; }
+        
+        /* iOS Fix: Evita zoom automático ao focar em inputs */
+        input[type="text"], input[type="number"] { font-size: 16px !important; }
+
+        /* Estilo Liquid Glass / iOS Pro */
+        .liquid-card {
+            background: rgba(13, 17, 23, 0.75);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .liquid-input {
+            background: rgba(5, 7, 10, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+        }
+
+        .liquid-input:focus {
+            border-color: #10b981;
+            outline: none;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+        }
+
+        /* Checkbox Personalizado (Branco -> Verde Esmeralda) */
+        .check-task {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .check-task:checked {
+            background-color: #10b981;
+            border-color: #10b981;
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+        }
+
+        .check-task:checked::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        /* Scrollbar suave */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 10px; }
     </style>
 </head>
-<body class="text-slate-100 min-h-screen pb-24 relative overflow-x-hidden">
+<body class="min-h-screen pb-24 relative overflow-x-hidden">
 
-    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-10 left-10 w-[600px] h-[600px] bg-violet-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <!-- Luzes de fundo Liquid Glass -->
+    <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-emerald-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none"></div>
 
+    <!-- Toast de Salvamento -->
     <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-emerald-600/90 backdrop-blur-xl text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center space-x-3 text-sm font-semibold border border-emerald-400/30">
         <div class="bg-white/20 p-1.5 rounded-xl"><i class="fa-solid fa-cloud-arrow-up text-white"></i></div>
         <span>Progresso salvo!</span>
     </div>
 
+    <!-- Header -->
     <header class="liquid-card border-b border-white/5 sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-400 p-3.5 rounded-2xl shadow-xl shadow-indigo-600/30 border border-white/20">
+                <div class="bg-gradient-to-tr from-emerald-600 via-teal-500 to-indigo-500 p-3.5 rounded-2xl shadow-xl shadow-emerald-900/30 border border-white/20">
                     <i class="fa-solid fa-user-doctor text-white text-xl"></i>
                 </div>
                 <div>
-                    <span class="bg-indigo-500/15 text-indigo-300 border border-indigo-500/30 text-[11px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">Revalida 2026.2</span>
+                    <span class="bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">Revalida 2026.2</span>
                     <h1 class="text-xl font-extrabold tracking-tight text-white mt-0.5">Painel de Estudos</h1>
                 </div>
             </div>
-            <button onclick="resetData()" class="text-xs bg-slate-900/60 hover:bg-rose-950/40 text-slate-400 hover:text-rose-400 border border-white/10 px-4 py-2.5 rounded-xl transition-all">
+            <button onclick="resetData()" class="text-xs bg-neutral-900/80 hover:bg-rose-950/40 text-neutral-400 hover:text-rose-400 border border-white/10 px-4 py-2.5 rounded-xl transition-all">
                 <i class="fa-solid fa-rotate-right mr-2"></i> Limpar Dados
             </button>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 mt-8 space-y-8 relative z-10">
-        <!-- Resumo -->
+        <!-- Cards de Resumo -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="liquid-card p-6 rounded-3xl">
-                <p class="text-xs font-semibold text-slate-400 uppercase">Progresso Geral</p>
+                <p class="text-xs font-semibold text-neutral-400 uppercase">Progresso Geral</p>
                 <h3 id="progress-text-card" class="text-3xl font-extrabold text-white mt-1">0%</h3>
-                <div class="mt-5 w-full bg-slate-950/60 h-2.5 rounded-full overflow-hidden p-0.5"><div id="progress-bar" class="bg-gradient-to-r from-indigo-500 to-emerald-400 h-full w-0 transition-all duration-500 rounded-full"></div></div>
+                <div class="mt-5 w-full bg-black/60 h-2.5 rounded-full overflow-hidden p-0.5 border border-white/5"><div id="progress-bar" class="bg-gradient-to-r from-teal-500 to-emerald-400 h-full w-0 transition-all duration-500 rounded-full"></div></div>
             </div>
             <div class="liquid-card p-6 rounded-3xl">
-                <p class="text-xs font-semibold text-slate-400 uppercase">Foco na Prova</p>
+                <p class="text-xs font-semibold text-neutral-400 uppercase">Foco na Prova</p>
                 <h3 class="text-3xl font-extrabold text-emerald-400 mt-1">Edição 2026.2</h3>
             </div>
             <div class="liquid-card p-6 rounded-3xl">
-                <p class="text-xs font-semibold text-slate-400 uppercase">Meta Diária</p>
-                <h3 class="text-3xl font-extrabold text-violet-400 mt-1">50 Questões</h3>
+                <p class="text-xs font-semibold text-neutral-400 uppercase">Meta Diária</p>
+                <h3 class="text-3xl font-extrabold text-teal-400 mt-1">50 Questões</h3>
             </div>
         </div>
 
-        <!-- Tabela Checklist -->
+        <!-- Tabela Checklist Completa -->
         <section class="liquid-card rounded-3xl shadow-2xl overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm border-collapse">
                     <thead>
-                        <tr class="bg-slate-900/60 text-slate-400 uppercase text-[10px] font-bold border-b border-white/5">
+                        <tr class="bg-black/40 text-neutral-400 uppercase text-[10px] font-bold border-b border-white/5">
                             <th class="p-4 pl-6">Data</th>
                             <th class="p-4">Dia</th>
                             <th class="p-4">Prova / Atividade</th>
@@ -81,13 +140,13 @@
             </div>
         </section>
 
-        <!-- Tabela Evolução -->
+        <!-- Tabela Evolução com Cores Dinâmicas -->
         <section class="liquid-card rounded-3xl shadow-2xl overflow-hidden p-6">
             <h2 class="text-base font-bold text-white mb-6 flex items-center gap-2"><i class="fa-solid fa-chart-line text-emerald-400"></i> Controle de Evolução</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                     <thead>
-                        <tr class="bg-slate-900/60 text-slate-400 uppercase text-[10px] font-bold border-b border-white/5">
+                        <tr class="bg-black/40 text-neutral-400 uppercase text-[10px] font-bold border-b border-white/5">
                             <th class="p-4 pl-6">Prova</th>
                             <th class="p-4 text-center">Acertos / 100</th>
                             <th class="p-4 text-center">Desempenho</th>
@@ -142,15 +201,23 @@
             scheduleData.forEach((item, index) => {
                 const isRevision = item.activity.includes("REVISÃO") || item.activity.includes("ERROS");
                 const tr = document.createElement('tr');
-                tr.className = isRevision ? "bg-indigo-900/10 hover:bg-indigo-900/20 transition-colors" : "hover:bg-white/[0.02] transition-colors";
+                
+                // Linha com destaque especial e borda lateral para os dias de revisão
+                tr.className = isRevision 
+                    ? "bg-amber-500/10 border-l-4 border-amber-400 hover:bg-amber-500/20 transition-all shadow-inner" 
+                    : "hover:bg-white/[0.02] transition-colors";
+                
                 tr.innerHTML = `
-                    <td class="p-4 pl-6 text-slate-300 text-xs">${item.date}</td>
-                    <td class="p-4 text-slate-400 text-xs font-semibold">${item.day}</td>
-                    <td class="p-4 font-bold ${isRevision ? 'text-violet-400' : 'text-indigo-300'} text-xs">${item.activity}</td>
-                    <td class="p-4 text-slate-400 text-xs font-mono">${item.q}</td>
-                    <td class="p-4 text-center"><input type="checkbox" id="fez_${index}" onchange="saveAndCalculate()" class="w-5 h-5 rounded-md cursor-pointer accent-emerald-500"></td>
-                    <td class="p-4 text-center"><input type="checkbox" id="corrigiu_${index}" onchange="saveAndCalculate()" class="w-5 h-5 rounded-md cursor-pointer accent-emerald-500"></td>
-                    <td class="p-4 text-center"><input type="text" id="acertos_${index}" oninput="saveAndCalculate()" placeholder="-" class="w-16 liquid-input rounded-lg text-center py-1 text-xs"></td>
+                    <td class="p-4 pl-6 text-neutral-400 text-xs">${item.date}</td>
+                    <td class="p-4 text-neutral-500 text-xs font-semibold">${item.day}</td>
+                    <td class="p-4 font-bold ${isRevision ? 'text-amber-300 flex items-center gap-2' : 'text-emerald-300'} text-xs">
+                        ${isRevision ? '<span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[9px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider"><i class="fa-solid fa-rotate mr-1"></i> Revisão</span>' : ''}
+                        <span>${item.activity}</span>
+                    </td>
+                    <td class="p-4 text-neutral-400 text-xs font-mono">${item.q}</td>
+                    <td class="p-4 text-center"><input type="checkbox" id="fez_${index}" onchange="saveAndCalculate()" class="check-task"></td>
+                    <td class="p-4 text-center"><input type="checkbox" id="corrigiu_${index}" onchange="saveAndCalculate()" class="check-task"></td>
+                    <td class="p-4 text-center"><input type="number" id="acertos_${index}" oninput="saveAndCalculate()" placeholder="-" class="w-16 liquid-input rounded-lg text-center py-1 text-xs font-bold"></td>
                     <td class="p-4 pr-6"><input type="text" id="erros_${index}" oninput="saveAndCalculate()" placeholder="Anotações..." class="w-full liquid-input rounded-lg px-2 py-1 text-xs"></td>
                 `;
                 tbody.appendChild(tr);
@@ -161,9 +228,9 @@
             evolutionData.forEach((exam, index) => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                    <td class="p-4 pl-6 font-bold text-indigo-300 text-xs">Prova ${exam}</td>
-                    <td class="p-4 text-center"><input type="number" min="0" max="100" id="evo_acertos_${index}" oninput="updateEvolution(${index})" placeholder="0-100" class="w-24 liquid-input rounded-lg text-center py-1 text-xs font-bold"></td>
-                    <td class="p-4 text-center font-extrabold text-xs" id="evo_pct_${index}">-</td>
+                    <td class="p-4 pl-6 font-bold text-emerald-300 text-xs">Prova ${exam}</td>
+                    <td class="p-4 text-center font-bold text-white text-xs" id="evo_acertos_${index}">-</td>
+                    <td class="p-4 text-center font-extrabold text-xs text-neutral-400" id="evo_pct_${index}">-</td>
                     <td class="p-4 pr-6"><input type="text" id="evo_obs_${index}" oninput="saveAndCalculate()" placeholder="Observações..." class="w-full liquid-input rounded-lg px-3 py-1 text-xs"></td>
                 `;
                 evoBody.appendChild(tr);
@@ -171,23 +238,46 @@
             loadData();
         }
 
-        function updateEvolution(index) {
-            const val = parseFloat(document.getElementById(`evo_acertos_${index}`).value);
-            const pctElement = document.getElementById(`evo_pct_${index}`);
-            
-            if (!isNaN(val)) {
-                pctElement.innerText = val.toFixed(1) + '%';
-                // Reset classes
-                pctElement.className = "p-4 text-center font-extrabold text-xs";
-                // Color Logic
-                if (val < 60) pctElement.classList.add('text-red-400');
-                else if (val <= 70) pctElement.classList.add('text-amber-400');
-                else pctElement.classList.add('text-emerald-400');
-            } else {
-                pctElement.innerText = '-';
-                pctElement.className = "p-4 text-center font-extrabold text-xs";
-            }
-            saveAndCalculate();
+        function updateEvolutionFromChecklist() {
+            evolutionData.forEach((exam, evoIndex) => {
+                let totalAcertos = 0;
+                let hasInput = false;
+
+                scheduleData.forEach((item, schedIndex) => {
+                    if (item.activity.includes(exam)) {
+                        const valStr = document.getElementById(`acertos_${schedIndex}`).value;
+                        if (valStr !== "") {
+                            const val = parseFloat(valStr);
+                            if (!isNaN(val)) {
+                                totalAcertos += val;
+                                hasInput = true;
+                            }
+                        }
+                    }
+                });
+
+                const acertosElement = document.getElementById(`evo_acertos_${evoIndex}`);
+                const pctElement = document.getElementById(`evo_pct_${evoIndex}`);
+
+                if (hasInput) {
+                    acertosElement.innerText = totalAcertos;
+                    pctElement.innerText = totalAcertos.toFixed(1) + '%';
+                    
+                    // Lógica de Cores Dinâmicas (Vermelho, Amarelo, Verde)
+                    pctElement.className = "p-4 text-center font-extrabold text-xs";
+                    if (totalAcertos < 60) {
+                        pctElement.classList.add('text-rose-400');
+                    } else if (totalAcertos <= 70) {
+                        pctElement.classList.add('text-amber-400');
+                    } else {
+                        pctElement.classList.add('text-emerald-400');
+                    }
+                } else {
+                    acertosElement.innerText = '-';
+                    pctElement.innerText = '-';
+                    pctElement.className = "p-4 text-center font-extrabold text-xs text-neutral-400";
+                }
+            });
         }
 
         function saveAndCalculate() {
@@ -199,11 +289,12 @@
                 data[`erros_${index}`] = document.getElementById(`erros_${index}`).value;
             });
             evolutionData.forEach((_, index) => {
-                data[`evo_acertos_${index}`] = document.getElementById(`evo_acertos_${index}`).value;
                 data[`evo_obs_${index}`] = document.getElementById(`evo_obs_${index}`).value;
             });
             localStorage.setItem('revalida_pro_2026_2_data', JSON.stringify(data));
+            
             updateProgress();
+            updateEvolutionFromChecklist();
             
             const toast = document.getElementById('toast');
             toast.classList.remove('translate-y-24', 'opacity-0');
@@ -215,19 +306,16 @@
             if (!saved) return;
             const data = JSON.parse(saved);
             scheduleData.forEach((_, index) => {
-                if (data[`fez_${index}`]) document.getElementById(`fez_${index}`).checked = data[`fez_${index}`];
-                if (data[`corrigiu_${index}`]) document.getElementById(`corrigiu_${index}`).checked = data[`corrigiu_${index}`];
-                if (data[`acertos_${index}`]) document.getElementById(`acertos_${index}`).value = data[`acertos_${index}`];
-                if (data[`erros_${index}`]) document.getElementById(`erros_${index}`).value = data[`erros_${index}`];
+                if (data[`fez_${index}`] !== undefined) document.getElementById(`fez_${index}`).checked = data[`fez_${index}`];
+                if (data[`corrigiu_${index}`] !== undefined) document.getElementById(`corrigiu_${index}`).checked = data[`corrigiu_${index}`];
+                if (data[`acertos_${index}`] !== undefined) document.getElementById(`acertos_${index}`).value = data[`acertos_${index}`];
+                if (data[`erros_${index}`] !== undefined) document.getElementById(`erros_${index}`).value = data[`erros_${index}`];
             });
             evolutionData.forEach((_, index) => {
-                if (data[`evo_acertos_${index}`]) {
-                    document.getElementById(`evo_acertos_${index}`).value = data[`evo_acertos_${index}`];
-                    updateEvolution(index);
-                }
-                if (data[`evo_obs_${index}`]) document.getElementById(`evo_obs_${index}`).value = data[`evo_obs_${index}`];
+                if (data[`evo_obs_${index}`] !== undefined) document.getElementById(`evo_obs_${index}`).value = data[`evo_obs_${index}`];
             });
             updateProgress();
+            updateEvolutionFromChecklist();
         }
 
         function updateProgress() {
